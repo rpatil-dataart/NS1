@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_401282_nsone_int.SystemLogHelper</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SystemLogHelper</name>
+        <script><![CDATA[var SystemLogHelper = Class.create();
+SystemLogHelper.prototype = {
+	
+	initialize: function() {
+		this.setTraceability();
+	},
+	
+	enableTrace: 'false',
+
+	logPrefix: {
+		'Info' : '[Info SystemLogHelper]', //logging prefix to identify library log
+		'Error' : '[Error SystemLogHelper]'
+	},
+	
+
+	setTraceability: function() {
+		this.enableTrace = gs.getProperty('x_401282_nsone_int.debug.enable') || 'false';
+	},
+
+	/*
+	If property x_401282_nsone_int.debug.enable is set to true, any message passed as a parameter,
+	will be added to system log as trace information.
+	Input Param:
+		msg:(type:string) Custom informative message
+	*/
+	trace: function(prefix,msg){
+		if(this.enableTrace.toLowerCase() == "true"){
+			msg = msg.replace(/,/g,",\n");
+			msg = msg.replace(/\{/g,"\{\n");
+			var dt = new GlideDateTime();
+			prefix += "(" + dt.getNumericValue() + ")";
+			gs.info(prefix + " : \n\n" + msg + "\n\n");	
+		}
+	},
+	
+	test: function(){
+		this.trace(this.logPrefix.Error, "Error Test");
+		this.trace(this.logPrefix.Info, "Info Test");
+	},
+
+	type: 'SystemLogHelper'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-09-15 07:34:16</sys_created_on>
+        <sys_id>024cb45fdb3b730021b91ffa68961922</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>SystemLogHelper</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_script_include_024cb45fdb3b730021b91ffa68961922</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-15 07:55:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

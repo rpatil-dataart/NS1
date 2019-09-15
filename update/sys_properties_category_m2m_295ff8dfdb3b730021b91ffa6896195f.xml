@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="NSOne Configurations">ecc78494dbb3730051bde4da4b9619a5</category>
+        <order>100</order>
+        <property display_value="x_401282_nsone_int.debug.enable" name="x_401282_nsone_int.debug.enable">0cadf09fdb3b730021b91ffa689619cf</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-09-15 07:39:44</sys_created_on>
+        <sys_id>295ff8dfdb3b730021b91ffa6896195f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_401282_nsone_int.debug.enable.NSOne Configurations</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_295ff8dfdb3b730021b91ffa6896195f</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-15 07:39:44</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
