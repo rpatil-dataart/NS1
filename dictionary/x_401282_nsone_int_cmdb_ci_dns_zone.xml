@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="DNS Zone" max_length="40" name="x_401282_nsone_int_cmdb_ci_dns_zone" sizeclass="1" type="collection">
+    <element extends="cmdb_ci" label="DNS Zone" max_length="40" name="x_401282_nsone_int_cmdb_ci_dns_zone" type="collection">
         <element label="Network Pools" max_length="100" name="network_pools" type="string"/>
         <element label="Primary Master" max_length="100" name="primary_master" type="string"/>
         <element label="Serial" max_length="40" name="serial" type="longint"/>
+        <element attributes="synchronizePartitions=true" choice="3" default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true">
+            <choice/>
+        </element>
         <element label="DNSSEC" max_length="40" name="u_dnssec" type="boolean"/>
         <element label="DNS Servers" max_length="4000" name="u_dns_servers" reference="x_401282_nsone_int_dns_server" type="glide_list"/>
         <element label="Expiry" max_length="40" name="u_expiry" type="longint"/>
@@ -14,5 +17,8 @@
         <element label="TTL" max_length="40" name="u_ttl" type="longint"/>
         <element display="true" label="Zone" mandatory="true" max_length="200" name="zone" type="string"/>
         <element label="Zone ID" mandatory="true" max_length="40" name="zone_id" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
     </element>
 </database>

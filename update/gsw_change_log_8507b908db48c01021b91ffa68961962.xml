@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2019-09-17 19:38:26</change_date>
+        <changed_by display_value="Sachin Morey">413c8b9a1b7373001cf5b9541a4bcb22</changed_by>
+        <content display_value="Enabling AJAXGlideRecord ACL Checking *">d295d76b11232200964f016bcc1bddfe</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-09-17 19:38:26</sys_created_on>
+        <sys_id>8507b908db48c01021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2019-09-17 19:38:26</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>gsw_change_log_8507b908db48c01021b91ffa68961962</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-17 19:38:26</sys_updated_on>
+        <type>2</type>
+    </gsw_change_log>
+</record_update>

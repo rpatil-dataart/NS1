@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[onLoad();
+function onLoad(){
+	var ga = new GlideAjax('NSOneIntegration');
+	ga.addParam("sysparm_name", "getLastSyncUp");
+	ga.getXMLAnswer(function(answer) {
+		//alert("refersh : "+answer);
+		updateDate(answer);
+	});
+}
+
+function loadData(){
+	var ga = new GlideAjax('NSOneIntegration');
+	ga.addParam("sysparm_name", "loadNSOneApi");
+	ga.getXMLWait();
+	//alert(ga.getAnswer());
+	updateDate(ga.getAnswer());
+}
+
+function updateDate(answer){
+	var sec = $[gs.getProperty('x_401282_nsone_int.NSOne_autoRefersh')];
+	var min = parseInt(sec/60);
+	//alert(min); This page will auto-refresh every 30 seconds
+	gel('statusTime').innerHTML = answer;
+	gel('statusValue').innerHTML = "This page will auto-refresh after every "+min +" mins";
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_401282_nsone_int_NSOne Integration .do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<head>
+		<!--<g2:evaluate var="jvar_refresh" expression="$[gs.getProperty('x_401282_nsone_int.NSOne_autoRefersh','0')]" />
+		<j2:if test="$[jvar_refresh > 0]">-->
+		   <meta http-equiv="refresh" content="$[gs.getProperty('x_401282_nsone_int.NSOne_autoRefersh')]" />
+	<!--	</j2:if>-->
+       <g:requires name="styles/ldap.css" includes="true" />
+		<!--<meta http-equiv="refresh" content="30"/>-->
+    </head>
+	<body focusout="focusTrap">
+		<h2>NS1 API Monitoring</h2>
+		<hr/>
+        <div id="ldap-modal-container">
+            <table style="width:100%" class="table">
+                <thead>
+                    <tr>
+                        <th tabindex="0"><b>Name</b>
+                        </th>
+                        <th tabindex="0"><b>Time</b>
+                        </th>
+                        <th tabindex="0"><b>Details</b>
+                        </th>
+                    </tr>
+                </thead>
+				<tr>
+                    <td nowrap="true" tabindex="0">
+                        ${gs.getMessage("Connectivity status with NS1 API")}$[SP]
+                    </td>
+                    <td  tabindex="0" nowrap="true" id="NS1status"></td>
+                    <td  tabindex="0" id="NS1status"></td>
+                </tr>  
+				<tr>
+                    <td nowrap="true" tabindex="0">
+                        ${gs.getMessage("Last Sync Date Time")}$[SP]
+                    </td>
+                    <td  tabindex="0" nowrap="true" id="statusTime"></td>
+                    <td  tabindex="0" id="statusValue"></td>
+                </tr>     
+				<tr>
+                    <td nowrap="true" tabindex="0">
+                        ${gs.getMessage("Next Schedule Run")}$[SP]
+                    </td>
+                    <td  tabindex="0" nowrap="true" id="scheduleTime"></td>
+                    <td  tabindex="0" id="scheduleValue">Schedule job will run after 15 min</td>
+                </tr> 
+			 </table>
+			<hr />
+			 <button id='ldap-last-element' class="btn btn-default" name="test" onclick="loadData();">Refresh
+            </button>
+		</div>
+    </body>
+</j:jelly>]]></html>
+        <name>NSOne Integration </name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>manali</sys_created_by>
+        <sys_created_on>2019-09-17 09:33:32</sys_created_on>
+        <sys_id>0e6ca3b31b7bb30023b9631e6e4bcb93</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>NSOne Integration </sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_ui_page_0e6ca3b31b7bb30023b9631e6e4bcb93</sys_update_name>
+        <sys_updated_by>manali</sys_updated_by>
+        <sys_updated_on>2019-09-19 15:45:35</sys_updated_on>
+    </sys_ui_page>
+</record_update>

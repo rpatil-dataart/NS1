@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-20 20:25:37</sys_created_on>
-        <sys_id>c6dd9d45db00401051bde4da4b9619a3</sys_id>
+        <sys_id>85e42f651bc4841023b9631e6e4bcb08</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Zone ID</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_dictionary_x_401282_nsone_int_cmdb_ci_dns_zone_zone_id</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-09-20 20:25:37</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-09-22 19:29:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
