@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Zone Record" max_length="40" name="x_401282_nsone_int_cmdb_ci_zone_record" sizeclass="1" type="collection">
+        <element label="Record ID" max_length="40" name="u_record_id" type="string"/>
+        <element label="Short Answers" max_length="4000" name="u_short_answers" reference="x_401282_nsone_int_short_answers" type="glide_list"/>
+        <element label="Tier" max_length="2" name="u_tier" type="integer"/>
+        <element label="TTL" max_length="40" name="u_ttl" type="longint"/>
+        <element choice="3" default="A" label="Type" max_length="40" name="u_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="A" value="A"/>
+                <element inactive_on_update="false" label="AAAA" value="AAAA"/>
+                <element inactive_on_update="false" label="AFSDB" value="AFSDB"/>
+                <element inactive_on_update="false" label="ALIAS" value="ALIAS"/>
+                <element inactive_on_update="false" label="CAA" value="CAA"/>
+                <element inactive_on_update="false" label="CERT" value="CERT"/>
+                <element inactive_on_update="false" label="CNAME" value="CNAME"/>
+                <element inactive_on_update="false" label="DS" value="DS"/>
+                <element inactive_on_update="false" label="HINFO" value="HINFO"/>
+                <element inactive_on_update="false" label="MX" value="MX"/>
+                <element inactive_on_update="false" label="NAPTR" value="NAPTR"/>
+                <element inactive_on_update="false" label="NS" value="NS"/>
+                <element inactive_on_update="false" label="PTR" value="PTR"/>
+                <element inactive_on_update="false" label="RP" value="RP"/>
+                <element inactive_on_update="false" label="SPF" value="SPF"/>
+                <element inactive_on_update="false" label="SRV" value="SRV"/>
+                <element inactive_on_update="false" label="TXT" value="TXT"/>
+            </choice>
+        </element>
+        <element label="Zone" max_length="32" name="u_zone" reference="x_401282_nsone_int_cmdb_ci_dns_zone" type="reference"/>
+    </element>
+</database>

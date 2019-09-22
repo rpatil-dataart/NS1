@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="DNS Server" max_length="40" name="x_401282_nsone_int_dns_server" type="collection">
+        <element display="true" label="DNS Server" max_length="100" name="u_dns_server" type="string"/>
+    </element>
+</database>

@@ -8,39 +8,24 @@
         <name>NSOneApiZones</name>
         <script><![CDATA[var NSOneApiZones = Class.create();
 NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
-
+	
 	initialize: function() {
-		x_401282_nsone_int.NSOneApiCore.prototype.initialize.call(this);
-		this.logger = new x_401282_nsone_int.SystemLogHelper();
-		var func = "initialize";
-		this.logger.info(this.type, func, "Entering Function");
+		  x_401282_nsone_int.NSOneApiCore.prototype.initialize.call(this);
 	},
 
-	/* Get All Zones
-	* Sample API Call
-	* GET https://api.nsone.net/v1/zones
-	*/
 	getAllZones: function(){
-		var func = "getAllZones";
-		this.logger.info(this.type, func, "Entering Function");
-
-		var zones;
-
 		var method = "Get Zones"; //Need to add in constants class or some table
 		var endpoint = "NS1-Zones and Records";
 		var headers= this.getDefaultRequestHeaders();
+		
 		var response = this.sendRequest(method,endpoint, headers, null, null);
+		var zones ;
+		//TODO: include in try catch
+		if (this.responseWasSuccessful(response)) {
+			zones = this._populateCMDBWithZone(response);
 
-		try{
-			if (this.responseWasSuccessful(response)) {
-				zones = this._populateCMDBWithZone(response);
-
-			} else {
-				this.result.nsOneError.errorDetails = "Error";
-			}
-		}
-		catch(e){
-			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+		} else {
+			this.result.nsOneError.errorDetails = "Error";
 		}
 		return zones;
 	},
@@ -48,24 +33,22 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 	_populateCMDBWithZone: function(response){
 
 		//This method will have business logis to populate CIs
-		var func = "_populateCMDBWithZone";
-		
-		this.logger.debug(this.type, func, "Response Body" + response.getBody());
+		gs.info("SUCCESS");
+		gs.info("Response Body" + response.getBody());
 		
 		return response.getBody();
 	},
 
-
-
+	
 	/* 
 	**********************
 	***** Unit Tests *****
 	**********************
-
+	
 	//Get All Zones
 	var result = new NSOneApiZones().getAllZones();
     gs.info(result);
-
+	
 	*/
 	type: 'NSOneApiZones'
 });]]></script>
@@ -73,13 +56,13 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-05 14:19:47</sys_created_on>
         <sys_id>e5aabe44dbff330051bde4da4b961998</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>NSOneApiZones</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_e5aabe44dbff330051bde4da4b961998</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-16 19:56:35</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-09 19:07:25</sys_updated_on>
     </sys_script_include>
 </record_update>

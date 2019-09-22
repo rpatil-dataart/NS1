@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="3c2caa29db00001051bde4da4b961963" sys_domain="global" table="x_401282_nsone_int_cmdb_ci_dns_zone" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:21:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>302caa29db00001051bde4da4b961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_401282_nsone_int_cmdb_ci_dns_zone" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">3c2caa29db00001051bde4da4b961963</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">bcff5d85db00401051bde4da4b9619d5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:21:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:21:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c2caa29db00001051bde4da4b961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_401282_nsone_int_cmdb_ci_dns_zone" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">3c2caa29db00001051bde4da4b961963</sys_ui_form>
+            <sys_ui_section caption="Zone Settings" display_value="Zone Settings" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">b82caa29db00001051bde4da4b961961</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:21:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:21:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>742caa29db00001051bde4da4b96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_401282_nsone_int_cmdb_ci_dns_zone" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">3c2caa29db00001051bde4da4b961963</sys_ui_form>
+            <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:21:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 16:57:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76220fa5db40001051bde4da4b9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_401282_nsone_int_cmdb_ci_dns_zone" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">3c2caa29db00001051bde4da4b961963</sys_ui_form>
+            <sys_ui_section caption="Records" display_value="Records" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">76220fa5db40001051bde4da4b9619a1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 16:57:41</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_401282_nsone_int_cmdb_ci_dns_zone</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:21:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c2caa29db00001051bde4da4b961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_401282_nsone_int_cmdb_ci_dns_zone</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_ui_form_sections_3c2caa29db00001051bde4da4b961963</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:21:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

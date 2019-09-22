@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="DNS Zone" max_length="40" name="x_401282_nsone_int_cmdb_ci_dns_zone" sizeclass="1" type="collection">
+        <element label="Network Pools" max_length="100" name="network_pools" type="string"/>
+        <element label="Primary Master" max_length="100" name="primary_master" type="string"/>
+        <element label="Serial" max_length="40" name="serial" type="longint"/>
+        <element label="DNSSEC" max_length="40" name="u_dnssec" type="boolean"/>
+        <element label="DNS Servers" max_length="4000" name="u_dns_servers" reference="x_401282_nsone_int_dns_server" type="glide_list"/>
+        <element label="Expiry" max_length="40" name="u_expiry" type="longint"/>
+        <element label="Hostmaster" mandatory="true" max_length="100" name="u_hostmaster" type="string"/>
+        <element label="Networks" max_length="100" name="u_networks" type="string"/>
+        <element label="Next TTL" max_length="40" name="u_next_ttl" type="longint"/>
+        <element label="Refresh" max_length="40" name="u_refresh" type="longint"/>
+        <element label="Retry" max_length="40" name="u_retry" type="longint"/>
+        <element label="TTL" max_length="40" name="u_ttl" type="longint"/>
+        <element display="true" label="Zone" mandatory="true" max_length="200" name="zone" type="string"/>
+        <element label="Zone ID" mandatory="true" max_length="40" name="zone_id" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_type" table="x_401282_nsone_int_cmdb_ci_zone_record" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>A</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:29:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0fde2a9db00001051bde4da4b961918</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:29:37</sys_updated_on>
+            <value>A</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AAAA</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:32:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae9eaaa9db00001051bde4da4b961960</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:32:27</sys_updated_on>
+            <value>AAAA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AFSDB</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:32:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dcae6669db00001051bde4da4b96191e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:32:57</sys_updated_on>
+            <value>AFSDB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ALIAS</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:32:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e79ea669db00001051bde4da4b961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:32:43</sys_updated_on>
+            <value>ALIAS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CAA</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:33:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26ce6aa9db00001051bde4da4b96197b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:33:34</sys_updated_on>
+            <value>CAA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CERT</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:33:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5fceaa69db00001051bde4da4b961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:33:41</sys_updated_on>
+            <value>CERT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CNAME</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:33:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>77ce2ea9db00001051bde4da4b961956</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:33:51</sys_updated_on>
+            <value>CNAME</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DS</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:34:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5c0f2ea9db00001051bde4da4b96196b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:34:28</sys_updated_on>
+            <value>DS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HINFO</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:34:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d50feaa9db00001051bde4da4b9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:34:49</sys_updated_on>
+            <value>HINFO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MX</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:35:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4b5fee69db00001051bde4da4b961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:35:54</sys_updated_on>
+            <value>MX</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NAPTR</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:36:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e75f22e9db00001051bde4da4b961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:36:11</sys_updated_on>
+            <value>NAPTR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NS</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:36:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cc6f6669db00001051bde4da4b961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:36:16</sys_updated_on>
+            <value>NS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PTR</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:36:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ec6feea9db00001051bde4da4b961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:36:48</sys_updated_on>
+            <value>PTR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>RP</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3aafaea9db00001051bde4da4b9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:37:25</sys_updated_on>
+            <value>RP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SPF</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:37:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>97af22e9db00001051bde4da4b9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:37:39</sys_updated_on>
+            <value>SPF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SRV</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:37:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>48bfe2e9db00001051bde4da4b9619ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:37:54</sys_updated_on>
+            <value>SRV</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TXT</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:38:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>63ef26e9db00001051bde4da4b9619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:38:06</sys_updated_on>
+            <value>TXT</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_type</element>
+            <name>x_401282_nsone_int_cmdb_ci_zone_record</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-22 15:29:37</sys_created_on>
+            <sys_id>780ee2a9db00001051bde4da4b9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_type</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_choice_x_401282_nsone_int_cmdb_ci_zone_record_u_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-22 15:29:37</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

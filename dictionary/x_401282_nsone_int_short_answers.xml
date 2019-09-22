@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Short Answer" max_length="40" name="x_401282_nsone_int_short_answers" type="collection">
+        <element display="true" label="Short Answer" max_length="100" name="u_short_answer" type="string"/>
+    </element>
+</database>
