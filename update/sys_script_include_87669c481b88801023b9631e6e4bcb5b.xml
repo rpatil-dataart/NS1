@@ -2,22 +2,25 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_401282_nsone_int.NSOneIntegration</api_name>
+        <api_name>x_401282_nsone_int.NS1ApiMonitoring</api_name>
         <client_callable>true</client_callable>
         <description/>
-        <name>NSOneIntegration</name>
-        <script><![CDATA[var NSOneIntegration = Class.create();
-NSOneIntegration.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+        <name>NS1ApiMonitoring</name>
+        <script><![CDATA[var NS1ApiMonitoring = Class.create();
+NS1ApiMonitoring.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
 	loadNSOneApi:function(){
+		this.logger = new x_401282_nsone_int.SystemLogHelper();
+		var func = "loadNSOneApi";
+		this.logger.info(this.type, func, "Entering Function");
 		var result=new NSOneApiZones().getAllZones();
-		gs.info(result);
+		//gs.info(result);		
+		this.logger.info(this.type, func, result);
 		var sync = this.getLastSyncUp();
-		//gs.info("getLastSyncUp : "+a);
 		return sync;
 	},
 	
 	getLastSyncUp : function(){
-		//gs.info("Inside getLastSyncUp");
 		var gr = new GlideRecord("syslog_app_scope");  
 		gr.addEncodedQuery('sys_scope=79627e08dbbf330051bde4da4b961982');
 		gr.orderByDesc('sys_created_on');
@@ -31,19 +34,19 @@ NSOneIntegration.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 		}	
 	},
 	
-	type: 'NSOneIntegration'
+	type: 'NS1ApiMonitoring'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>manali</sys_created_by>
         <sys_created_on>2019-09-17 12:56:48</sys_created_on>
         <sys_id>87669c481b88801023b9631e6e4bcb5b</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>NSOneIntegration</sys_name>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>NS1ApiMonitoring</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_87669c481b88801023b9631e6e4bcb5b</sys_update_name>
-        <sys_updated_by>manali</sys_updated_by>
-        <sys_updated_on>2019-09-19 14:26:23</sys_updated_on>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-23 18:35:27</sys_updated_on>
     </sys_script_include>
 </record_update>

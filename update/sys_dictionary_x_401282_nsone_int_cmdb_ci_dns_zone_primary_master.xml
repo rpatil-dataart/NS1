@@ -3,15 +3,10 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
+        <calculation/>
+        <choice>0</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Primary Master</column_label>
@@ -51,9 +46,9 @@
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-09-22 15:03:48</sys_created_on>
-        <sys_id>05e4eb651bc4841023b9631e6e4bcbfc</sys_id>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2019-09-23 18:37:29</sys_created_on>
+        <sys_id>6e92e8ce1b80c41023b9631e6e4bcb7e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Primary Master</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
@@ -61,7 +56,7 @@
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_dictionary_x_401282_nsone_int_cmdb_ci_dns_zone_primary_master</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-09-22 19:29:26</sys_updated_on>
+        <sys_updated_on>2019-09-23 18:37:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
