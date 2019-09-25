@@ -25,7 +25,45 @@ ZonesAndRecordsLibrary.prototype = {
 		4. Transform the Data
 		*/
 
+		var zones = new x_401282_nsone_int.NSOneApiZones().getAllZones();
+
+		for(var zone in zones){
+
+			var domainName = zones[zone].zone;		
+			this.logger.info(this.type, "func", "domainName " + domainName);
+			//Get Zone Details
+			var result = new NSOneApiZones().getZoneDetails(domainName);	
+
+			var request = new sn_ws.RESTMessageV2();
+			request.setEndpoint('https://dev78723.service-now.com/api/now/import/x_401282_nsone_int_di_zone');
+			request.setHttpMethod('POST');
+
+			//Eg. UserName="admin", Password="admin" for this code sample.
+			var user = 'admin';
+			var password = 'T1ger@2019';
+
+			request.setBasicAuth(user,password);
+			request.setRequestHeader("Accept","application/json");
+			request.setRequestHeader('Content-Type','application/json');
+
+			request.setRequestBody(result);
+			var response = request.execute();
+			this.logger.debug(this.type, "func", "domainName " + domainName + " Import Set API Response"+ response.getBody());
+
+
+		}		
+
+
+
+
 	},
+
+	/*Tests */
+
+	/*
+
+new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones()
+	*/
 
 	type: 'ZonesAndRecordsLibrary'
 };]]></script>
@@ -33,13 +71,13 @@ ZonesAndRecordsLibrary.prototype = {
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-22 19:04:12</sys_created_on>
         <sys_id>150f53a11bc4841023b9631e6e4bcb22</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>ZonesAndRecordsLibrary</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_150f53a11bc4841023b9631e6e4bcb22</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-22 19:08:50</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-25 19:19:04</sys_updated_on>
     </sys_script_include>
 </record_update>

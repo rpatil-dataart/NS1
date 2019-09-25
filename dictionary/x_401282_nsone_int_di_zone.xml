@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="DI Zone" max_length="40" name="x_401282_nsone_int_di_zone" type="collection">
+        <element label="DNS Servers" max_length="1000" name="dns_servers" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expiry" max_length="40" name="expiry" type="longint"/>
+        <element label="Hostmaster" max_length="100" name="hostmaster" type="string"/>
+        <element label="Zone ID" max_length="100" name="id" type="string"/>
+        <element label="Meta" max_length="1000" name="meta" type="string"/>
+        <element label="Networks" max_length="100" name="networks" type="string"/>
+        <element label="Network Pools" max_length="100" name="network_pools" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="NX TTL" max_length="40" name="nx_ttl" type="longint"/>
+        <element label="Primary" max_length="1000" name="primary" type="string"/>
+        <element label="Records" max_length="4000" name="records" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Refresh" max_length="100" name="refresh" type="longint"/>
+        <element attributes="edge_encryption_enabled=true" label="Retry" max_length="40" name="retry" type="longint"/>
+        <element attributes="edge_encryption_enabled=true" label="TTL" max_length="100" name="ttl" type="longint"/>
+        <element display="true" label="Zone" mandatory="true" max_length="100" name="zone" type="string"/>
+    </element>
+</database>

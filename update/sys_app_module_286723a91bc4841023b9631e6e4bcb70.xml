@@ -19,8 +19,6 @@
         <query/>
         <report/>
         <roles>admin,x_401282_nsone_int.user,x_401282_nsone_int.manager</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-22 19:41:27</sys_created_on>
