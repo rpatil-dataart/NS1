@@ -19,6 +19,8 @@
         <query>v_ws_editor.do?sysparm_query=name=x_401282_nsone_int_testzoneimport</query>
         <report/>
         <roles/>
+        <survey/>
+        <survey_overwrite>false</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-25 07:23:24</sys_created_on>

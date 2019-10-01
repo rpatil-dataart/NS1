@@ -238,6 +238,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>serial</element>
+            <position>17</position>
+            <sys_created_by>smorey</sys_created_by>
+            <sys_created_on>2019-09-30 14:46:37</sys_created_on>
+            <sys_id>4de0fb881bd00c1023b9631e6e4bcb0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_di_zone" sys_domain="global" view="Default view">bd1c48aadb00801051bde4da4b96194a</sys_ui_section>
+            <sys_updated_by>smorey</sys_updated_by>
+            <sys_updated_on>2019-09-30 14:46:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

@@ -5,9 +5,9 @@
         <alter_access>false</alter_access>
         <client_scripts_access>false</client_scripts_access>
         <configuration_access>false</configuration_access>
-        <create_access>false</create_access>
+        <create_access>true</create_access>
         <create_access_controls>true</create_access_controls>
-        <delete_access>false</delete_access>
+        <delete_access>true</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
         <label>Zone Record</label>
@@ -16,22 +16,22 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Configuration Item" name="cmdb_ci">22b0566ae131330078502406b63333fc</super_class>
-        <sys_class_code>$#</sys_class_code>
+        <super_class display_value="Configuration Item" name="cmdb_ci">50404bc61b33330023b9631e6e4bcb36</super_class>
+        <sys_class_code>#&amp;</sys_class_code>
         <sys_class_name>sys_db_object</sys_class_name>
-        <sys_class_path>/!!/$#</sys_class_path>
+        <sys_class_path>/!!/#&amp;</sys_class_path>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-22 15:26:27</sys_created_on>
         <sys_id>f82d2669db00001051bde4da4b9619c4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Zone Record</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_db_object_f82d2669db00001051bde4da4b9619c4</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-09-22 15:26:27</sys_updated_on>
-        <update_access>false</update_access>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-27 16:11:56</sys_updated_on>
+        <update_access>true</update_access>
         <user_role display_value="x_401282_nsone_int.user" name="x_401282_nsone_int.user">75623600dbff330051bde4da4b961989</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>

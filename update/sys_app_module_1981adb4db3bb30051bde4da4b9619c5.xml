@@ -21,6 +21,8 @@
         <query/>
         <report/>
         <roles>admin</roles>
+        <survey/>
+        <survey_overwrite>false</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-07 15:46:00</sys_created_on>

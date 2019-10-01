@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-09-26 12:02:11</sys_created_on>
+        <sys_id>9de466f6dbc0881021b91ffa689619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_401282_nsone_int_di_zone_record.x_401282_nsone_int.user</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_security_acl display_value="x_401282_nsone_int_di_zone_record">d1e466f6dbc0881021b91ffa689619a4</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_9de466f6dbc0881021b91ffa689619a6</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-26 12:02:11</sys_updated_on>
+        <sys_user_role display_value="x_401282_nsone_int.user" name="x_401282_nsone_int.user">75623600dbff330051bde4da4b961989</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

@@ -12,13 +12,13 @@
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-22 16:41:19</sys_created_on>
-        <sys_id>773418e6db40801051bde4da4b9619eb</sys_id>
+        <sys_id>1e92e8ce1b80c41023b9631e6e4bcb14</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_401282_nsone_int_short_answers</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
-        <sys_update_name>ua_table_licensing_config_773418e6db40801051bde4da4b9619eb</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_1e92e8ce1b80c41023b9631e6e4bcb14</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-09-22 16:41:19</sys_updated_on>
     </ua_table_licensing_config>

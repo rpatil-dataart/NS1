@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="smorey">21c5c72edb88481021b91ffa689619c4</basic_auth_profile>
+        <basic_auth_user>admin</basic_auth_user>
+        <content>{&#13;
+"nx_ttl":3600,&#13;
+"retry":7200,&#13;
+"dnssec":false,&#13;
+"zone":"mytest-06.com",&#13;
+"network_pools":["p07"],&#13;
+"serial":1569170426,&#13;
+"primary":{&#13;
+"enabled":false,&#13;
+"secondaries":[]},&#13;
+"refresh":43200,&#13;
+"expiry":1209600,&#13;
+"dns_servers":["dns1.p07.nsone.net",&#13;
+"dns2.p07.nsone.net",&#13;
+"dns3.p07.nsone.net",&#13;
+"dns4.p07.nsone.net"],&#13;
+"records":[{&#13;
+"domain":"mytest-06.com",&#13;
+"short_answers":["dns1.p07.nsone.net",&#13;
+"dns2.p07.nsone.net",&#13;
+"dns3.p07.nsone.net",&#13;
+"dns4.p07.nsone.net",&#13;
+"test"],&#13;
+"link":null,&#13;
+"ttl":3600,&#13;
+"tier":1,&#13;
+"type":"NS",&#13;
+"id":"5d7e4c3fc9c79d00012e9164"},&#13;
+{&#13;
+"domain":"ttest.mytest-06.com",&#13;
+"short_answers":[],&#13;
+"link":null,&#13;
+"ttl":3600,&#13;
+"tier":1,&#13;
+"type":"A",&#13;
+"id":"5d879384f2abd000010c0753"}],&#13;
+"meta":{&#13;
+},&#13;
+"link":null,&#13;
+"primary_master":"dns1.p07.nsone.net",&#13;
+"ttl":3600,&#13;
+"id":"5d7e4c3fc9c79d00012e915f",&#13;
+"hostmaster":"hostmaster@nsone.net",&#13;
+"networks":[0],&#13;
+"pool":"p07"}</content>
+        <function_name>POST</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>ImportSetAPI [ POST ]</qualified_name>
+        <rest_endpoint>${instanceUri}/api/now/import/${stagingTableName}</rest_endpoint>
+        <rest_message display_value="ImportSetAPI">cd348b2adb88481021b91ffa68961902</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-09-25 19:43:22</sys_created_on>
+        <sys_id>79c40feadb88481021b91ffa689619fa</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>POST</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_79c40feadb88481021b91ffa689619fa</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-25 20:40:49</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

@@ -14,39 +14,78 @@ NS1ApiMonitoring.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 		var func = "loadNSOneApi";
 		this.logger.info(this.type, func, "Entering Function");
 		var result=new NSOneApiZones().getAllZones();
-		//gs.info(result);		
+		//new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones()
+		//gs.info(result);
 		this.logger.info(this.type, func, result);
-		var sync = this.getLastSyncUp();
-		return sync;
+		var sync = this.getSyncUpData();
+		var status=this.getImportStatus();
+		var trigger = this.getNextScheduleDate();
+		this.logger.info(this.type, func, +status);
+		//gs.log(status);
+		return sync + "," +status + "," +trigger;
 	},
 	
-	getLastSyncUp : function(){
-		var gr = new GlideRecord("syslog_app_scope");  
-		gr.addEncodedQuery('sys_scope=79627e08dbbf330051bde4da4b961982');
-		gr.orderByDesc('sys_created_on');
+	getSyncUpData : function(){
+		var status=this.getImportStatus();
+		var trigger = this.getNextScheduleDate();
+		var gr = new GlideRecord("sys_import_set");
+		gr.addEncodedQuery('table_nameSTARTSWITHX_401282_nsone_int');
+		//gr.addEncodedQuery('sys_scope=79627e08dbbf330051bde4da4b961982');
+		gr.orderByDesc('sys_updated_on');
 		gr.setLimit(1);
 		gr.query();
 		if (gr.next()) {
-			var date = new GlideDateTime(gr.sys_created_on);
+			var date = new GlideDateTime(gr.sys_updated_on);
 			date.getValue();
 			var lastSynUp = date.getDisplayValue();
-			return lastSynUp;
-		}	
+			return lastSynUp + "," +status + "," +trigger;
+			//return lastSynUp;
+		}
 	},
-	
+	getImportStatus : function(){
+		var importSet = new GlideRecord("sys_import_set");
+		importSet.addEncodedQuery('table_nameLIKEx_401282_nsone_int');
+		importSet.orderByDesc('sys_updated_on');
+		importSet.query();
+		importSet.setLimit(1);
+		if (importSet.next()) {
+			var importHistory = new GlideRecord("sys_import_set_run");
+			importHistory.addQuery("set.number", importSet.number);
+			importHistory.query();
+			if (importHistory.next()) {
+				//gs.info("Inside import set history table : " +importHistory.set + " "+importHistory.state);
+				return importHistory.state + "," +importHistory.set;
+			}
+			
+		}
+		
+	},
+	getNextScheduleDate : function(){
+		var trigger = new GlideRecord("sys_trigger");
+		trigger.addEncodedQuery('nameSTARTSWITHGet All Active Zones');
+		//gr.addQuery("name", "value");
+		trigger.query();
+		if (trigger.next()) {
+			var date = new GlideDateTime(trigger.next_action);
+			date.getValue();
+			var nextScheduleDate = date.getDisplayValue();
+			return nextScheduleDate;
+		}
+		
+	},
 	type: 'NS1ApiMonitoring'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>manali</sys_created_by>
         <sys_created_on>2019-09-17 12:56:48</sys_created_on>
         <sys_id>87669c481b88801023b9631e6e4bcb5b</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>NS1ApiMonitoring</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_87669c481b88801023b9631e6e4bcb5b</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-23 18:35:27</sys_updated_on>
+        <sys_updated_by>manali</sys_updated_by>
+        <sys_updated_on>2019-10-01 16:53:01</sys_updated_on>
     </sys_script_include>
 </record_update>

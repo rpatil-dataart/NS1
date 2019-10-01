@@ -33,7 +33,7 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 
 		try{
 			if (this.responseWasSuccessful(response)) {
-				zones = this._populateCMDBWithZone(response);
+				zones = this.getResponseJSON(response);
 
 			} else {
 				this.result.nsOneError.errorDetails = "Error";
@@ -43,19 +43,12 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
 		}
 		return zones;
-	},
+	},	
 
-	_populateCMDBWithZone: function(response){
-
-		//This method will have business logis to populate CIs
-		var func = "_populateCMDBWithZone";
-
-		this.logger.debug(this.type, func, "Response Body" + response.getBody());
-		var responseBody = response.getBody();
-
-		return JSON.parse(responseBody);
-	},
-
+	/* Get a zone's details
+	*  Sample API Call
+	*  GET https://api.nsone.net/v1/zones/example.com
+	*/
 	getZoneDetails: function(zone){
 		var func = "getZoneDetails";
 		this.logger.info(this.type, func, "Entering Function");
@@ -71,23 +64,69 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 		try{
 			if (this.responseWasSuccessful(response)) {				
 				this.logger.debug(this.type, func, "Zone Details " + response.getBody()); 
-				zoneDetails = response.getBody();
+				zoneDetails = this.getResponseJSON(response);
 				
 			} else {
 				this.result.nsOneError.errorDetails = "Error";
 			}
 		}
 		catch(e){
-			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+			this.logger.error(this.type,func, "Exception thrown in getting zone details" + JSON.stringify(e));   
 		}
 		return zoneDetails;
 	},
+	
+	
+	
+	/* Get record configuration details
+	* Sample API Call
+	* https://api.nsone.net/v1/zones/example.com/www.example.com/A
+	*/
+	getRecordConfigurationDetails: function(zone, domain, type){
+		
+		var func = "getRecordConfigurationDetails";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var configDetails;
+
+		var method = "Get record configuration details"; //Need to add in constants class or some table
+		var endpoint = "NS1-Zones and Records";
+		var headers= this.getDefaultRequestHeaders();
+		var params = this._getRecordParams(zone, domain, type);
+		
+		var response = this.sendRequest(method, endpoint, headers, params, null);
+
+		try{
+			if (this.responseWasSuccessful(response)) {				
+				this.logger.debug(this.type, func, "Record Configuration Details " + response.getBody()); 
+				configDetails = this.getResponseJSON(response);
+				
+			} else {
+				this.result.nsOneError.errorDetails = "Error";
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting Record Configurations" + JSON.stringify(e));   
+		}
+		return configDetails;
+	},
+	
+	
 
 	_getZoneParams: function(zone) {
 		var params = [];
 		params.push({ "name": "zone", "value": zone });       
 		return params;
 	},
+	
+	_getRecordParams: function(zone, domain, type) {
+		var params = [];
+		params.push({ "name": "zone", "value": zone });
+		params.push({ "name": "domain", "value": domain });  
+		params.push({ "name": "type", "value": type });  
+		return params;
+	},
+	
 
 
 
@@ -102,6 +141,10 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 
 	//Get a Zones Details
 	var result = new NSOneApiZones().getZoneDetails('www.ns1-test.com');
+	gs.info(result);
+	 
+	 //Get record configuration details	 
+	 var result = new NSOneApiZones().getRecordConfigurationDetails('www.ns1-test.com', 'www.ns1-test.com', 'NS');
 	 gs.info(result);
 
 	*/
@@ -111,13 +154,13 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-05 14:19:47</sys_created_on>
         <sys_id>e5aabe44dbff330051bde4da4b961998</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>NSOneApiZones</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_e5aabe44dbff330051bde4da4b961998</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-09-25 12:19:51</sys_updated_on>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-09-26 10:10:15</sys_updated_on>
     </sys_script_include>
 </record_update>

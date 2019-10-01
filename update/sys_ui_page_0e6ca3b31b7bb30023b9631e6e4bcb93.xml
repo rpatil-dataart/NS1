@@ -4,11 +4,21 @@
         <client_script><![CDATA[onLoad();
 function onLoad(){
 	var ga = new GlideAjax('NS1ApiMonitoring');
-	ga.addParam("sysparm_name", "getLastSyncUp");
-	ga.getXMLAnswer(function(answer) {
-		//alert("refersh : "+answer);
-		updateDate(answer);
-	});
+	ga.addParam("sysparm_name", "getSyncUpData");
+	ga.getXML(getAnswer);
+	
+	function getAnswer(response) {
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		//alert("Answer : "+answer);
+		var res = answer.split(",");
+		var synUp = res[0];
+		var status = res[1];
+		var importSet =res[2];
+		var nextSchedule =res[3];
+		updateDate(synUp);
+		updateStatus(status,importSet);
+		updateNextSchedule(nextSchedule);
+	}
 }
 
 function loadData(){
@@ -24,6 +34,18 @@ function updateDate(answer){
 	var min = parseInt(sec/60);
 	gel('statusTime').innerHTML = answer;
 	gel('statusValue').innerHTML = "This page will auto-refresh after every "+ min +" mins";
+}
+
+function updateStatus(status,importSet){
+	var url = "https://ven03169.service-now.com/sys_import_set.do?sys_id="+importSet;
+	gel('NS1status').innerHTML = status;
+	//gel('NS1statusDesc').innerHTML = "To check click on link";
+	gel('importURL').href = url;
+}
+
+function updateNextSchedule(nextSchedule){
+	gel('scheduleTime').innerHTML = nextSchedule; 
+	gel('statusValue').innerHTML = "Schedule job will run after every";
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -56,7 +78,9 @@ function updateDate(answer){
 						${gs.getMessage("Connectivity status with NS1 API")}$[SP]
 					</td>
 					<td  tabindex="0" nowrap="true" id="NS1status"></td>
-					<td  tabindex="0" id="NS1status"></td>
+					<td  tabindex="0" id="NS1statusDesc"> Please click the $[SP]
+						<a id="importURL" href="" target="_blank">Link</a> $[SP] to check status
+					</td>
 				</tr>  
 				<tr>
 					<td nowrap="true" tabindex="0">
@@ -74,7 +98,9 @@ function updateDate(answer){
 				</tr> 
 			</table>
 			<hr />
-			<button id='ldap-last-element' class="btn btn-default" name="test" onclick="loadData();">Refresh
+			<button id='ldap-last-element' class="btn btn-default" name="test" onclick="onLoad();">Refresh
+			</button> $[SP]$[SP]$[SP]
+			<button id='ldap-last-element' class="btn btn-default" name="test" onclick="loadData();">Load Data
 			</button>
 		</div>
 	</body>
@@ -85,13 +111,13 @@ function updateDate(answer){
         <sys_created_by>manali</sys_created_by>
         <sys_created_on>2019-09-17 09:33:32</sys_created_on>
         <sys_id>0e6ca3b31b7bb30023b9631e6e4bcb93</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>API Monitoring</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_ui_page_0e6ca3b31b7bb30023b9631e6e4bcb93</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-23 18:31:05</sys_updated_on>
+        <sys_updated_by>manali</sys_updated_by>
+        <sys_updated_on>2019-10-01 17:02:00</sys_updated_on>
     </sys_ui_page>
 </record_update>
