@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_401282_nsone_int.process.record.batch</event_name>
+        <name>Process Records Batch</name>
+        <order>100</order>
+        <script><![CDATA[//x_401282_nsone_int.process.record.batch
+/**
+ * Does the work on each loop.
+ * @param {Number} [limit=10] - The number of records to process per loop.
+ * @param {Number} [currentNumber=0] - The number of records that have been processed so far, by all previous loops.
+ this.logger = new x_401282_nsone_int.SystemLogHelper();
+		var func = "initialize";
+		this.logger.info(this.type, func, "Entering Function");
+
+		this.importSetUtil = new x_401282_nsone_int.ImportSetApiUtils();
+		this.zoneApis = new x_401282_nsone_int.NSOneApiZones();
+ */
+function eventWrapper(limit, currentNumber) {
+
+	var EVENT_NAME = 'x_401282_nsone_int.process.record.batch'; //todo: Update this to the name of the event you've created.
+	var TABLE_NAME = 'x_401282_nsone_int_record_configuration_parameters'; //todo: Update this to the name of the table containing the records you're processing
+	
+	var QUERY = 'state!=processed'; //todo: Put your query here
+	var IMPORTSET_TABLE = 'x_401282_nsone_int_di_zone_record';
+
+	var gr = new GlideRecord(TABLE_NAME);
+
+	//Set default values
+	limit = Number(limit) > 0 ? Number(limit) : 10; //Default: 10
+	currentNumber = currentNumber > 0 ? currentNumber : 0; //Default: 0
+
+	gr.setLimit(limit);
+	gr.addQuery(QUERY);
+	gr.query();
+	if (!gr.hasNext()) {
+		gs.info('EDR: [Script name here] completed with ' + currentNumber +
+			   ' total records processed.');
+		return; //No more records to process. Halt function, and loop.
+	}
+	while (gr.next()) {
+
+		var domainName = gr.getValue('zonename');
+		var recDomainName = gr.getValue('recordname');
+		var recType = gr.getValue('type');
+
+
+		var configDetails = new x_401282_nsone_int.NSOneApiZones().getRecordConfigurationDetails(domainName, recDomainName, recType);
+
+		if(configDetails){
+
+			//this.logger.debug(this.type, func, "record configuration details are "+ JSON.stringify(configDetails));
+
+			//add short_answers from dns details to JSON as this is needed in zone record table 
+			//configDetails.short_answers = records[record].short_answers;
+
+			//Import record configuration to Zone Record				
+			var recImportResult = new x_401282_nsone_int.ImportSetApiUtils().processImportSet(IMPORTSET_TABLE, configDetails);			
+			gr.setValue('state', 'processed');
+			
+			//this.logger.debug(this.type, func, "Record Name : " + recDomainName + "\n Record Import Set API Response"+ JSON.stringify(recImportResult));
+		}
+		else{
+			gr.setValue('state', 'error');
+			//this.logger.warn(this.type, func, "Unable to record configuration for: "+ records[record].domain + " of zone " + domainName);
+		}
+		gr.update();
+		
+		currentNumber++;
+	}
+	//Log a progress update
+	gs.info('EDR: event wrapper processed ' + currentNumber +
+		   ' records so far. Triggering the next loop.');
+	//Trigger the event again
+	gs.eventQueue(EVENT_NAME, gr, limit, currentNumber);
+}
+
+eventWrapper(event.parm1, event.parm2);]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-07 19:31:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5193b82e1b5c045023b9631e6e4bcb7a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Process Records Batch</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sysevent_script_action_5193b82e1b5c045023b9631e6e4bcb7a</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-07 20:06:57</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

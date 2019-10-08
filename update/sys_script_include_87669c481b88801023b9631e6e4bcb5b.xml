@@ -9,28 +9,25 @@
         <script><![CDATA[var NS1ApiMonitoring = Class.create();
 NS1ApiMonitoring.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	
+	
 	loadNSOneApi:function(){
 		this.logger = new x_401282_nsone_int.SystemLogHelper();
-		var func = "loadNSOneApi";
-		this.logger.info(this.type, func, "Entering Function");
-		var result=new NSOneApiZones().getAllZones();
-		//new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones()
-		//gs.info(result);
-		this.logger.info(this.type, func, result);
+		//var func = "loadNSOneApi";
+		//this.logger.info(this.type, func, "Entering Function");
+		var result=new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones();
 		var sync = this.getSyncUpData();
-		var status=this.getImportStatus();
-		var trigger = this.getNextScheduleDate();
-		this.logger.info(this.type, func, +status);
-		//gs.log(status);
-		return sync + "," +status + "," +trigger;
+		//var status=this.getImportStatus();
+		//var trigger = this.getNextScheduleDate();
+		return sync;
 	},
 	
+	// function called on demand of page refresh 
 	getSyncUpData : function(){
-		var status=this.getImportStatus();
+		var answers = [];
 		var trigger = this.getNextScheduleDate();
+		var instance= gs.getProperty('instance_name');
 		var gr = new GlideRecord("sys_import_set");
 		gr.addEncodedQuery('table_nameSTARTSWITHX_401282_nsone_int');
-		//gr.addEncodedQuery('sys_scope=79627e08dbbf330051bde4da4b961982');
 		gr.orderByDesc('sys_updated_on');
 		gr.setLimit(1);
 		gr.query();
@@ -38,40 +35,60 @@ NS1ApiMonitoring.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 			var date = new GlideDateTime(gr.sys_updated_on);
 			date.getValue();
 			var lastSynUp = date.getDisplayValue();
-			return lastSynUp + "," +status + "," +trigger;
-			//return lastSynUp;
-		}
-	},
-	getImportStatus : function(){
-		var importSet = new GlideRecord("sys_import_set");
-		importSet.addEncodedQuery('table_nameLIKEx_401282_nsone_int');
-		importSet.orderByDesc('sys_updated_on');
-		importSet.query();
-		importSet.setLimit(1);
-		if (importSet.next()) {
 			var importHistory = new GlideRecord("sys_import_set_run");
-			importHistory.addQuery("set.number", importSet.number);
+			importHistory.addQuery("set.number", gr.number);
 			importHistory.query();
 			if (importHistory.next()) {
-				//gs.info("Inside import set history table : " +importHistory.set + " "+importHistory.state);
-				return importHistory.state + "," +importHistory.set;
+				var url = "https://"+instance+".service-now.com/sys_import_set.do?sys_id="+importHistory.set;
+				return lastSynUp+","+ importHistory.state + ","+url +"," +trigger ;
 			}
-			
 		}
-		
 	},
+// 	getImportStatus : function(){
+// 		var importSet = new GlideRecord("sys_import_set");
+// 		importSet.addEncodedQuery('table_nameLIKEx_401282_nsone_int');
+// 		importSet.orderByDesc('sys_updated_on');
+// 		importSet.query();
+// 		importSet.setLimit(1);
+// 		if (importSet.next()) {
+// 			var importHistory = new GlideRecord("sys_import_set_run");
+// 			importHistory.addQuery("set.number", importSet.number);
+// 			importHistory.query();
+// 			if (importHistory.next()) {
+// 				//gs.info("Inside import set history table : " +importHistory.set + " "+importHistory.state);
+// 				return importHistory.state + "," +importHistory.set;
+// 			}
+			
+// 		}
+		
+// 	},
+	
+	// To get next trigger action date 
 	getNextScheduleDate : function(){
+		var interval = this.getScheduleInterval();
 		var trigger = new GlideRecord("sys_trigger");
-		trigger.addEncodedQuery('nameSTARTSWITHGet All Active Zones');
-		//gr.addQuery("name", "value");
+		//Check job context with sys_id of Get All Active Zones Scedule job
+		trigger.addEncodedQuery('job_contextLIKEf1d620d01b940c1023b9631e6e4bcbcf'); 
 		trigger.query();
 		if (trigger.next()) {
 			var date = new GlideDateTime(trigger.next_action);
 			date.getValue();
-			var nextScheduleDate = date.getDisplayValue();
-			return nextScheduleDate;
+			var nextScheduleDate = date.getDisplayValue();			
+			return nextScheduleDate + ","+interval;
 		}
 		
+	},
+	
+	//To get Schedule job interval
+	getScheduleInterval : function(){
+		var schedInt = new GlideRecord("sysauto_script");
+		//sys_id of Get All Active Zones Scedule job
+		schedInt.addEncodedQuery('sys_id=f1d620d01b940c1023b9631e6e4bcbcf'); 
+		schedInt.query();
+		if (schedInt.next()) {
+			var interval=schedInt.run_period.getDisplayValue();
+			return interval;
+		}
 	},
 	type: 'NS1ApiMonitoring'
 });]]></script>
@@ -79,13 +96,13 @@ NS1ApiMonitoring.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>manali</sys_created_by>
         <sys_created_on>2019-09-17 12:56:48</sys_created_on>
         <sys_id>87669c481b88801023b9631e6e4bcb5b</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>NS1ApiMonitoring</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_87669c481b88801023b9631e6e4bcb5b</sys_update_name>
         <sys_updated_by>manali</sys_updated_by>
-        <sys_updated_on>2019-10-01 16:53:01</sys_updated_on>
+        <sys_updated_on>2019-10-07 09:52:22</sys_updated_on>
     </sys_script_include>
 </record_update>

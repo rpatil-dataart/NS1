@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="TestZoneImport">108b90eedb40801051bde4da4b9619c2</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	//get zone details
+	var domainName = target.zone;
+	
+	if(!gs.nil(domainName)){
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllRecordsForZone(domainName);	
+		
+	}
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-06 13:10:02</sys_created_on>
+        <sys_id>6a44d2c6dbd4045021b91ffa68961927</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_transform_script_6a44d2c6dbd4045021b91ffa68961927</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-07 18:59:43</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

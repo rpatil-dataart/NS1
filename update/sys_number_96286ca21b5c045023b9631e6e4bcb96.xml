@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_401282_nsone_int_record_configuration_parameters">x_401282_nsone_int_record_configuration_parameters</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>RECPARM</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-07 18:34:26</sys_created_on>
+        <sys_id>96286ca21b5c045023b9631e6e4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RECPARM</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_number_96286ca21b5c045023b9631e6e4bcb96</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-07 18:34:26</sys_updated_on>
+    </sys_number>
+</record_update>

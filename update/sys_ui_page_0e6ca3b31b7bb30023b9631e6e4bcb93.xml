@@ -2,6 +2,12 @@
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
         <client_script><![CDATA[onLoad();
+
+//get Refresh time interval from property 
+var sec = $[gs.getProperty('x_401282_nsone_int.monitoring.interval')];
+var min = parseInt(sec/60);
+gel('refreshID').innerHTML = "This page will auto-refresh after every "+ min +" mins";
+
 function onLoad(){
 	var ga = new GlideAjax('NS1ApiMonitoring');
 	ga.addParam("sysparm_name", "getSyncUpData");
@@ -13,11 +19,12 @@ function onLoad(){
 		var res = answer.split(",");
 		var synUp = res[0];
 		var status = res[1];
-		var importSet =res[2];
+		var url =res[2];
 		var nextSchedule =res[3];
-		updateDate(synUp);
-		updateStatus(status,importSet);
-		updateNextSchedule(nextSchedule);
+		var interval=res[4];
+		//var instance = res[5];
+		updateDate(synUp,status,url);
+		updateNextSchedule(nextSchedule,interval);
 	}
 }
 
@@ -26,26 +33,18 @@ function loadData(){
 	ga.addParam("sysparm_name", "loadNSOneApi");
 	ga.getXMLWait();
 	//alert(ga.getAnswer());
-	updateDate(ga.getAnswer());
+	//updateDate(ga.getAnswer());
 }
 
-function updateDate(answer){
-	var sec = $[gs.getProperty('x_401282_nsone_int.monitoring.interval')];
-	var min = parseInt(sec/60);
-	gel('statusTime').innerHTML = answer;
-	gel('statusValue').innerHTML = "This page will auto-refresh after every "+ min +" mins";
-}
-
-function updateStatus(status,importSet){
-	var url = "https://ven03169.service-now.com/sys_import_set.do?sys_id="+importSet;
-	gel('NS1status').innerHTML = status;
-	//gel('NS1statusDesc').innerHTML = "To check click on link";
+function updateDate(synUp,status,url){
+	gel('statusTime').innerHTML = synUp;
+	gel('statusValue').innerHTML = status;
 	gel('importURL').href = url;
 }
 
-function updateNextSchedule(nextSchedule){
+function updateNextSchedule(nextSchedule,interval){
 	gel('scheduleTime').innerHTML = nextSchedule; 
-	gel('statusValue').innerHTML = "Schedule job will run after every";
+	gel('scheduleValue').innerHTML = "Schedule job will run after every "+interval;
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -56,10 +55,21 @@ function updateNextSchedule(nextSchedule){
 	<head>
 		<meta http-equiv="refresh" content="$[gs.getProperty('x_401282_nsone_int.monitoring.interval')]" />
 		<g:requires name="styles/ldap.css" includes="true" />
-		<!--<meta http-equiv="refresh" content="30"/>-->
 	</head>
 	<body focusout="focusTrap">
-		<h2>NS1 API Monitoring</h2>
+		<div id="ldap-modal-container">
+			<table style="width:100%" class="table">
+				<tr>
+					<td><h2>NS1 API Monitoring</h2></td>
+					<td></td>
+					<td style="padding:30px 30px 0 0; text-align: right;"> <span id='refreshID'> </span> $[SP]$[SP]$[SP]
+						<button id='ldap-last-element' class="btn btn-default" name="test" onclick="onLoad();">Refresh</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<h4>Zones and Records</h4>
 		<hr/>
 		<div id="ldap-modal-container">
 			<table style="width:100%" class="table">
@@ -75,31 +85,23 @@ function updateNextSchedule(nextSchedule){
 				</thead>
 				<tr>
 					<td nowrap="true" tabindex="0">
-						${gs.getMessage("Connectivity status with NS1 API")}$[SP]
-					</td>
-					<td  tabindex="0" nowrap="true" id="NS1status"></td>
-					<td  tabindex="0" id="NS1statusDesc"> Please click the $[SP]
-						<a id="importURL" href="" target="_blank">Link</a> $[SP] to check status
-					</td>
-				</tr>  
-				<tr>
-					<td nowrap="true" tabindex="0">
 						${gs.getMessage("Last Sync Date Time")}$[SP]
 					</td>
 					<td  tabindex="0" nowrap="true" id="statusTime"></td>
-					<td  tabindex="0" id="statusValue"></td>
+					<td  tabindex="0"> Status : $[SP] <span  id="statusValue"></span>.$[SP] Check Details $[SP]
+						<a id="importURL" href="" target="_blank">here</a>
+					</td>
 				</tr>     
 				<tr>
 					<td nowrap="true" tabindex="0">
 						${gs.getMessage("Next Schedule Run")}$[SP]
 					</td>
 					<td  tabindex="0" nowrap="true" id="scheduleTime"></td>
-					<td  tabindex="0" id="scheduleValue">Schedule job will run after 15 min</td>
+					<td  tabindex="0" id="scheduleValue"></td>
 				</tr> 
 			</table>
 			<hr />
-			<button id='ldap-last-element' class="btn btn-default" name="test" onclick="onLoad();">Refresh
-			</button> $[SP]$[SP]$[SP]
+			 
 			<button id='ldap-last-element' class="btn btn-default" name="test" onclick="loadData();">Load Data
 			</button>
 		</div>
@@ -111,13 +113,13 @@ function updateNextSchedule(nextSchedule){
         <sys_created_by>manali</sys_created_by>
         <sys_created_on>2019-09-17 09:33:32</sys_created_on>
         <sys_id>0e6ca3b31b7bb30023b9631e6e4bcb93</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>112</sys_mod_count>
         <sys_name>API Monitoring</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_ui_page_0e6ca3b31b7bb30023b9631e6e4bcb93</sys_update_name>
         <sys_updated_by>manali</sys_updated_by>
-        <sys_updated_on>2019-10-01 17:02:00</sys_updated_on>
+        <sys_updated_on>2019-10-07 10:40:58</sys_updated_on>
     </sys_ui_page>
 </record_update>

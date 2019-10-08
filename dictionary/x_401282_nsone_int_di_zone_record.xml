@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="DI Zone Record" max_length="40" name="x_401282_nsone_int_di_zone_record" type="collection">
+    <element extends="sys_import_set_row" label="DI Zone Record" max_length="40" name="x_401282_nsone_int_di_zone_record" sizeclass="84358" type="collection">
         <element label="Answers" max_length="1000" name="answers" type="string"/>
         <element display="true" label="Record Domain" max_length="255" name="domain" type="string"/>
         <element label="Filters" max_length="255" name="filters" type="string"/>

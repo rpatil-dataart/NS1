@@ -3,11 +3,11 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
-        <active>false</active>
-        <add_message>false</add_message>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
@@ -17,38 +17,43 @@
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
-        <message/>
-        <name>Test Rest BR</name>
+        <message><![CDATA[<p>Getting Zone Records.</p>]]></message>
+        <name>Sync Zone Records</name>
         <order>100</order>
         <priority>100</priority>
-        <rest_method display_value="Get Zones">aeb3b640dbff330051bde4da4b961925</rest_method>
-        <rest_method_text>Get Zones</rest_method_text>
-        <rest_service display_value="NS1-Zones and Records">5983f240dbff330051bde4da4b961956</rest_service>
-        <rest_service_text>NS1-Zones and Records</rest_service_text>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Add your code here
+	var domainName = current.zone.toString();
+	
+	if(!gs.nil(domainName)){
+		
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().raiseRecordPullEventForZone(domainName);
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>smorey</sys_created_by>
-        <sys_created_on>2019-09-27 19:50:45</sys_created_on>
+        <sys_created_on>2019-10-02 08:38:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>76799117db44c81021b91ffa689619b1</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Test Rest BR</sys_name>
+        <sys_id>a32fe03c1b108c1023b9631e6e4bcbb7</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Sync Zone Records</sys_name>
         <sys_overrides/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
-        <sys_update_name>sys_script_76799117db44c81021b91ffa689619b1</sys_update_name>
+        <sys_update_name>sys_script_a32fe03c1b108c1023b9631e6e4bcbb7</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-27 20:09:11</sys_updated_on>
+        <sys_updated_on>2019-10-07 15:20:22</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=76799117db44c81021b91ffa689619b1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a32fe03c1b108c1023b9631e6e4bcbb7"/>
 </record_update>

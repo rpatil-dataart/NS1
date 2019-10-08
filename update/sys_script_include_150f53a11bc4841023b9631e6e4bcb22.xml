@@ -4,10 +4,15 @@
         <active>true</active>
         <api_name>x_401282_nsone_int.ZonesAndRecordsLibrary</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>This library contains functions for operations on zones and records</description>
         <name>ZonesAndRecordsLibrary</name>
         <script><![CDATA[var ZonesAndRecordsLibrary = Class.create();
+
 ZonesAndRecordsLibrary.prototype = {
+
+	RECORD_PULL_EVENT : "x_401282_nsone_int.zone.records.pull.req",
+	ZONE_IMPORT_SET_TBL_NAME : 'x_401282_nsone_int_di_zone',
+	RECORD_IMPORT_SET_TBL_NAME: 'x_401282_nsone_int_di_zone_record',
 
 	initialize: function() {
 
@@ -16,9 +21,12 @@ ZonesAndRecordsLibrary.prototype = {
 		this.logger.info(this.type, func, "Entering Function");
 
 		this.importSetUtil = new x_401282_nsone_int.ImportSetApiUtils();
+		this.zoneApis = new x_401282_nsone_int.NSOneApiZones();
 	},
 
+
 	/*Facade method to get zones and records*/
+
 	getAllActiveZones: function(){
 
 		/* 
@@ -29,57 +37,159 @@ ZonesAndRecordsLibrary.prototype = {
 		*/
 
 		var func = "getAllActiveZones";
-		var zones = new x_401282_nsone_int.NSOneApiZones().getAllZones();
-		var zoneImportSetTableName = 'x_401282_nsone_int_di_zone';		
+		this.logger.info(this.type, func, "Entering Function");
 
-		for(var zone in zones){
-
-			var domainName = zones[zone].zone;		
-			this.logger.info(this.type, func, "Attempting to get zone details for: " + domainName);
-
-			//Import Zone details to DNS Zone
-			var result = this.importSetUtil.processImportSet(zoneImportSetTableName, zones[zone]);			
-			this.logger.debug(this.type, func, "domainName: " + domainName + "\n Import Set API Response"+ JSON.stringify(result));
+		try{
+			var zones = this.zoneApis.getAllZones();
 			
-			//Get Zone Details
-			//var zoneDetails = new NSOneApiZones().getZoneDetails(domainName);	
-			//this.logger.debug(this.type, func, "zone details are "+ JSON.stringify(zoneDetails));
+			for(var zone in zones){
 
-			//Get all records per zone
-			//var records = zoneDetails.records;
+				var domainName = zones[zone].zone;		
+				this.logger.info(this.type, func, "Attempting to process import for zone: " + domainName);
 
-			//this._processRecords(domainName, records);
+				//Import Zone details to DNS Zone
+				var result = this.importSetUtil.processImportSet(this.ZONE_IMPORT_SET_TBL_NAME, zones[zone]);			
+				this.logger.debug(this.type, func, "domainName: " + domainName + "\n Import Set API Response"+ JSON.stringify(result));
 
-
-		}		
+				//this.raiseRecordPullEventForZone(domainName);
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+		}
 	},
 
-	_processRecords: function(domainName,records){
-		
-		var func = "_processRecords";
-		var recordImportSetTableName =  'x_401282_nsone_int_di_zone_record';
+	/* Raise Record Pull Event for Zone */
+	raiseRecordPullEventForZone: function(domainName){
 
-		for (var record in records){				
-			this.logger.info(this.type, func, "processing zone record: "+ records[record].domain + " for zone " + domainName);
+		var func = "raiseRecordPullEventForZone";
 
-			var recDomainName = records[record].domain;
-			var recType = records[record].type;
+		this.logger.info(this.type, func, "Entering Function");
 
-			var configDetails = new NSOneApiZones().getRecordConfigurationDetails(domainName, recDomainName, recType);
-			this.logger.debug(this.type, func, "record configuration details are "+ JSON.stringify(configDetails));
+		//check if queue entry is already present
+		var gr = new GlideRecord('sysevent');
+		var query =	"sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^name="+ this.RECORD_PULL_EVENT + "^queue=dns_zone_queue^parm1=" + domainName +"^processedISEMPTY";
+		gr.addEncodedQuery(query);
+		gr.query();
 
-			//add short_answers from dns details to JSON as this is needed in zone record table 
-			configDetails.short_answers = records[record].short_answers;
-
-			//Import record configuration to Zone Record				
-			var recImportResult = this.importSetUtil.processImportSet(recordImportSetTableName, configDetails);			
-			this.logger.debug(this.type, func, "Record Name : " + recDomainName + "\n Record Import Set API Response"+ JSON.stringify(recImportResult));
+		if(!gr.hasNext()){
+			gs.eventQueue(this.RECORD_PULL_EVENT, null, domainName,null);		
+		}
+		else{
+			this.logger.info(this.type, func, "Event is already available for domain "+ domainName);
 		}
 	},
 
 
+	/* Get all records for a zone */
+	getAllRecordsForZone: function(domainName){
+
+		var func = "getAllRecordsForZone";		
+		this.logger.info(this.type, func, "Entering Function");
+
+		try{
+			//Get Zone Details
+			var zoneDetails = this.zoneApis.getZoneDetails(domainName);	
+			if(zoneDetails){
+				this.logger.debug(this.type, func, "zone details are "+ JSON.stringify(zoneDetails));
+
+				//Get all records per zone
+				var records = zoneDetails.records;
+
+				this._processRecords(domainName, records);
+			}
+			else{
+				this.logger.warn(this.type, func, " unable to find zone details for zone: "+ domainName);
+			}
+
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting records for zone " + domainName + " Exception " + JSON.stringify(e));   
+		}
+
+	},
+
+	/* Process all records for transformation */
+	_processRecords: function(domainName, records){
+
+		var func = "_processRecords";
+		this.logger.info(this.type, func, "Entering Function");
+
+		try{
+			for (var record in records){				
+				this.logger.info(this.type, func, "processing zone record: "+ records[record].domain + " for zone " + domainName);
+
+				var recDomainName = records[record].domain.toString();
+				var recType = records[record].type.toString();
+				
+				//Create entry in request queue table
+				var recParms = new GlideRecord('x_401282_nsone_int_record_configuration_parameters');
+				
+				recParms.newRecord();
+				recParms.setValue('recordname', recDomainName);
+				recParms.setValue('zonename', domainName);
+				recParms.setValue('type', recType);
+				
+				recParms.insert();
+				
+
+			/*	var configDetails = this.zoneApis.getRecordConfigurationDetails(domainName, recDomainName, recType);
+
+				if(configDetails){
+
+					this.logger.debug(this.type, func, "record configuration details are "+ JSON.stringify(configDetails));
+
+					//add short_answers from dns details to JSON as this is needed in zone record table 
+					configDetails.short_answers = records[record].short_answers;
+
+					//Import record configuration to Zone Record				
+					var recImportResult = this.importSetUtil.processImportSet(this.RECORD_IMPORT_SET_TBL_NAME, configDetails);			
+					this.logger.debug(this.type, func, "Record Name : " + recDomainName + "\n Record Import Set API Response"+ JSON.stringify(recImportResult));
+				}
+				else{
+					this.logger.warn(this.type, func, "Unable to record configuration for: "+ records[record].domain + " of zone " + domainName);
+				}
+				*/
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in processing records " + JSON.stringify(e));   
+		}
+	},
+
+
+	/*	Delete record import sets and their related import set rows
+		that were created more than or equal to 3 hours ago	*/	
+	cleanupRecordImportSets: function(){
+
+		var func = "cleanupRecordImportSets";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var ic = new ImportSetCleaner(this.RECORD_IMPORT_SET_TBL_NAME);
+
+		ic.setDaysAgo(0.125);
+		ic.clean();
+
+	},
+
+	/*	Delete Zone import sets and their related import set rows
+		that were created more than or equal to 3 hours ago	*/
+	cleanupZoneImportSets: function(){
+
+		var func = "cleanupZoneImportSets";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var ic = new ImportSetCleaner(this.ZONE_IMPORT_SET_TBL_NAME);
+		ic.setDaysAgo(0.125);
+		ic.clean();
+	},
+
+
 	/* *** Tests ***
-		new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones()
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllActiveZones();
+
+		var domainName = '';
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllRecordsForZone(domainName);
 	*/
 
 	type: 'ZonesAndRecordsLibrary'
@@ -88,13 +198,13 @@ ZonesAndRecordsLibrary.prototype = {
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-22 19:04:12</sys_created_on>
         <sys_id>150f53a11bc4841023b9631e6e4bcb22</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>ZonesAndRecordsLibrary</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_150f53a11bc4841023b9631e6e4bcb22</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-30 18:33:14</sys_updated_on>
+        <sys_updated_on>2019-10-07 19:04:32</sys_updated_on>
     </sys_script_include>
 </record_update>

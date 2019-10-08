@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="DI DNS Zone" max_length="40" name="x_401282_nsone_int_di_zone" type="collection">
+    <element extends="sys_import_set_row" label="DI DNS Zone" max_length="40" name="x_401282_nsone_int_di_zone" sizeclass="20104" type="collection">
         <element label="DNS Servers" max_length="1000" name="dns_servers" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Expiry" max_length="40" name="expiry" type="longint"/>
         <element label="Hostmaster" max_length="100" name="hostmaster" type="string"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Record Configuration Parameters" max_length="40" name="x_401282_nsone_int_record_configuration_parameters" sizeclass="2933099" type="collection">
+        <element display="true" label="Record Name" mandatory="true" max_length="255" name="recordname" type="string"/>
+        <element choice="3" default="ready" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="error" value="error"/>
+                <element inactive_on_update="false" label="processed" value="processed"/>
+                <element inactive_on_update="false" label="ready" value="ready"/>
+            </choice>
+        </element>
+        <element label="Type" mandatory="true" max_length="40" name="type" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+        <element label="Zone Name" mandatory="true" max_length="255" name="zonename" type="string"/>
+    </element>
+</database>
