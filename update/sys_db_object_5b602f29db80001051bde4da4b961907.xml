@@ -32,7 +32,7 @@
         <sys_updated_by>smorey</sys_updated_by>
         <sys_updated_on>2019-09-30 11:26:44</sys_updated_on>
         <update_access>true</update_access>
-        <user_role display_value="x_401282_nsone_int.user" name="x_401282_nsone_int.user">75623600dbff330051bde4da4b961989</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

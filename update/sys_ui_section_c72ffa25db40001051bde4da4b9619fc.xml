@@ -3,98 +3,154 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_type</element>
             <position>0</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>70a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>d6f77d33db78801021b91ffa689619e7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_tier</element>
             <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>f0a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>5ef77d33db78801021b91ffa689619e7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_ttl</element>
             <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>74a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>def77d33db78801021b91ffa689619e7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>f4a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>52f77d33db78801021b91ffa689619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_zone</element>
             <position>4</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>78a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>d2f77d33db78801021b91ffa689619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fqdn</element>
             <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>f8a04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>56f77d33db78801021b91ffa689619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_record_id</element>
             <position>6</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-22 16:51:00</sys_created_on>
-            <sys_id>7ca04f65db40001051bde4da4b9619c6</sys_id>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>d6f77d33db78801021b91ffa689619e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-22 16:51:00</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>first_discovered</element>
+            <position>7</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>5af77d33db78801021b91ffa689619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_discovered</element>
+            <position>8</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>daf77d33db78801021b91ffa689619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>operational_status</element>
+            <position>9</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>5ef77d33db78801021b91ffa689619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_updated_on</element>
+            <position>10</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-05 18:06:56</sys_created_on>
+            <sys_id>def77d33db78801021b91ffa689619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_401282_nsone_int_cmdb_ci_zone_record" sys_domain="global" view="Default view">c72ffa25db40001051bde4da4b9619fc</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-05 18:06:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

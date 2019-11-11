@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="message" label="Message" language="en" table="var__m_sys_hub_flow_output_c1ac0701db81841021b91ffa689619d1">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>message</element>
+            <help/>
+            <hint/>
+            <label>Message</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_c1ac0701db81841021b91ffa689619d1</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>smorey</sys_created_by>
+            <sys_created_on>2019-11-09 21:29:17</sys_created_on>
+            <sys_id>ddac4701db81841021b91ffa6896195f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Message</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_c1ac0701db81841021b91ffa689619d1_message_en</sys_update_name>
+            <sys_updated_by>smorey</sys_updated_by>
+            <sys_updated_on>2019-11-09 21:29:17</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="rebind_timer" label="Rebind Timer" language="en" table="x_401282_nsone_int_scope_group">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>rebind_timer</element>
+            <help/>
+            <hint>Rebind timer in seconds</hint>
+            <label>Rebind Timer</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_scope_group</name>
+            <plural>Rebind Timers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 15:58:56</sys_created_on>
+            <sys_id>6c0e56e3dbe800d021b91ffa689619d2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Rebind Timer</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_documentation_x_401282_nsone_int_scope_group_rebind_timer_en</sys_update_name>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:24:34</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

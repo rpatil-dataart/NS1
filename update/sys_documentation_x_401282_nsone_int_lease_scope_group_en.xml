@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="scope_group" label="Scope Group" language="en" table="x_401282_nsone_int_lease">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>scope_group</element>
+            <help/>
+            <hint/>
+            <label>Scope Group</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_lease</name>
+            <plural>Scope Groups</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:32:51</sys_created_on>
+            <sys_id>95c5eae7db2c00d021b91ffa689619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Scope Group</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_documentation_x_401282_nsone_int_lease_scope_group_en</sys_update_name>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:32:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

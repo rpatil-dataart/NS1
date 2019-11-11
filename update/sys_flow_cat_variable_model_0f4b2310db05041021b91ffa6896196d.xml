@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_flow_cat_variable_model">
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>474b2310db05041021b91ffa6896196d</id>
+        <name>SM_CreateARecord</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-07 15:47:45</sys_created_on>
+        <sys_id>0f4b2310db05041021b91ffa6896196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SM_CreateARecord</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_flow_cat_variable_model_0f4b2310db05041021b91ffa6896196d</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:47:45</sys_updated_on>
+    </sys_flow_cat_variable_model>
+</record_update>

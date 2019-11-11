@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+  "queries": {&#13;
+    "send_warnings": ${account_queries_warnings},&#13;
+    "warning_2": ${account_queries_warning2},&#13;
+    "warning_1": ${account_queries_warning1}&#13;
+  },&#13;
+  "records": {&#13;
+    "send_warnings": ${account_records_warnings},&#13;
+    "warning_2": ${account_records_warning2},&#13;
+    "warning_1": ${account_records_warning1}&#13;
+  }&#13;
+}</content>
+        <function_name>Modify overage alerting settings</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>NS1-Account Management [ Modify overage alerting settings ]</qualified_name>
+        <rest_endpoint>https://api.nsone.net/v1/account/usagewarnings</rest_endpoint>
+        <rest_message display_value="NS1-Account Management">f16aa0a51bf444d023b9631e6e4bcbf9</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-10-29 13:25:02</sys_created_on>
+        <sys_id>705430a91bf444d023b9631e6e4bcb74</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Modify overage alerting settings</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_705430a91bf444d023b9631e6e4bcb74</sys_update_name>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-10-29 13:29:42</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

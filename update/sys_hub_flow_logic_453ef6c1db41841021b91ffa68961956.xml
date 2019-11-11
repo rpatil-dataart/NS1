@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">3c9af1b4db05441021b91ffa689619c6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Create Host record">7a16b0601bc1041023b9631e6e4bcb04</flow>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>2.5.2.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>9141901f-0fee-4a33-a658-af7a6c8d2749</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 20:26:11</sys_created_on>
+        <sys_id>453ef6c1db41841021b91ffa68961956</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_453ef6c1db41841021b91ffa68961956</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 20:26:14</sys_updated_on>
+        <ui_id>705ac512-0329-4d5c-9103-1d6b49f750ba</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=453ef6c1db41841021b91ffa68961956"/>
+</record_update>

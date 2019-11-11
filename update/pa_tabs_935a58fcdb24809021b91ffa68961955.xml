@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="INSERT_OR_UPDATE">
+        <canvas_page display_value="PA New Tab">575a58fcdb24809021b91ffa68961953</canvas_page>
+        <name>New Tab</name>
+        <page display_value="PA New Tab">d75a58fcdb24809021b91ffa68961952</page>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-10-14 17:20:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>935a58fcdb24809021b91ffa68961955</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>pa_tabs_935a58fcdb24809021b91ffa68961955</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-14 17:20:29</sys_updated_on>
+    </pa_tabs>
+</record_update>

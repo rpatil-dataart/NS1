@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get a Reservation Details">e723e395db4d841021b91ffa68961997</action>
+        <cid>44538c2d-be23-4d13-8c2c-e3e945682709</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Get a Reservation Details</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:24</sys_created_on>
+        <sys_id>56e36f95db4d841021b91ffa6896193d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Get a Reservation Details</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_step_instance_56e36f95db4d841021b91ffa6896193d</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:51:59</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=56e36f95db4d841021b91ffa6896193d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>1ee36f95db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>5ae36f95db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <value>https://demo.nsone.net/v1</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>96e36f95db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:51:59</sys_created_on>
+        <sys_id>cc84e3d5db4d841021b91ffa689619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:51:59</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>dee36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>56e36f95db4d841021b91ffa6896193d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>dee36f95db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <value>21a8aef6db70c8d021b91ffa6896194e</value>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=56e36f95db4d841021b91ffa6896193d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>d6e36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>16e36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>52e36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>9ae36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>9ae36f95db4d841021b91ffa68961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"type":"ADV_NV","value":[{"name":"X-NSONE-Key","value":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].sn_auth_token}}","attributes":{"omit_if_empty":false}}]}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:51:59</sys_created_on>
+        <sys_id>4c84e3d5db4d841021b91ffa689619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:51:59</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resource_path</field>
+        <id>56e36f95db4d841021b91ffa6896193d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:49:25</sys_created_on>
+        <sys_id>5ee36f95db4d841021b91ffa68961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:49:25</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>/dhcp/reservation/{{action.reservation_id}}</value>
+    </sys_element_mapping>
+</record_update>

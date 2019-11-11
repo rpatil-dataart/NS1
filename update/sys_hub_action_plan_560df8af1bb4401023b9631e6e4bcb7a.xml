@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_plan">
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Delete Host Record">728b386f1bb4401023b9631e6e4bcbaf</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"560df8af1bb4401023b9631e6e4bcb7a","name":"plan"}}</plan>
+        <snapshot>b88939b3db78801021b91ffa6896190b</snapshot>
+        <sys_class_name>sys_hub_action_plan</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 19:10:57</sys_created_on>
+        <sys_id>560df8af1bb4401023b9631e6e4bcb7a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>728b386f1bb4401023b9631e6e4bcbaf</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_plan_560df8af1bb4401023b9631e6e4bcb7a</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-05 18:13:43</sys_updated_on>
+    </sys_hub_action_plan>
+</record_update>

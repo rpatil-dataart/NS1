@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_parameters">
+    <sys_soap_message_parameters action="INSERT_OR_UPDATE">
+        <name>records</name>
+        <soap_function display_value="insertMultiple">64085909db20049021b91ffa689619de</soap_function>
+        <sys_class_name>sys_soap_message_parameters</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-15 20:38:37</sys_created_on>
+        <sys_id>2b415a05dbe0049021b91ffa68961947</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>records</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_soap_message_parameters_2b415a05dbe0049021b91ffa68961947</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-16 17:51:12</sys_updated_on>
+        <type>string</type>
+        <value>"&lt;record&gt;&lt;nx_ttl&gt;3600&lt;/nx_ttl&gt;&lt;retry&gt;7200&lt;/retry&gt;&lt;dnssec&gt;false&lt;/dnssec&gt;&lt;zone&gt;1111111111.com&lt;/zone&gt;	&lt;network_pools&gt;p08&lt;/network_pools&gt;
+&lt;serial&gt;1570812006&lt;/serial&gt;&lt;primary&gt;	&lt;enabled&gt;false&lt;/enabled&gt;&lt;/primary&gt;&lt;refresh&gt;43200&lt;/refresh&gt;&lt;expiry&gt;1209600&lt;/expiry&gt;	&lt;dns_servers&gt;dns1.p08.nsone.net&lt;/dns_servers&gt;
+	&lt;dns_servers&gt;dns2.p08.nsone.net&lt;/dns_servers&gt;
+	&lt;dns_servers&gt;dns3.p08.nsone.net&lt;/dns_servers&gt;
+	&lt;dns_servers&gt;dns4.p08.nsone.net&lt;/dns_servers&gt;
+&lt;meta/&gt;&lt;link/&gt;&lt;primary_master&gt;dns1.p08.nsone.net&lt;/primary_master&gt;&lt;ttl&gt;3600&lt;/ttl&gt;&lt;id&gt;5da09c87bbccf90001984c59&lt;/id&gt;&lt;hostmaster&gt;hostmaster@nsone.net&lt;/hostmaster&gt;	&lt;networks&gt;0&lt;/networks&gt;
+&lt;pool&gt;p08&lt;/pool&gt;&lt;/record&gt;"</value>
+    </sys_soap_message_parameters>
+</record_update>

@@ -5,8 +5,13 @@
         <order>100</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 
+
+	if(action =="insert"){		
+		target.first_discovered = new GlideDateTime().getDisplayValue();
+	}
+
 	log.info("Transforming short_answers");
-/*
+	/*
 	//Convert Short description from array to comma seperated string
 	var shortAnswers = source.short_answers.substring(source.short_answers.indexOf('[') + 1,  source.short_answers.indexOf(']'));	
 
@@ -19,7 +24,7 @@
 		for(var ans in shortAnswersArray){
 
 			var shortAnsGr = new GlideRecord('x_401282_nsone_int_short_answers');
-			
+
 			if(shortAnsGr.get('u_short_answer', shortAnswersArray[ans])){
 				targetShortAns.push(shortAnsGr.getValue('sys_id'));
 			}
@@ -27,7 +32,7 @@
 				shortAnsGr.initialize();
 				shortAnsGr.setValue('u_short_answer', shortAnswersArray[ans]);
 				var ansSysId = shortAnsGr.insert();
-				
+
 				targetShortAns.push(ansSysId);
 			}
 		}
@@ -40,14 +45,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-26 14:30:02</sys_created_on>
         <sys_id>a4d54ffedb04881021b91ffa689619ae</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>onBefore</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_transform_script_a4d54ffedb04881021b91ffa689619ae</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-27 10:42:55</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:18:39</sys_updated_on>
         <when>onBefore</when>
     </sys_transform_script>
 </record_update>

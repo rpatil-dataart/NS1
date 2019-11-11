@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>create_record</internal_name>
+        <label_cache>[{"name":"{{action.zone}}","label":"action➛zone","type":"action","ref":""},{"name":"{{action.domain}}","label":"action➛domain","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛type","type":"action","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].sn_auth_token}}","label":"Create Recordstep➛➛Credential Value","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].status_code}}","label":"step➛Create Record➛Status Code","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].response_body}}","label":"step➛Create Record➛Response Body","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].error_message}}","label":"step➛Create Record➛Error Message","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].}}","label":"step➛Processing Script ➛","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].s}}","label":"step➛Processing Script ➛s","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].st}}","label":"step➛Processing Script ➛st","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].sta}}","label":"step➛Processing Script ➛sta","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].stat}}","label":"step➛Processing Script ➛stat","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].statu}}","label":"step➛Processing Script ➛statu","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].status}}","label":"step➛Processing Script ➛status","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].r}}","label":"step➛Processing Script ➛r","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].re}}","label":"step➛Processing Script ➛re","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].rec}}","label":"step➛Processing Script ➛rec","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].reco}}","label":"step➛Processing Script ➛reco","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].recor}}","label":"step➛Processing Script ➛recor","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].record}}","label":"step➛Processing Script ➛record","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].e}}","label":"step➛Processing Script ➛e","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].er}}","label":"step➛Processing Script ➛er","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].err}}","label":"step➛Processing Script ➛err","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].erro}}","label":"step➛Processing Script ➛erro","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error}}","label":"step➛Processing Script ➛error","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_}}","label":"step➛Processing Script ➛error_","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_m}}","label":"step➛Processing Script ➛error_m","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_me}}","label":"step➛Processing Script ➛error_me","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_mes}}","label":"step➛Processing Script ➛error_mes","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_mess}}","label":"step➛Processing Script ➛error_mess","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_messa}}","label":"step➛Processing Script ➛error_messa","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_messag}}","label":"step➛Processing Script ➛error_messag","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_message}}","label":"step➛Processing Script ➛error_message","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Create record</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Create Host Record">8124cda31bf4401023b9631e6e4bcb9e</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 20:21:19</sys_created_on>
+        <sys_id>9d2d496b1bf4401023b9631e6e4bcb67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create record</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_9d2d496b1bf4401023b9631e6e4bcb67</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 20:21:19</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=9d2d496b1bf4401023b9631e6e4bcb67"/>
+    <sys_element_mapping action="delete_multiple" query="id=9d2d496b1bf4401023b9631e6e4bcb67"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>9d2d496b1bf4401023b9631e6e4bcb67</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 20:21:21</sys_created_on>
+        <sys_id>712d496b1bf4401023b9631e6e4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 20:21:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9d2d496b1bf4401023b9631e6e4bcb67</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>9d2d496b1bf4401023b9631e6e4bcb67</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 20:21:21</sys_created_on>
+        <sys_id>352d496b1bf4401023b9631e6e4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 20:21:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9d2d496b1bf4401023b9631e6e4bcb67</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>9d2d496b1bf4401023b9631e6e4bcb67</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 20:21:21</sys_created_on>
+        <sys_id>f52d496b1bf4401023b9631e6e4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 20:21:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9d2d496b1bf4401023b9631e6e4bcb67</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].status}}</value>
+    </sys_element_mapping>
+</record_update>

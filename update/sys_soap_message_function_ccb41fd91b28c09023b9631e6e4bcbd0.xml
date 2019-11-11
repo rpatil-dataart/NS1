@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x="http://www.service-now.com/x_401282_nsone_int_di_zone_record">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <x:insert>
+         <!--Optional:-->
+         <answers>${insert.answers}</answers>
+         <!--Optional:-->
+         <domain>${insert.domain}</domain>
+         <!--Optional:-->
+         <filters>${insert.filters}</filters>
+         <!--Optional:-->
+         <id>${insert.id}</id>
+         <!--Optional:-->
+         <import_set_run>${insert.import_set_run}</import_set_run>
+         <!--Optional:-->
+         <meta>${insert.meta}</meta>
+         <!--Optional:-->
+         <networks>${insert.networks}</networks>
+         <!--Optional:-->
+         <regions>${insert.regions}</regions>
+         <!--Optional:-->
+         <short_answers>${insert.short_answers}</short_answers>
+         <!--Optional:-->
+         <template_import_log>${insert.template_import_log}</template_import_log>
+         <!--Optional:-->
+         <tier>${insert.tier}</tier>
+         <!--Optional:-->
+         <ttl>${insert.ttl}</ttl>
+         <!--Optional:-->
+         <type>${insert.type}</type>
+         <!--Optional:-->
+         <use_client_subnet>${insert.use_client_subnet}</use_client_subnet>
+         <!--Optional:-->
+         <zone>${insert.zone}</zone>
+      </x:insert>
+   </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>insert</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>RecordImportSet [ insert ]</qualified_name>
+        <soap_action>http://www.service-now.com/x_401282_nsone_int_di_zone_record/insert</soap_action>
+        <soap_endpoint>https://ven03169.service-now.com/x_401282_nsone_int_di_zone_record.do?SOAP</soap_endpoint>
+        <soap_message display_value="RecordImportSet">4f645bd91b28c09023b9631e6e4bcbda</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-16 20:11:30</sys_created_on>
+        <sys_id>ccb41fd91b28c09023b9631e6e4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>insert</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_soap_message_function_ccb41fd91b28c09023b9631e6e4bcbd0</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-16 20:11:30</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

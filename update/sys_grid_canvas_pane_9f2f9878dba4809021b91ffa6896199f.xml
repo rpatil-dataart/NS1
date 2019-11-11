@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA New Tab">575a58fcdb24809021b91ffa68961953</grid_canvas>
+        <height>10</height>
+        <portal_widget display_value="Created 2019-10-14 10:41:30">532f9878dba4809021b91ffa6896199e</portal_widget>
+        <posx>6</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-10-14 17:41:30</sys_created_on>
+        <sys_id>9f2f9878dba4809021b91ffa6896199f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>575a58fcdb24809021b91ffa68961953</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_9f2f9878dba4809021b91ffa6896199f</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-14 17:47:21</sys_updated_on>
+        <width>6</width>
+    </sys_grid_canvas_pane>
+</record_update>

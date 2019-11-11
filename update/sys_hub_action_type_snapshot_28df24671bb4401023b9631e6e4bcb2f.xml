@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>list_host_records</internal_name>
+        <label_cache>[{"name":"{{action.zone}}","label":"action➛Zone","type":"action","ref":""},{"name":"{{action.domain}}","label":"action➛Domain","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{step[064bf4c7-f825-4c5a-9bc1-a012cec0fd13].sn_auth_token}}","label":"step➛List Host Records ➛Credential Value","type":"step","ref":""},{"name":"{{step[064bf4c7-f825-4c5a-9bc1-a012cec0fd13].status_code}}","label":"step➛List Host Records ➛Status Code","type":"step","ref":""},{"name":"{{step[064bf4c7-f825-4c5a-9bc1-a012cec0fd13].response_body}}","label":"step➛List Host Records ➛Response Body","type":"step","ref":""},{"name":"{{step[064bf4c7-f825-4c5a-9bc1-a012cec0fd13].error_message}}","label":"step➛List Host Records ➛Error Message","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].s}}","label":"step➛Post Processing➛s","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].st}}","label":"step➛Post Processing➛st","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].sta}}","label":"step➛Post Processing➛sta","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].stat}}","label":"step➛Post Processing➛stat","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].statu}}","label":"step➛Post Processing➛statu","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].records}}","label":"step➛Post Processing➛records","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>List Host Records</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="List Host Records">dbc1902bdbf4401021b91ffa68961983</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 18:13:12</sys_created_on>
+        <sys_id>28df24671bb4401023b9631e6e4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List Host Records</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_28df24671bb4401023b9631e6e4bcb2f</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 18:13:12</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=28df24671bb4401023b9631e6e4bcb2f"/>
+    <sys_element_mapping action="delete_multiple" query="id=28df24671bb4401023b9631e6e4bcb2f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>28df24671bb4401023b9631e6e4bcb2f</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 18:13:14</sys_created_on>
+        <sys_id>81df24671bb4401023b9631e6e4bcbab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 18:13:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_28df24671bb4401023b9631e6e4bcb2f</table>
+        <value>{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>28df24671bb4401023b9631e6e4bcb2f</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 18:13:14</sys_created_on>
+        <sys_id>45df24671bb4401023b9631e6e4bcbab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 18:13:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_28df24671bb4401023b9631e6e4bcb2f</table>
+        <value>{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>28df24671bb4401023b9631e6e4bcb2f</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-04 18:13:14</sys_created_on>
+        <sys_id>09df24671bb4401023b9631e6e4bcbab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-04 18:13:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_28df24671bb4401023b9631e6e4bcb2f</table>
+        <value>{{step[537b0ff7-b06e-48bd-947f-0fea5c65077c].status}}</value>
+    </sys_element_mapping>
+</record_update>

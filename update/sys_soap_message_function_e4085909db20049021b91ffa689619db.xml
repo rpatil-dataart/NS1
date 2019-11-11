@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x="http://www.service-now.com/x_401282_nsone_int_di_zone">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <x:getKeys>
+         <!--Optional:-->
+         <dns_servers>${getKeys.dns_servers}</dns_servers>
+         <!--Optional:-->
+         <expiry>${getKeys.expiry}</expiry>
+         <!--Optional:-->
+         <hostmaster>${getKeys.hostmaster}</hostmaster>
+         <!--Optional:-->
+         <id>${getKeys.id}</id>
+         <!--Optional:-->
+         <import_set_run>${getKeys.import_set_run}</import_set_run>
+         <!--Optional:-->
+         <meta>${getKeys.meta}</meta>
+         <!--Optional:-->
+         <network_pools>${getKeys.network_pools}</network_pools>
+         <!--Optional:-->
+         <networks>${getKeys.networks}</networks>
+         <!--Optional:-->
+         <nx_ttl>${getKeys.nx_ttl}</nx_ttl>
+         <!--Optional:-->
+         <primary>${getKeys.primary}</primary>
+         <!--Optional:-->
+         <records>${getKeys.records}</records>
+         <!--Optional:-->
+         <refresh>${getKeys.refresh}</refresh>
+         <!--Optional:-->
+         <retry>${getKeys.retry}</retry>
+         <!--Optional:-->
+         <serial>${getKeys.serial}</serial>
+         <!--Optional:-->
+         <sys_class_name>${getKeys.sys_class_name}</sys_class_name>
+         <!--Optional:-->
+         <sys_created_by>${getKeys.sys_created_by}</sys_created_by>
+         <!--Optional:-->
+         <sys_created_on>${getKeys.sys_created_on}</sys_created_on>
+         <!--Optional:-->
+         <sys_import_row>${getKeys.sys_import_row}</sys_import_row>
+         <!--Optional:-->
+         <sys_import_set>${getKeys.sys_import_set}</sys_import_set>
+         <!--Optional:-->
+         <sys_import_state>${getKeys.sys_import_state}</sys_import_state>
+         <!--Optional:-->
+         <sys_import_state_comment>${getKeys.sys_import_state_comment}</sys_import_state_comment>
+         <!--Optional:-->
+         <sys_mod_count>${getKeys.sys_mod_count}</sys_mod_count>
+         <!--Optional:-->
+         <sys_row_error>${getKeys.sys_row_error}</sys_row_error>
+         <!--Optional:-->
+         <sys_target_sys_id>${getKeys.sys_target_sys_id}</sys_target_sys_id>
+         <!--Optional:-->
+         <sys_target_table>${getKeys.sys_target_table}</sys_target_table>
+         <!--Optional:-->
+         <sys_transform_map>${getKeys.sys_transform_map}</sys_transform_map>
+         <!--Optional:-->
+         <sys_updated_by>${getKeys.sys_updated_by}</sys_updated_by>
+         <!--Optional:-->
+         <sys_updated_on>${getKeys.sys_updated_on}</sys_updated_on>
+         <!--Optional:-->
+         <template_import_log>${getKeys.template_import_log}</template_import_log>
+         <!--Optional:-->
+         <ttl>${getKeys.ttl}</ttl>
+         <!--Optional:-->
+         <zone>${getKeys.zone}</zone>
+         <!--Optional:-->
+         <__use_view>${getKeys.__use_view}</__use_view>
+         <!--Optional:-->
+         <__encoded_query>${getKeys.__encoded_query}</__encoded_query>
+         <!--Optional:-->
+         <__limit>${getKeys.__limit}</__limit>
+         <!--Optional:-->
+         <__first_row>${getKeys.__first_row}</__first_row>
+         <!--Optional:-->
+         <__last_row>${getKeys.__last_row}</__last_row>
+      </x:getKeys>
+   </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>getKeys</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>ZoneImportSet [ getKeys ]</qualified_name>
+        <soap_action>http://www.service-now.com/x_401282_nsone_int_di_zone/getKeys</soap_action>
+        <soap_endpoint>https://ven03169.service-now.com/x_401282_nsone_int_di_zone.do?SOAP</soap_endpoint>
+        <soap_message display_value="ZoneImportSet">9fb79509db20049021b91ffa689619f6</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-15 16:28:17</sys_created_on>
+        <sys_id>e4085909db20049021b91ffa689619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getKeys</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_soap_message_function_e4085909db20049021b91ffa689619db</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:28:17</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

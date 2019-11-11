@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>8124cda31bf4401023b9631e6e4bcb9e</copied_from>
+        <copied_from_name>Create Host Record</copied_from_name>
+        <description/>
+        <internal_name>get_a_host_record_configurations</internal_name>
+        <label_cache>[{"name":"{{action.zone}}","label":"action➛zone","type":"action","ref":""},{"name":"{{action.domain}}","label":"action➛domain","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛type","type":"action","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].sn_auth_token}}","label":"Create a Recordstep➛➛Credential Value","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].status_code}}","label":"step➛Create a Record➛Status Code","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].error_message}}","label":"step➛Create a Record➛Error Message","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].}}","label":"step➛Processing Script ➛","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].d}}","label":"step➛Processing Script ➛d","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].do}}","label":"step➛Processing Script ➛do","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].dom}}","label":"step➛Processing Script ➛dom","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].doma}}","label":"step➛Processing Script ➛doma","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].domai}}","label":"step➛Processing Script ➛domai","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].domain}}","label":"step➛Processing Script ➛domain","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].zone}}","label":"step➛Processing Script ➛zone","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].type}}","label":"step➛Processing Script ➛type","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].answers}}","label":"step➛Processing Script ➛answers","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_message}}","label":"step➛Processing Script ➛error_message","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].status}}","label":"step➛Processing Script ➛status","type":"step","ref":""},{"name":"{{step[179385c9-1b28-4826-8a82-8f119b94ba00].response_body}}","label":"step➛Create a Record➛Response Body","type":"step","ref":""},{"name":"{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].answer}}","label":"step➛Processing Script ➛answer","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>3573402ddb8d841021b91ffa68961998</latest_snapshot>
+        <master_snapshot>661fff19db8d841021b91ffa689619dd</master_snapshot>
+        <name>Get a Host Record Configurations</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:20</sys_created_on>
+        <sys_id>8fae7b19db8d841021b91ffa689619f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get a Host Record Configurations</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_8fae7b19db8d841021b91ffa689619f7</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 20:07:19</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=8fae7b19db8d841021b91ffa689619f7"/>
+    <sys_element_mapping action="delete_multiple" query="id=8fae7b19db8d841021b91ffa689619f7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>answer</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 20:07:17</sys_created_on>
+        <sys_id>b973402ddb8d841021b91ffa6896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 20:07:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].answer}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>domain</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>7faebb19db8d841021b91ffa689619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>f7aebb19db8d841021b91ffa689619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>33aebb19db8d841021b91ffa689619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].answers}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>b7aebb19db8d841021b91ffa689619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>type</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>f3aebb19db8d841021b91ffa689619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].type}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>zone</field>
+        <id>8fae7b19db8d841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 19:46:23</sys_created_on>
+        <sys_id>bbaebb19db8d841021b91ffa689619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:46:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8fae7b19db8d841021b91ffa689619f7</table>
+        <value>{{step[9ab517c7-5050-4650-8dcb-05ba8ec088b7].zone}}</value>
+    </sys_element_mapping>
+</record_update>

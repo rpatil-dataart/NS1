@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_401282_nsone_int.api.available.tokens</name>
+        <read_roles/>
+        <suffix>api.available.tokens</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-20 13:59:42</sys_created_on>
+        <sys_id>acc5aaa2dba4089021b91ffa68961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_401282_nsone_int.api.available.tokens</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_properties_acc5aaa2dba4089021b91ffa68961928</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-20 13:59:42</sys_updated_on>
+        <type>integer</type>
+        <value/>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=acc5aaa2dba4089021b91ffa68961928"/>
+</record_update>

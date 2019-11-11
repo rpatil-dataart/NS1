@@ -13,6 +13,12 @@ ZonesAndRecordsLibrary.prototype = {
 	RECORD_PULL_EVENT : "x_401282_nsone_int.zone.records.pull.req",
 	ZONE_IMPORT_SET_TBL_NAME : 'x_401282_nsone_int_di_zone',
 	RECORD_IMPORT_SET_TBL_NAME: 'x_401282_nsone_int_di_zone_record',
+	ZONE_TABLE_NAME: 'x_401282_nsone_int_cmdb_ci_dns_zone',
+	RECORD_TABLE_NAME: 'x_401282_nsone_int_cmdb_ci_zone_record',
+	RECORD_CONFIG_PARM_TABLE_NAME:'x_401282_nsone_int_record_configuration_parameters',
+	AVAILABLE_LIMIT: 900,
+
+	OPERATIONAL_STATUS:{RETIRED:6},
 
 	initialize: function() {
 
@@ -22,41 +28,141 @@ ZonesAndRecordsLibrary.prototype = {
 
 		this.importSetUtil = new x_401282_nsone_int.ImportSetApiUtils();
 		this.zoneApis = new x_401282_nsone_int.NSOneApiZones();
+		this.apiQueue = new x_401282_nsone_int.APIRequestQueueHelper();
 	},
 
+	/* *** Queue Entries *** */
 
-	/*Facade method to get zones and records*/
+	createAllZonesRequestQueueEntry : function(){
+
+		this.apiQueue.createApiRequestQueueEntry('GetAllActiveZones', null);
+	},
+
+	createZoneDetailsRequestQueueEntry : function(zoneName){
+
+		this.apiQueue.createApiRequestQueueEntry('GetZoneDetails', {'zoneName': zoneName});
+	},
+
+	createRecordConfigRequestQueueEntry : function(zoneName, recordName, type){
+
+		var recordData = {
+			"zoneName": zoneName,
+			"recordName":recordName,
+			"type":type
+		};
+
+		this.apiQueue.createApiRequestQueueEntry('GetRecordConfig', recordData);
+	},
+
+	/* *** Queue Entries End *** */
+
+	/*Method to get zones and records*/
 
 	getAllActiveZones: function(){
-
-		/* 
-		1. Get All Active Zones
-		2. Foreach zone get details
-		3. Call Import set API
-		4. Transform the Data
-		*/
 
 		var func = "getAllActiveZones";
 		this.logger.info(this.type, func, "Entering Function");
 
+		//var statusCode = -1;
+
 		try{
 			var zones = this.zoneApis.getAllZones();
-			
-			for(var zone in zones){
 
-				var domainName = zones[zone].zone;		
-				this.logger.info(this.type, func, "Attempting to process import for zone: " + domainName);
-
-				//Import Zone details to DNS Zone
-				var result = this.importSetUtil.processImportSet(this.ZONE_IMPORT_SET_TBL_NAME, zones[zone]);			
-				this.logger.debug(this.type, func, "domainName: " + domainName + "\n Import Set API Response"+ JSON.stringify(result));
-
-				//this.raiseRecordPullEventForZone(domainName);
+			if(zones){
+				var result = this.zoneApis.insertAllActiveZones(zones);
+				//statusCode = this.zoneApis.result.statusCode;
 			}
+
 		}
 		catch(e){
 			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
 		}
+		finally{			
+			return this.zoneApis.result;
+		}
+	},
+
+
+	insertRecordDetails : function(domainName, recDomainName, recType){
+
+		try{
+
+			var configDetails = this.zoneApis.getRecordConfigurationDetails(domainName, recDomainName, recType);
+			var recordData =  JSON.stringify(configDetails);
+
+			recordData = JSON.parse(recordData);	
+			var grUpdateRecord = new GlideRecord(this.RECORD_TABLE_NAME);
+			grUpdateRecord.addEncodedQuery('u_record_id='+recordData["id"]);
+			//	grUpdateRecord.addEncodedQuery('u_record_id='+recordData["id"]+'^fqdn='+recordData["zone"]+'^u_type='+recordData["type"]);
+			grUpdateRecord.query();
+			while(grUpdateRecord.next()){
+				grUpdateRecord.use_client_subnet = recordData["use_client_subnet"];					
+
+				if(recordData["networks"]){
+					grUpdateRecord.networks = recordData["networks"].toString();
+				}
+
+				if(recordData["feeds"]){
+					grUpdateRecord.feeds = recordData["feeds"].toString();
+				}
+				if(recordData["meta"]){
+					grUpdateRecord.meta = JSON.stringify(recordData["meta"], null, "\t");
+				}
+				if(recordData["regions"]){
+					grUpdateRecord.regions = JSON.stringify(recordData["regions"], null, "\t");
+				}
+				if(recordData["answers"]){
+					var answers=JSON.stringify(recordData["answers"], null, "\t");
+					//	grUpdateRecord.answers =answers.substring(answers.indexOf('[') + 1,  answers.indexOf(']'));  	
+					grUpdateRecord.answers =answers;  	
+				}
+				if(recordData["filter"]){
+					grUpdateRecord.filter = recordData["filter"].toString();
+				}
+				grUpdateRecord.update();
+			}
+
+
+			//Call import set api				
+			//	var result = this.zoneApis.insertAllRecords(configDetails);
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting record configuration details. Exception " + JSON.stringify(e));   
+		}
+		finally{			
+			return this.zoneApis.result;
+		}
+
+	},
+
+
+	/* get zone details */
+	insertRecords: function(domainName){
+		var func = "insertRecords";		
+		this.logger.info(this.type, func, "Entering Function");
+
+		try{
+			//Get Zone Details
+			var zoneDetails = this.zoneApis.getZoneDetails(domainName);	
+			if(zoneDetails && zoneDetails.records){
+
+				var records = zoneDetails.records;
+				//set zone name to each record;
+				for (var record in records){					
+					records[record].zone = domainName;
+				}
+
+				//Call import set api				
+				var result = this.zoneApis.insertAllRecords(records);
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting records for zone " + domainName + " Exception " + JSON.stringify(e));   
+		}
+		finally{			
+			return this.zoneApis.result;
+		}
+
 	},
 
 	/* Raise Record Pull Event for Zone */
@@ -80,6 +186,21 @@ ZonesAndRecordsLibrary.prototype = {
 		}
 	},
 
+	getIPRelatedRecords: function(records){
+
+		return records.filter(function(record){
+			return record.type == 'A' || record.type == 'AAAA' || record.type == 'PTR';
+		}
+							 );
+	},	
+
+	isReverseRecordPresent: function(records, recordNameToMatch){
+
+		return records.filter(function(record){
+			return  record.type == 'PTR' && record.domain == recordNameToMatch;
+		}
+							 );
+	},	
 
 	/* Get all records for a zone */
 	getAllRecordsForZone: function(domainName){
@@ -109,6 +230,8 @@ ZonesAndRecordsLibrary.prototype = {
 
 	},
 
+
+
 	/* Process all records for transformation */
 	_processRecords: function(domainName, records){
 
@@ -121,19 +244,34 @@ ZonesAndRecordsLibrary.prototype = {
 
 				var recDomainName = records[record].domain.toString();
 				var recType = records[record].type.toString();
-				
-				//Create entry in request queue table
-				var recParms = new GlideRecord('x_401282_nsone_int_record_configuration_parameters');
-				
-				recParms.newRecord();
-				recParms.setValue('recordname', recDomainName);
-				recParms.setValue('zonename', domainName);
-				recParms.setValue('type', recType);
-				
-				recParms.insert();
-				
 
-			/*	var configDetails = this.zoneApis.getRecordConfigurationDetails(domainName, recDomainName, recType);
+				var recordData = {
+					"zoneName": domainName,
+					"recordName":recDomainName,
+					"type":recType
+				};
+
+				this.apiQueue.createZoneDetailsRequestQueueEntry('GetAllActiveZones', recordData);
+
+				/*
+				//Create entry in request queue table
+				var recParms = new GlideRecord(this.RECORD_CONFIG_PARM_TABLE_NAME);				
+				recParms.addQuery("recordname="+recDomainName+"^type="+recType+"^zonename="+domainName+"^state=ready");
+				recParms.query();
+
+				if(!recParms.hasNext()){
+
+
+					recParms.setValue('recordname', recDomainName);
+					recParms.setValue('zonename', domainName);
+					recParms.setValue('type', recType);
+
+
+				}
+				*/
+
+
+				/*	var configDetails = this.zoneApis.getRecordConfigurationDetails(domainName, recDomainName, recType);
 
 				if(configDetails){
 
@@ -157,6 +295,7 @@ ZonesAndRecordsLibrary.prototype = {
 		}
 	},
 
+	/* *** CLEANUP CODE  *** */
 
 	/*	Delete record import sets and their related import set rows
 		that were created more than or equal to 3 hours ago	*/	
@@ -165,7 +304,7 @@ ZonesAndRecordsLibrary.prototype = {
 		var func = "cleanupRecordImportSets";
 		this.logger.info(this.type, func, "Entering Function");
 
-		var ic = new ImportSetCleaner(this.RECORD_IMPORT_SET_TBL_NAME);
+		var ic = new global.ImportSetCleaner(this.RECORD_IMPORT_SET_TBL_NAME);
 
 		ic.setDaysAgo(0.125);
 		ic.clean();
@@ -179,10 +318,53 @@ ZonesAndRecordsLibrary.prototype = {
 		var func = "cleanupZoneImportSets";
 		this.logger.info(this.type, func, "Entering Function");
 
-		var ic = new ImportSetCleaner(this.ZONE_IMPORT_SET_TBL_NAME);
+		var ic = new global.ImportSetCleaner(this.ZONE_IMPORT_SET_TBL_NAME);
 		ic.setDaysAgo(0.125);
 		ic.clean();
 	},
+
+	/* *** CLEANUP CODE ENDS *** */
+
+	/* *** CI RETIREMENT CODE *** */
+
+	retireOldZones: function(daysAgo){
+		var ago = daysAgo || 1;
+		var query = 'operational_status!=6^last_discoveredRELATIVELE@dayofweek@ago@' + ago;
+		this.retireCI(this.ZONE_TABLE_NAME, query);		
+	},
+
+	retireChildRecordsOfZone: function(zoneSysId){
+
+		var func = "retireChildRecordsOfZone";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var query = 'u_zone=' + zoneSysId;		
+		this.retireCI(this.RECORD_TABLE_NAME, query);
+	},
+
+	retireOldRecords: function(daysAgo){
+		var ago = daysAgo || 1;
+		var query = 'operational_status!=6^last_discoveredRELATIVELE@dayofweek@ago@' + ago;		
+		this.retireCI(this.RECORD_TABLE_NAME, query);		
+	},
+
+	retireCI: function(tableName, query){
+
+		var func = "retireZones";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var daysAgo = gs.getProperty('x_401282_nsone_int.ci.retirement.period', 1);
+
+		var zone = new GlideRecord(tableName);
+		zone.addEncodedQuery(query);
+		zone.setValue('operational_status',	this.OPERATIONAL_STATUS.RETIRED);
+		zone.updateMultiple();		
+
+	},
+
+	/* *** CI RETIREMENT CODE ENDS *** */
+
+
 
 
 	/* *** Tests ***
@@ -190,6 +372,12 @@ ZonesAndRecordsLibrary.prototype = {
 
 		var domainName = '';
 		new x_401282_nsone_int.ZonesAndRecordsLibrary().getAllRecordsForZone(domainName);
+
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().retireOldZones(1);
+
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().retireOldRecords(1);
+
+		new x_401282_nsone_int.ZonesAndRecordsLibrary().retireChildRecordsOfZone('3D013298551bd8cc1023b9631e6e4bcb77');
 	*/
 
 	type: 'ZonesAndRecordsLibrary'
@@ -198,13 +386,13 @@ ZonesAndRecordsLibrary.prototype = {
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-22 19:04:12</sys_created_on>
         <sys_id>150f53a11bc4841023b9631e6e4bcb22</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>136</sys_mod_count>
         <sys_name>ZonesAndRecordsLibrary</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_150f53a11bc4841023b9631e6e4bcb22</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-10-07 19:04:32</sys_updated_on>
+        <sys_updated_on>2019-11-08 19:44:08</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Network" max_length="40" name="x_401282_nsone_int_network" type="collection">
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Free addresses v6" max_length="40" name="free_addresses_v6" type="string"/>
+        <element label="Free Adress v4" max_length="40" name="free_adress_v4" type="string"/>
+        <element label="kvps" max_length="8000" name="kvps" type="string"/>
+        <element label="Num Prefixes v4" max_length="40" name="num_prefixes_v4" type="string"/>
+        <element label="Num Prefixes v6" max_length="40" name="num_prefixes_v6" type="string"/>
+        <element label="rt" max_length="40" name="rt" type="string"/>
+        <element label="Subnets" max_length="32" name="subnets" reference="x_401282_nsone_int_ip_address" type="reference"/>
+        <element label="Tags" max_length="8000" name="tags" type="string"/>
+        <element label="Total addresses v6" max_length="40" name="total_addresses_v6" type="string"/>
+        <element label="Total address v4" max_length="40" name="total_address_v4" type="string"/>
+        <element label="Used addresses v6" max_length="40" name="used_addresses_v6" type="string"/>
+        <element label="Used Address v4" max_length="40" name="used_address_v4" type="string"/>
+    </element>
+</database>

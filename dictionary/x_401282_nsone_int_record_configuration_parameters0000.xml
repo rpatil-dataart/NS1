@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Record Configuration Parameters" max_length="40" name="x_401282_nsone_int_record_configuration_parameters0000" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Record Name" mandatory="true" max_length="255" name="recordname" type="string"/>
+        <element choice="3" choice_field="state" choice_table="x_401282_nsone_int_record_configuration_parameters" default="ready" label="State" max_length="40" name="state" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Type" mandatory="true" max_length="40" name="type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zone Name" mandatory="true" max_length="255" name="zonename" type="string"/>
+    </element>
+</database>

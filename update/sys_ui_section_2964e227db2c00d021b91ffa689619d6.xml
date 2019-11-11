@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="DHCP V6 Settings" section_id="2964e227db2c00d021b91ffa689619d6" sys_domain="global" table="x_401282_nsone_int_scope_group" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>enabled_v6</element>
+            <position>0</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>bd64a627db2c00d021b91ffa689619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>renew_timer_v6</element>
+            <position>1</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>3564a627db2c00d021b91ffa689619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>preferred_lifetime</element>
+            <position>2</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>b964a627db2c00d021b91ffa689619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>3164a627db2c00d021b91ffa689619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valid_lifetime</element>
+            <position>4</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>b564a627db2c00d021b91ffa689619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>rebind_timer_v6</element>
+            <position>5</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>f164e627db2c00d021b91ffa68961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dhcp_options_v6</element>
+            <position>6</position>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_id>7964e627db2c00d021b91ffa68961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="DHCP V6 Settings" display_value="DHCP V6 Settings" name="x_401282_nsone_int_scope_group" sys_domain="global" view="Default view">2964e227db2c00d021b91ffa689619d6</sys_ui_section>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>DHCP V6 Settings</caption>
+            <header>false</header>
+            <name>x_401282_nsone_int_scope_group</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 16:26:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2964e227db2c00d021b91ffa689619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>DHCP V6 Settings</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_ui_section_2964e227db2c00d021b91ffa689619d6</sys_update_name>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 16:26:52</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

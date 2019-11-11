@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="name_dhcp" table="x_401282_nsone_int_dhcp_option" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/routers</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>0</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:34:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aea3fa27dbac00d021b91ffa689619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:34:00</sys_updated_on>
+            <value>dhcpv4/routers</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/time-servers</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>1</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:34:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ce3ba63dbac00d021b91ffa689619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:34:29</sys_updated_on>
+            <value>dhcpv4/time-servers</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/domain-name-servers</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>2</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:35:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41043a67dbac00d021b91ffa689619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:35:06</sys_updated_on>
+            <value>dhcpv4/domain-name-servers</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/host-name</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>3</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:36:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f8443a67dbac00d021b91ffa689619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:36:10</sys_updated_on>
+            <value>dhcpv4/host-name</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/domain-name</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>4</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:36:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c64be67dbac00d021b91ffa68961905</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:36:41</sys_updated_on>
+            <value>dhcpv4/domain-name</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/vendor-class-identifier</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>5</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:37:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0774be67dbac00d021b91ffa6896190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:37:08</sys_updated_on>
+            <value>dhcpv4/vendor-class-identifier</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/tftp-server-name</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>6</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:38:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81c4f2e3dbac00d021b91ffa689619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:38:22</sys_updated_on>
+            <value>dhcpv4/tftp-server-name</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/bootfile-name</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>7</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:38:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>04e4b227dbac00d021b91ffa6896196f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:38:50</sys_updated_on>
+            <value>dhcpv4/bootfile-name</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name_dhcp</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>dhcpv4/dns-servers</label>
+            <language>en</language>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sequence>8</sequence>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:39:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>72f4baa7dbac00d021b91ffa68961994</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:39:18</sys_updated_on>
+            <value>dhcpv4/dns-servers</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>name_dhcp</element>
+            <name>x_401282_nsone_int_dhcp_option</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-10-23 17:34:00</sys_created_on>
+            <sys_id>05c37627dbac00d021b91ffa689619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>name_dhcp</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_choice_x_401282_nsone_int_dhcp_option_name_dhcp</sys_update_name>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-10-23 17:34:00</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

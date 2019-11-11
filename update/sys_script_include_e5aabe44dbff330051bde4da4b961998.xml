@@ -65,7 +65,7 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 			if (this.responseWasSuccessful(response)) {				
 				this.logger.debug(this.type, func, "Zone Details " + response.getBody()); 
 				zoneDetails = this.getResponseJSON(response);
-				
+
 			} else {
 				this.result.nsOneError.errorDetails = "Error";
 			}
@@ -75,15 +75,13 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 		}
 		return zoneDetails;
 	},
-	
-	
-	
+
 	/* Get record configuration details
 	* Sample API Call
 	* https://api.nsone.net/v1/zones/example.com/www.example.com/A
 	*/
 	getRecordConfigurationDetails: function(zone, domain, type){
-		
+
 		var func = "getRecordConfigurationDetails";
 		this.logger.info(this.type, func, "Entering Function");
 
@@ -93,14 +91,14 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 		var endpoint = "NS1-Zones and Records";
 		var headers= this.getDefaultRequestHeaders();
 		var params = this._getRecordParams(zone, domain, type);
-		
+
 		var response = this.sendRequest(method, endpoint, headers, params, null);
 
 		try{
 			if (this.responseWasSuccessful(response)) {				
 				this.logger.debug(this.type, func, "Record Configuration Details " + response.getBody()); 
 				configDetails = this.getResponseJSON(response);
-				
+
 			} else {
 				this.result.nsOneError.errorDetails = "Error";
 			}
@@ -110,15 +108,15 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 		}
 		return configDetails;
 	},
-	
-	
+
+
 
 	_getZoneParams: function(zone) {
 		var params = [];
 		params.push({ "name": "zone", "value": zone });       
 		return params;
 	},
-	
+
 	_getRecordParams: function(zone, domain, type) {
 		var params = [];
 		params.push({ "name": "zone", "value": zone });
@@ -127,7 +125,89 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 		return params;
 	},
 	
+	
+	insertAllActiveZones: function(zones){
+		var func = "insertAllActiveZones";
+		this.logger.info(this.type, func, "Entering Function");
 
+		try { 
+			
+			var xmlHelper = new global.XMLHelper();
+
+			var xmlStr = zones.map(function(zone){
+				return "<record>" + xmlHelper.toXMLStr(zone,true) + "</record>";
+			});
+
+			var functionName = "insertMultiple"; //Need to add in constants class or some table
+			var messageName = "x_401282_nsone_int.ZoneImportSet";
+			//var headers= this.getDefaultRequestHeaders();
+			var params = [{ "name": "records", "value": xmlStr }];
+			this.logger.debug(this.type, func, "params " + xmlStr); 
+			var response = this.sendSOAPRequest(functionName, messageName, null, params, null);
+
+			try{
+				if (this.responseWasSuccessful(response)) {
+					var responseBody = response.getBody(); 
+										
+					this.logger.debug(this.type,func, gs.getMessage("Response Body{0}", [responseBody]));				
+
+				} else {
+					this.result.nsOneError.errorDetails = "Error";
+				}
+			}
+			catch(e){
+				this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+			}
+
+
+		}
+		catch(ex) { 
+			this.logger.error(this.type,func, "Exception thrown while inserting Zones" + JSON.stringify(ex));
+			//var message = ex.message;
+		}
+	},
+	
+	/**/
+	insertAllRecords: function(records){
+		var func = "insertAllRecords";
+		this.logger.info(this.type, func, "Entering Function");
+
+		try { 
+			
+			var xmlHelper = new global.XMLHelper();
+
+			var xmlStr = records.map(function(record){
+				return "<record>" + xmlHelper.toXMLStr(record,true) + "</record>";
+			});
+
+			var functionName = "insertMultiple"; //Need to add in constants class or some table
+			var messageName = "x_401282_nsone_int.RecordImportSet";
+			//var headers= this.getDefaultRequestHeaders();
+			var params = [{ "name": "records", "value": xmlStr }];
+			this.logger.debug(this.type, func, "params " + xmlStr); 
+			var response = this.sendSOAPRequest(functionName, messageName, null, params, null);
+
+			try{
+				if (this.responseWasSuccessful(response)) {
+					var responseBody = response.getBody(); 
+										
+					this.logger.debug(this.type,func, gs.getMessage("Response Body{0}", [responseBody]));				
+
+				} else {
+					this.result.nsOneError.errorDetails = "Error";
+				}
+			}
+			catch(e){
+				this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+			}
+
+
+		}
+		catch(ex) { 
+			this.logger.error(this.type,func, "Exception thrown while inserting Zones" + JSON.stringify(ex));
+			//var message = ex.message;
+		}
+	},
 
 
 	/* 
@@ -142,7 +222,7 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
 	//Get a Zones Details
 	var result = new NSOneApiZones().getZoneDetails('www.ns1-test.com');
 	gs.info(result);
-	 
+
 	 //Get record configuration details	 
 	 var result = new NSOneApiZones().getRecordConfigurationDetails('www.ns1-test.com', 'www.ns1-test.com', 'NS');
 	 gs.info(result);
@@ -154,13 +234,13 @@ NSOneApiZones.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-05 14:19:47</sys_created_on>
         <sys_id>e5aabe44dbff330051bde4da4b961998</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>NSOneApiZones</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_e5aabe44dbff330051bde4da4b961998</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-26 10:10:15</sys_updated_on>
+        <sys_updated_on>2019-10-20 17:10:31</sys_updated_on>
     </sys_script_include>
 </record_update>

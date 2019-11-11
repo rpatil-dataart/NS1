@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Lease" max_length="40" name="x_401282_nsone_int_lease" type="collection">
+        <element label="DHCID" max_length="255" name="dhcid" type="string"/>
+        <element label="Expiration" max_length="40" name="expiration" type="glide_date_time"/>
+        <element label="MAC" max_length="255" name="mac" type="string"/>
+        <element label="Prefix" max_length="255" name="prefix" type="string"/>
+        <element label="Scope Group" max_length="32" name="scope_group" reference="x_401282_nsone_int_scope_group" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Assign an IP address">c6c563581bcdc01023b9631e6e4bcb77</flow>
+        <order>3.3</order>
+        <parent_ui_id>20ebffeb-cc23-4136-83cd-761b21b9aaf3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>c7894fc9db41841021b91ffa6896190e</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_c7894fc9db41841021b91ffa6896190e</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:11</sys_updated_on>
+        <ui_id>bab48f8b-b0b6-4f25-a422-fce31cf82917</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c7894fc9db41841021b91ffa6896190e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c7894fc9db41841021b91ffa6896190e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>4b894fc9db41841021b91ffa68961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <value>IP Address created but failed to reserve host</value>
+        <variable display_value="">c34aa006531003003bf1d9109ec587c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c7894fc9db41841021b91ffa6896190e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:05</sys_created_on>
+        <sys_id>f9c16355db4d841021b91ffa68961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:05</sys_updated_on>
+        <value>IP Address created but failed to reserve host</value>
+        <variable display_value="">23c1bcc6531003003bf1d9109ec587e5</variable>
+    </sys_variable_value>
+</record_update>

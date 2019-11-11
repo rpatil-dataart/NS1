@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_401282_nsone_int.APIRequestQueueHelper</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>APIRequestQueueHelper</name>
+        <script><![CDATA[var APIRequestQueueHelper = Class.create();
+APIRequestQueueHelper.prototype = {
+
+	TABLE: "x_401282_nsone_int_api_request_queue",
+
+	STATE_NEW: 100,
+	STATE_PROCESSING: 200,
+	STATE_COMPLETE: 300,
+	STATE_CANCELLED: 400,
+	STATE_ERROR: 500,
+
+	AVAILABLE_MAX_LIMIT: 900,
+
+	initialize: function() {
+		var func = "initialize";  
+
+		this.logger = new x_401282_nsone_int.SystemLogHelper();
+		this.logger.info(this.type, func, "ENTERING Function");      
+	},
+
+	/*
+     * This method will create a new Request Queue Entry
+     *
+     * @returns: GlideRecord of new request record if one was created; Null if error or nothing was created     *
+     *
+     */
+	createApiRequestQueueEntry: function(
+	actionName, //(String) Name of the Action to process
+	 inputData //(object) Javascript object of input data
+	) {
+		var func = "createApiRequestQueueEntry";
+		this.logger.info(this.type, func, "Entering function");
+
+		var entry;
+
+		try {
+
+			entry = new GlideRecord(this.TABLE);
+			entry.initialize();
+			entry.action = actionName;
+			entry.input_data = JSON.stringify(inputData);
+			entry.insert();
+
+			if (entry && entry.isValidRecord()) {
+				return entry;
+			}
+
+		} catch (e) {
+			this.logger.error(this.type, func, e);
+		}
+		return entry;
+	},
+
+	processAvailableQueueEntries: function(){
+		var func = "processAvailableQueueEntries";
+		this.logger.info(this.type, func, "Entering function");		
+
+		try {
+			var available = this.getNumAvailableQueueEntries();
+
+			if (available === 0) {
+				this.logger.info(this.type, func, "No available queue entries at this time");
+				return;
+			}
+
+
+
+			var now = new GlideDateTime();
+			var entry = new GlideRecord(this.TABLE);
+			entry.addQuery("state", this.STATE_NEW);		
+			entry.addQuery("sys_created_on", "<=", now);
+			entry.orderBy("sys_created_on");
+			entry.setLimit(this.AVAILABLE_MAX_LIMIT);
+			entry.query();
+
+			while (entry.next()) {			
+				this.logger.info(this.type, func, "Available Tokens " + gs.getUser().getPreference('api.max.limit'));
+
+				this.logger.info(this.type, func, "Processing queue entry: " + entry.getValue("sys_id"));
+				this.processRequest(entry);				
+			}
+		} catch (e) {
+			this.logger.error(this.type, func, e);
+		}
+		return;
+
+	},
+
+	processRequest: function(
+	request //(String or GlideRecord) SysId or Record for the Request in the Queue
+	) {
+		var func = "processRequest";
+		this.logger.info(this.type, func, "Entering function");
+
+		var action = request.getValue('action');
+		this.logger.info(this.type, func, "Processing Action " + action);
+
+		var zoneLib = new x_401282_nsone_int.ZonesAndRecordsLibrary();
+
+		switch(action){
+
+			case 'GetAllActiveZones':
+				this.logger.info(this.type, func, "Processing GetAllActiveZones");	
+
+				var result = zoneLib.getAllActiveZones();
+				if(result.statusCode == 200){
+					this.setComplete(request);
+				}
+				else{
+					this.setErrorAndPostRetry(request, result);
+				}
+
+				break;
+
+			case 'GetZoneDetails':
+				this.logger.info(this.type, func, "Processing GetAllActiveZones");	
+
+				var inputData = request.input_data;
+				var zoneName = JSON.parse(inputData).zoneName;
+				var recordResult = zoneLib.insertRecords(zoneName);
+				if(recordResult == 200){
+					this.setComplete(request);
+				}
+				else{
+					this.setErrorAndPostRetry(request);
+				}
+
+				break;
+
+			case 'GetRecordConfig':
+
+				break;
+
+			default:
+				this.logger.info(this.type, func, "Unable to identify action " + action);	
+				break;
+		}
+
+	},
+
+	/*
+     * This method will take the current request set an error on it.  It will then attempt to generate a new one with an incremented Retry count
+     *
+     * @returns: GlideRecord of new request record if one was created; Null if error or nothing was created
+     *
+     * @introduced: v1.0.0
+     */
+	setErrorAndPostRetry: function(
+	request, //(String or GlideRecord) SysId or Record for the Request in the Queue
+	 result // (JSON Object)
+	) {
+		var func = "setErrorAndPostRetry";
+		this.logger.info(this.type, func, "Entering function");
+
+		try {       
+
+			var currentRetryCount = parseInt(request.getValue("retry_count"));
+
+			request.retry_count = currentRetryCount + 1;
+			request.state = this.STATE_ERROR;
+
+			if(result){
+				request.error_code = result.errorCode;
+				request.response_body = result.errorMessage;
+			}
+
+			request.update();
+
+			//return this.createRetryRequest(request);
+		} catch (e) {
+			this.logger.error(this.type, func, e);
+		}
+		return;
+	},
+
+	/*
+     * This method will set the request entry as Complete
+     *
+     * @returns: nothing
+     */
+	setComplete: function(
+	request //(GlideRecord) SysId or Record for the Request in the Queue
+	) {
+		var func = "setComplete";
+		this.logger.info(this.type, func, "Entering function");
+
+		try {           
+			request.state = this.STATE_COMPLETE;
+			request.update();
+		} catch (e) {
+			this.logger.error(this.type, func, e);
+		}
+		return;
+	},
+
+
+	createRetryRequest: function(
+	request //(String or GlideRecord) SysId or Record for the Request in the Queue
+	) {
+		var func = "createRetryRequest";
+		this.logger.info(this.type, func, "Entering function");
+
+		var retryRequest;
+
+		try {
+			request = this.helper.getGr(request, this.TABLE);
+			this.logger.info(this.type, func, "request: " + request.getValue("sys_id"));
+
+			var currentRetryCount = parseInt(request.getValue("retry_count"));
+			var action = request.action.getRefRecord();
+			var maxRetries = parseInt(action.getValue("max_retries"));
+
+			if (currentRetryCount < maxRetries) {
+				retryRequest = new GlideRecord(this.TABLE);
+				retryRequest.initialize();
+				retryRequest.action = request.action;
+				retryRequest.retry_count = currentRetryCount + 1;
+				retryRequest.input_data = request.getValue("input_data");
+				retryRequest.parent = request.getValue("sys_id");
+				retryRequest.insert();
+
+			} else {
+				this.logger.info(this.type, func, "Request (" + request.getValue("sys_id") + ") met/exceeded max retries allowed: " + maxRetries);
+			}
+
+			if (retryRequest && retryRequest.isValidRecord()) {
+				return retryRequest;
+			}
+
+		} catch (e) {
+			this.logger.reportException(this.type, func, e, "");
+		}
+		return;
+	},
+
+	/*
+     * Gets the number of available queue items to process
+     *  
+     * @returns (int) number of available queue items
+     */
+	getNumAvailableQueueEntries: function() {
+		var func = "getNumAvailableQueueEntries";
+		this.logger.info(this.type, func, "Entering function");
+
+		var entries = 0;
+		try {
+			var count = new GlideAggregate(this.TABLE);
+			count.addAggregate('COUNT');
+			var now = new GlideDateTime();
+			count.addQuery("state", this.STATE_NEW);
+			count.addQuery("sys_created_on", "<=", now);
+			count.query();
+			if (count.next()) {
+				entries = parseInt(count.getAggregate('COUNT'));
+			}
+		} catch (e) {
+			this.logger.error(this.type, func, e);
+		}
+		return entries;
+	},
+
+	/*
+     * Deletes entries in the queue that have exceeded their lifespan
+     *
+     * @returns numberRecordsDeleted
+     */
+
+	cleanUpOldEntries: function() {
+
+	},
+
+	getQueueRecord: function(sysId){
+
+		var gr;
+		gr = new GlideRecord(this.TABLE);	
+		gr.get(sysId);
+		
+		return gr;
+	},
+
+
+	type: 'APIRequestQueueHelper'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-10-19 13:58:37</sys_created_on>
+        <sys_id>bbfb55d2db24c49021b91ffa68961988</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>APIRequestQueueHelper</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_script_include_bbfb55d2db24c49021b91ffa68961988</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-23 19:32:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

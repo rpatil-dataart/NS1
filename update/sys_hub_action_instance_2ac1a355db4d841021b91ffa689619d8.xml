@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign an IP address">06c16355db4d841021b91ffa689619ec</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:09</sys_created_on>
+        <sys_id>2ac1a355db4d841021b91ffa689619d8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_2ac1a355db4d841021b91ffa689619d8</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:09</sys_updated_on>
+        <ui_id>027d3880-7357-48c2-acfa-c988a0f43ff2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2ac1a355db4d841021b91ffa689619d8"/>
+    <sys_element_mapping action="delete_multiple" query="id=2ac1a355db4d841021b91ffa689619d8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>2ac1a355db4d841021b91ffa689619d8</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:09</sys_created_on>
+        <sys_id>26c1a355db4d841021b91ffa689619dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Status Code: {{99eebe4a-5b9a-440b-aef5-18acb71a1c4c.status}}</value>
+    </sys_element_mapping>
+</record_update>

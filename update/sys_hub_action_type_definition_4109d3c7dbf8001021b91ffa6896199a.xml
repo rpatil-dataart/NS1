@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Delete a reservation</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>02113d83dbf4001021b91ffa6896191d</copied_from>
+        <copied_from_name>Delete a reservation</copied_from_name>
+        <description>Delete a reservation</description>
+        <internal_name>remove_a_network</internal_name>
+        <label_cache>[{"name":"{{action.reservation_id}}","label":"action➛network_id","type":"action","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].sn_auth_token}}","label":"step➛Remove a Network ➛Credential Value","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].}}","label":"step➛Post Processing➛","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].status_code}}","label":"step➛Remove a Network ➛Status Code","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].response_body}}","label":"step➛Remove a Network ➛Response Body","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].error_message}}","label":"step➛Remove a Network ➛Error Message","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].e}}","label":"step➛Post Processing➛e","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].er}}","label":"step➛Post Processing➛er","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].err}}","label":"step➛Post Processing➛err","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].erro}}","label":"step➛Post Processing➛erro","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error}}","label":"step➛Post Processing➛error","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_}}","label":"step➛Post Processing➛error_","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_m}}","label":"step➛Post Processing➛error_m","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_me}}","label":"step➛Post Processing➛error_me","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_mes}}","label":"step➛Post Processing➛error_mes","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_mess}}","label":"step➛Post Processing➛error_mess","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_messa}}","label":"step➛Post Processing➛error_messa","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_messag}}","label":"step➛Post Processing➛error_messag","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].response}}","label":"step➛Post Processing➛response","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>d066b78bdb3c001021b91ffa689619ef</latest_snapshot>
+        <master_snapshot>86a91fc7dbf8001021b91ffa689619a4</master_snapshot>
+        <name>Remove a Network </name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:15:29</sys_created_on>
+        <sys_id>4109d3c7dbf8001021b91ffa6896199a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Remove a Network </sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_4109d3c7dbf8001021b91ffa6896199a</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 19:23:48</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=4109d3c7dbf8001021b91ffa6896199a"/>
+    <sys_element_mapping action="delete_multiple" query="id=4109d3c7dbf8001021b91ffa6896199a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>errormessage</field>
+        <id>4109d3c7dbf8001021b91ffa6896199a</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:15:30</sys_created_on>
+        <sys_id>e50957c7dbf8001021b91ffa6896195e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:29:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_4109d3c7dbf8001021b91ffa6896199a</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response</field>
+        <id>4109d3c7dbf8001021b91ffa6896199a</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:15:30</sys_created_on>
+        <sys_id>a90957c7dbf8001021b91ffa6896195e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 19:23:46</sys_updated_on>
+        <table>var__m_sys_hub_action_output_4109d3c7dbf8001021b91ffa6896199a</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].response}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>4109d3c7dbf8001021b91ffa6896199a</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:15:30</sys_created_on>
+        <sys_id>6d0957c7dbf8001021b91ffa6896195e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:29:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_4109d3c7dbf8001021b91ffa6896199a</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].status}}</value>
+    </sys_element_mapping>
+</record_update>

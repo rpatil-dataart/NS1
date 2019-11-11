@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+  "prefix": "${prefix}",&#13;
+  "network_id": ${network_id},&#13;
+  "kvps": ${kvps},&#13;
+  "tags": ${tags},&#13;
+  "desc": "${desc}",&#13;
+  "type": "${type}",&#13;
+  "name": "${name}"&#13;
+}</content>
+        <function_name>Update an IP address</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>NS1-IPAM [ Update an IP address ]</qualified_name>
+        <rest_endpoint>https://${api.mycompany.net}/v1/ipam/address/${addressId}</rest_endpoint>
+        <rest_message display_value="NS1-IPAM">3fbbd0b6dbf3730051bde4da4b961966</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-10-30 16:56:20</sys_created_on>
+        <sys_id>794eeafd1b3884d023b9631e6e4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update an IP address</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_794eeafd1b3884d023b9631e6e4bcb90</sys_update_name>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-10-30 16:56:20</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

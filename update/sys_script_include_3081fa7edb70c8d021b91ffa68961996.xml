@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_401282_nsone_int.NSOneErrorHandler</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>NSOneErrorHandler</name>
+        <script><![CDATA[var NSOneErrorHandler = Class.create();
+NSOneErrorHandler.prototype = {
+	initialize: function() {
+	},
+
+	dhcpErrorHandler: function(inputs, outputs) {
+
+		outputs.error_message = inputs.errorMessage + " " + JSON.parse(inputs.responseBody).message;
+		outputs.status = 'Failure';
+		var now = new GlideDateTime().getDisplayValue();
+		gs.info('DHCP API Error. Error while trying to connect with NS One Server at ' + now + '. Error message: "' + outputs.error_message + '"!');
+
+		return outputs;
+	},
+
+	ipamErrorHandler: function(inputs, outputs) {
+
+		outputs.error_message = inputs.errorMessage + " " + JSON.parse(inputs.responseBody).message;
+		outputs.status = 'Failure';
+		var now = new GlideDateTime().getDisplayValue();
+		gs.info('IPAM API Error. Error while trying to connect with NS One Server at ' + now + '. Error message: "' + outputs.error_message + '"!');
+
+		return outputs;
+	},
+
+	DNSErrorHandler:function(inputs, outputs) {
+
+		outputs.error_message = inputs.errorMessage + " " + JSON.parse(inputs.responseBody).message;
+		outputs.status = 'Failure';
+		var now = new GlideDateTime().getDisplayValue();
+		gs.info('DNS API Error. Error while trying to connect with NS One Server at ' + now + '. Error message: "' + outputs.error_message + '"!');
+
+		return outputs;
+	},
+	type: 'NSOneErrorHandler'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-02 19:45:13</sys_created_on>
+        <sys_id>3081fa7edb70c8d021b91ffa68961996</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>NSOneErrorHandler</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_script_include_3081fa7edb70c8d021b91ffa68961996</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:42:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

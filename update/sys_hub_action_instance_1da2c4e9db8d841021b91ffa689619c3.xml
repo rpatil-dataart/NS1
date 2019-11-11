@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete a reservation">01214643db38001021b91ffa68961969</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Delete IPAM IP Address Reservation">b7226b55db4d841021b91ffa689619ff</flow>
+        <order>2.3</order>
+        <parent_ui_id>1321e9bc-9c2f-4198-8cc3-0435cde56aff</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 20:03:41</sys_created_on>
+        <sys_id>1da2c4e9db8d841021b91ffa689619c3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_1da2c4e9db8d841021b91ffa689619c3</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-11 16:22:21</sys_updated_on>
+        <ui_id>ed60a70b-272b-4ca2-b687-6b40e9f5cd4b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1da2c4e9db8d841021b91ffa689619c3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1da2c4e9db8d841021b91ffa689619c3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-11 16:22:15</sys_created_on>
+        <sys_id>138994bddb49c41021b91ffa68961906</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-11 16:22:15</sys_updated_on>
+        <value/>
+        <variable display_value="">c5214643db38001021b91ffa6896196b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1da2c4e9db8d841021b91ffa689619c3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 20:03:41</sys_created_on>
+        <sys_id>95a2c4e9db8d841021b91ffa689619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 20:03:41</sys_updated_on>
+        <value/>
+        <variable display_value="">59aeb58fdbf4001021b91ffa6896196f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1da2c4e9db8d841021b91ffa689619c3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reservation_id</field>
+        <id>1da2c4e9db8d841021b91ffa689619c3</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-11 16:22:15</sys_created_on>
+        <sys_id>9f8994bddb49c41021b91ffa68961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-11 16:22:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_01214643db38001021b91ffa68961969</table>
+        <value>{{subflow.reservation_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reservation_id</field>
+        <id>1da2c4e9db8d841021b91ffa689619c3</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 20:03:41</sys_created_on>
+        <sys_id>15a2c4e9db8d841021b91ffa689619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 20:03:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02113d83dbf4001021b91ffa6896191d</table>
+        <value>{{subflow.reservation_id}}</value>
+    </sys_element_mapping>
+</record_update>

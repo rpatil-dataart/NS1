@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4b894fc9db41841021b91ffa68961915</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Assign an IP address">06c16355db4d841021b91ffa689619ec</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3.4</order>
+        <outputs_assigned>output,error_message,message</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>20ebffeb-cc23-4136-83cd-761b21b9aaf3</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:08</sys_created_on>
+        <sys_id>e2c1a355db4d841021b91ffa689619a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_e2c1a355db4d841021b91ffa689619a0</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:08</sys_updated_on>
+        <ui_id>78fc144c-2427-44d5-b82a-39c3b0fe76f8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e2c1a355db4d841021b91ffa689619a0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e2c1a355db4d841021b91ffa689619a0</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:08</sys_created_on>
+        <sys_id>aac1a355db4d841021b91ffa689619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:08</sys_updated_on>
+        <value>IP Address created but failed to create a reservation</value>
+        <variable display_value="">dac1a355db4d841021b91ffa6896196e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e2c1a355db4d841021b91ffa689619a0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>e2c1a355db4d841021b91ffa689619a0</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:08</sys_created_on>
+        <sys_id>a2c1a355db4d841021b91ffa689619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_06c16355db4d841021b91ffa689619ec</table>
+        <value>{{d07df984-8bcc-4453-a088-4f69f895bdab.errormessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>message</field>
+        <id>e2c1a355db4d841021b91ffa689619a0</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:08</sys_created_on>
+        <sys_id>2ac1a355db4d841021b91ffa689619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_06c16355db4d841021b91ffa689619ec</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>output</field>
+        <id>e2c1a355db4d841021b91ffa689619a0</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:40:08</sys_created_on>
+        <sys_id>66c1a355db4d841021b91ffa689619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_06c16355db4d841021b91ffa689619ec</table>
+        <value>{{d07df984-8bcc-4453-a088-4f69f895bdab.status}}</value>
+    </sys_element_mapping>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_401282_nsone_int.ip_address_user" name="x_401282_nsone_int.ip_address_user">fb5882d7dba48c9021b91ffa689619c1</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-10-22 19:45:55</sys_created_on>
+        <sys_id>7f5882d7dba48c9021b91ffa689619c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fb5882d7dba48c9021b91ffa689619c1</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_embedded_help_role_7f5882d7dba48c9021b91ffa689619c3</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-22 19:45:55</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

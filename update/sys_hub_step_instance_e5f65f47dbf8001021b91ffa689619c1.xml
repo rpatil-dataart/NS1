@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Create a network">a5e4d303dbf8001021b91ffa689619cc</action>
+        <cid>b27d7e88-7b89-4d12-9903-b1dd2c303490</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Post Processing</label>
+        <order>3</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>e5f65f47dbf8001021b91ffa689619c1</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Post Processing</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_step_instance_e5f65f47dbf8001021b91ffa689619c1</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-07 18:57:02</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e5f65f47dbf8001021b91ffa689619c1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e5f65f47dbf8001021b91ffa689619c1</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>21f65f47dbf8001021b91ffa689619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e5f65f47dbf8001021b91ffa689619c1</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>e1f65f47dbf8001021b91ffa689619d7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-07 18:57:02</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  if (inputs.status_code == 200) {
+    var responseBody=JSON.parse(inputs.response);
+    outputs.status = 'Success';
+    outputs.Name=responseBody.name;
+    outputs.RoutingTable=responseBody.rt;
+    outputs.Description=responseBody.desc;
+    outputs.network = JSON.parse(inputs.response);
+  } else {
+    outputs = new NSOneErrorHandler().ipamErrorHandler(inputs, outputs);
+  }
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e5f65f47dbf8001021b91ffa689619c1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>e9f65f47dbf8001021b91ffa689619d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>errorMessage</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>6df65f47dbf8001021b91ffa689619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_e5f65f47dbf8001021b91ffa689619c1</table>
+        <value>{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>e1f65f47dbf8001021b91ffa689619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_e5f65f47dbf8001021b91ffa689619c1</table>
+        <value>{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responseBody</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 18:19:12</sys_created_on>
+        <sys_id>69fdc0e01b41041023b9631e6e4bcbf7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 18:19:12</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_e5f65f47dbf8001021b91ffa689619c1</table>
+        <value>{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>adf65f47dbf8001021b91ffa689619d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_code</field>
+        <id>e5f65f47dbf8001021b91ffa689619c1</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 17:06:30</sys_created_on>
+        <sys_id>21f65f47dbf8001021b91ffa689619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 17:06:30</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_e5f65f47dbf8001021b91ffa689619c1</table>
+        <value>{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].status_code}}</value>
+    </sys_element_mapping>
+</record_update>

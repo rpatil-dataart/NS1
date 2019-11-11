@@ -16,10 +16,11 @@ NSOneApiCore.prototype = {
 		var func = "initialize";
 		this.logger = new x_401282_nsone_int.SystemLogHelper();		
 		this.logger.info(this.type, func, "Entering Function");
-		
+
 		this.synchronous = true;
 
 		this.result = {
+			remainingRate:"",
 			errorMessage: "",
 			errorCode: "",
 			statusCode: "",
@@ -82,6 +83,55 @@ NSOneApiCore.prototype = {
 		return response;
 	},
 
+
+	sendSOAPRequest: function(
+	soapFunction, //(string) SOAP Message Function Name
+	 messageName, //(string) SOAP Message Name
+	 headers, //(array) Array of name/value pair objects
+	 parameters,//(array) Array of name/value pair objects
+	 body //(XML String) XML String representing the body
+	) {
+
+		var request, response; 
+		var func = "sendRequest";
+
+		try {
+
+			this.logger.info(this.type, func ,"sending SOAP request");
+
+			request = new sn_ws.SOAPMessageV2(messageName, soapFunction);
+			//request.setEccParameter('skip_sensor',true);
+
+			if(headers){
+				for (var header = 0; header < headers.length; header++) {
+					request.setRequestHeader(headers[header].name, headers[header].value);
+				}
+			}
+
+			if(parameters){
+				for (var param = 0; param < parameters.length; param++) {
+					request.setStringParameterNoEscape(parameters[param].name, parameters[param].value);
+				}
+			}
+
+			if(body){
+				request.setRequestBody(body);
+			}
+
+			if (!this.synchronous) {
+				request.executeAsync();
+			} else {
+				response = request.execute();             
+			}
+
+		} catch (e) {
+			this.logger.error(this.type, func , "Exception thrown in submitting request " + JSON.stringify(e));          
+		}
+		return response;
+	},
+
+
+
 	/* */
 	responseWasSuccessful: function(
 	restResponse //(RESTResponseV2)
@@ -99,7 +149,12 @@ NSOneApiCore.prototype = {
 				throw new Error(msg);
 			}
 
+			//this.logger.warn(this.type, func, "All Headers" + restResponse.getHeader('X-RateLimit-Remaining'));
+			
 			this.result.statusCode = restResponse.getStatusCode();
+			//this.result.remainingRate = restResponse.getHeader('X-RateLimit-Remaining');
+			//gs.getUser().savePreference('api.max.limit', restResponse.getHeader('X-RateLimit-Remaining'));
+
 			if (restResponse.haveError()) {
 				var errorCode = restResponse.getErrorCode();
 				var errorMessage = restResponse.getErrorMessage();
@@ -113,7 +168,7 @@ NSOneApiCore.prototype = {
 				success = false;
 			}
 		} catch (e) {
-			this.logger.error(this.type, func ,"Exception ocurred");            
+			this.logger.error(this.type, func ,"Exception ocurred " + e);            
 			success = false;
 		}
 
@@ -126,17 +181,17 @@ NSOneApiCore.prototype = {
 		h.push({ "name": "X-NSONE-Key", "value": gs.getProperty("x_401282_nsone_int.nsone.api.key") });       
 		h.push({ "name": "Accept", "value": "application/json" }); 
 		h.push({ "name": "Content-Type", "value": "application/json" });    
-		
+
 		return h;
 	},
-	
-	
+
+
 	//Returns response string in JSON format
 	getResponseJSON: function(response){
 
 		//This method will have business logis to populate CIs
 		var func = "getResponseJSON";
-		
+
 		this.logger.debug(this.type, func, "Response Body \n" + response.getBody());
 		var responseBody = response.getBody();
 
@@ -154,13 +209,13 @@ NSOneApiCore.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-09-05 13:54:22</sys_created_on>
         <sys_id>45157680dbff330051bde4da4b96191a</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>NSOneApiCore</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_45157680dbff330051bde4da4b96191a</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-09-25 20:31:45</sys_updated_on>
+        <sys_updated_on>2019-10-23 18:46:19</sys_updated_on>
     </sys_script_include>
 </record_update>

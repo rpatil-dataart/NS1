@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Service Group" max_length="40" name="x_401282_nsone_int_service_group" type="collection">
+        <element label="ID" max_length="40" name="id" read_only="true" type="string"/>
+    </element>
+</database>

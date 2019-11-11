@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category/>
+        <checked_out_by display_value="Raj Patil">f91b839a1b7373001cf5b9541a4bcbac</checked_out_by>
+        <default_height/>
+        <default_width/>
+        <description>Delete a IPAM IP Address Reservation in NSOne</description>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta/>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"","web_service_message_function":"","web_service_endpoint":"","parameters":"[]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables/>
+        <name>IPAM Delete</name>
+        <output_meta/>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description>Delete a IPAM IP Address Reservation or IP Address</short_description>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>rpatil</sys_created_by>
+        <sys_created_on>2019-11-03 03:53:09</sys_created_on>
+        <sys_id>c8c028c71bb0001023b9631e6e4bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IPAM Delete</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>wf_element_activity_c8c028c71bb0001023b9631e6e4bcb81</sys_update_name>
+        <sys_updated_by>rpatil</sys_updated_by>
+        <sys_updated_on>2019-11-03 03:53:09</sys_updated_on>
+        <version_container_id>5461280b1bb0001023b9631e6e4bcb0f</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=c8c028c71bb0001023b9631e6e4bcb81"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out>2019-11-03 03:53:09</checked_out>
+        <checked_out_by display_value="Raj Patil">f91b839a1b7373001cf5b9541a4bcbac</checked_out_by>
+        <published>false</published>
+        <sys_created_by>rpatil</sys_created_by>
+        <sys_created_on>2019-11-03 03:53:09</sys_created_on>
+        <sys_id>1c616c0b1bb0001023b9631e6e4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rpatil</sys_updated_by>
+        <sys_updated_on>2019-11-03 03:53:09</sys_updated_on>
+        <valid_from/>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>5461280b1bb0001023b9631e6e4bcb0f</version_container_id>
+        <wf_element_definition display_value="IPAM Delete">c8c028c71bb0001023b9631e6e4bcb81</wf_element_definition>
+    </wf_versionable>
+</record_update>

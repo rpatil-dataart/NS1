@@ -22,24 +22,26 @@ function eventWrapper(limit, currentNumber) {
 
 	var EVENT_NAME = 'x_401282_nsone_int.process.record.batch'; //todo: Update this to the name of the event you've created.
 	var TABLE_NAME = 'x_401282_nsone_int_record_configuration_parameters'; //todo: Update this to the name of the table containing the records you're processing
-	
+
 	var QUERY = 'state!=processed'; //todo: Put your query here
 	var IMPORTSET_TABLE = 'x_401282_nsone_int_di_zone_record';
 
 	var gr = new GlideRecord(TABLE_NAME);
 
 	//Set default values
-	limit = Number(limit) > 0 ? Number(limit) : 10; //Default: 10
+	limit = Number(limit) > 0 ? Number(limit) : gs.getProperty('x_401282_nsone_int.api.processing.batch.size',300); //Default: 10
 	currentNumber = currentNumber > 0 ? currentNumber : 0; //Default: 0
 
 	gr.setLimit(limit);
 	gr.addQuery(QUERY);
 	gr.query();
+	
 	if (!gr.hasNext()) {
 		gs.info('EDR: [Script name here] completed with ' + currentNumber +
-			   ' total records processed.');
+				' total records processed.');
 		return; //No more records to process. Halt function, and loop.
 	}
+	
 	while (gr.next()) {
 
 		var domainName = gr.getValue('zonename');
@@ -59,7 +61,7 @@ function eventWrapper(limit, currentNumber) {
 			//Import record configuration to Zone Record				
 			var recImportResult = new x_401282_nsone_int.ImportSetApiUtils().processImportSet(IMPORTSET_TABLE, configDetails);			
 			gr.setValue('state', 'processed');
-			
+
 			//this.logger.debug(this.type, func, "Record Name : " + recDomainName + "\n Record Import Set API Response"+ JSON.stringify(recImportResult));
 		}
 		else{
@@ -67,12 +69,12 @@ function eventWrapper(limit, currentNumber) {
 			//this.logger.warn(this.type, func, "Unable to record configuration for: "+ records[record].domain + " of zone " + domainName);
 		}
 		gr.update();
-		
+
 		currentNumber++;
 	}
 	//Log a progress update
 	gs.info('EDR: event wrapper processed ' + currentNumber +
-		   ' records so far. Triggering the next loop.');
+			' records so far. Triggering the next loop.');
 	//Trigger the event again
 	gs.eventQueue(EVENT_NAME, gr, limit, currentNumber);
 }
@@ -85,7 +87,7 @@ eventWrapper(event.parm1, event.parm2);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5193b82e1b5c045023b9631e6e4bcb7a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Process Records Batch</sys_name>
         <sys_overrides/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
@@ -93,6 +95,6 @@ eventWrapper(event.parm1, event.parm2);]]></script>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sysevent_script_action_5193b82e1b5c045023b9631e6e4bcb7a</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-10-07 20:06:57</sys_updated_on>
+        <sys_updated_on>2019-10-13 14:00:04</sys_updated_on>
     </sysevent_script_action>
 </record_update>

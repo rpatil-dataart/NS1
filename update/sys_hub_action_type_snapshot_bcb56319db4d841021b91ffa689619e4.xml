@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation>Get Reservation Details</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Get Reservation Details</description>
+        <internal_name>get_a_reservation_details</internal_name>
+        <label_cache>[{"name":"{{action.reservation_id}}","label":"action➛Reservation Id","type":"action","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].sn_auth_token}}","label":"step➛Get a Reservation Details➛Credential Value","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].error_message}}","label":"step➛Get a Reservation Details➛Error Message","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].response_body}}","label":"step➛Get a Reservation Details➛Response Body","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].status_code}}","label":"step➛Get a Reservation Details➛Status Code","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].S}}","label":"step➛Post Processing➛S","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].St}}","label":"step➛Post Processing➛St","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Sta}}","label":"step➛Post Processing➛Sta","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Stat}}","label":"step➛Post Processing➛Stat","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Statu}}","label":"step➛Post Processing➛Statu","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Status}}","label":"step➛Post Processing➛Status","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].E}}","label":"step➛Post Processing➛E","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Er}}","label":"step➛Post Processing➛Er","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Err}}","label":"step➛Post Processing➛Err","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Erro}}","label":"step➛Post Processing➛Erro","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Error}}","label":"step➛Post Processing➛Error","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorM}}","label":"step➛Post Processing➛ErrorM","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMe}}","label":"step➛Post Processing➛ErrorMe","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMes}}","label":"step➛Post Processing➛ErrorMes","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMess}}","label":"step➛Post Processing➛ErrorMess","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessa}}","label":"step➛Post Processing➛ErrorMessa","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessag}}","label":"step➛Post Processing➛ErrorMessag","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessage}}","label":"step➛Post Processing➛ErrorMessage","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].AddressID}}","label":"step➛Post Processing➛AddressID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].I}}","label":"step➛Post Processing➛I","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ID}}","label":"step➛Post Processing➛ID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ScopeGroupID}}","label":"step➛Post Processing➛ScopeGroupID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].DomainName}}","label":"step➛Post Processing➛DomainName","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].HostName}}","label":"step➛Post Processing➛HostName","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Get a Reservation Details</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Get a Reservation Details">e723e395db4d841021b91ffa68961997</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:14</sys_created_on>
+        <sys_id>bcb56319db4d841021b91ffa689619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get a Reservation Details</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_bcb56319db4d841021b91ffa689619e4</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=bcb56319db4d841021b91ffa689619e4"/>
+    <sys_element_mapping action="delete_multiple" query="id=bcb56319db4d841021b91ffa689619e4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>address_id</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>59b5a319db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].AddressID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>domain_name</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>95b5a319db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].DomainName}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>d1b5a319db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>host_name</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>91b5a319db4d841021b91ffa68961963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].HostName}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>id</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>ddb5a319db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].ID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_group_id</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>1db5a319db4d841021b91ffa68961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].ScopeGroupID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>bcb56319db4d841021b91ffa689619e4</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-10 17:57:15</sys_created_on>
+        <sys_id>55b5a319db4d841021b91ffa68961963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bcb56319db4d841021b91ffa689619e4</table>
+        <value>{{step[e4323eba-24d0-418e-9519-763bb76b1910].Status}}</value>
+    </sys_element_mapping>
+</record_update>

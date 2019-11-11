@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="DHCP Option" max_length="40" name="x_401282_nsone_int_dhcp_option" type="collection">
+        <element choice="1" label="Name" max_length="40" name="name_dhcp" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="dhcpv4/routers" sequence="0" value="dhcpv4/routers"/>
+                <element inactive_on_update="false" label="dhcpv4/time-servers" sequence="1" value="dhcpv4/time-servers"/>
+                <element inactive_on_update="false" label="dhcpv4/domain-name-servers" sequence="2" value="dhcpv4/domain-name-servers"/>
+                <element inactive_on_update="false" label="dhcpv4/host-name" sequence="3" value="dhcpv4/host-name"/>
+                <element inactive_on_update="false" label="dhcpv4/domain-name" sequence="4" value="dhcpv4/domain-name"/>
+                <element inactive_on_update="false" label="dhcpv4/vendor-class-identifier" sequence="5" value="dhcpv4/vendor-class-identifier"/>
+                <element inactive_on_update="false" label="dhcpv4/tftp-server-name" sequence="6" value="dhcpv4/tftp-server-name"/>
+                <element inactive_on_update="false" label="dhcpv4/bootfile-name" sequence="7" value="dhcpv4/bootfile-name"/>
+                <element inactive_on_update="false" label="dhcpv4/dns-servers" sequence="8" value="dhcpv4/dns-servers"/>
+            </choice>
+        </element>
+        <element label="Reservation" max_length="32" name="reservation" reference="x_401282_nsone_int_reservations" type="reference"/>
+        <element label="Scope" max_length="32" name="scope" reference="x_401282_nsone_int_scope" type="reference"/>
+        <element label="Scope Group" max_length="32" name="scope_group" reference="x_401282_nsone_int_scope_group" type="reference"/>
+        <element label="Value" max_length="1000" name="value" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>push_to_datafeeds</name>
+        <rest_message_function display_value="Create a new Team">c5f095ad1b3844d023b9631e6e4bcb97</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-10-29 15:32:49</sys_created_on>
+        <sys_id>60911ded1b3844d023b9631e6e4bcbf6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>push_to_datafeeds</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_60911ded1b3844d023b9631e6e4bcbf6</sys_update_name>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-10-29 15:33:54</sys_updated_on>
+        <type>string</type>
+        <value>false</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

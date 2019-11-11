@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="Zone Record" max_length="40" name="x_401282_nsone_int_cmdb_ci_zone_record" sizeclass="138877" type="collection">
+    <element extends="cmdb_ci" label="Zone Record" max_length="40" name="x_401282_nsone_int_cmdb_ci_zone_record" sizeclass="195791" type="collection">
+        <element label="Answers" max_length="4000" name="answers" type="string"/>
+        <element label="Feeds" max_length="255" name="feeds" type="string"/>
+        <element label="Filters" max_length="255" name="filters" type="string"/>
+        <element label="Meta" max_length="255" name="meta" type="string"/>
+        <element label="Networks" max_length="255" name="networks" type="string"/>
+        <element label="Regions" max_length="255" name="regions" type="string"/>
         <element attributes="synchronizePartitions=true" choice="3" default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true">
             <choice/>
         </element>
+        <element label="Use Client Subnet" max_length="40" name="use_client_subnet" type="boolean"/>
         <element label="Record ID" max_length="40" name="u_record_id" type="string"/>
         <element label="Short Answers" max_length="4000" name="u_short_answers" reference="x_401282_nsone_int_short_answers" type="glide_list"/>
         <element label="Tier" max_length="2" name="u_tier" type="integer"/>

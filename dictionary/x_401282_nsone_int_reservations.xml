@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Reservation" max_length="40" name="x_401282_nsone_int_reservations" type="collection">
+        <element label="DHCP Options" max_length="4000" name="dhcp_options" reference="x_401282_nsone_int_dhcp_option" type="glide_list"/>
+        <element label="ID" max_length="255" name="id" read_only="true" type="string"/>
+        <element label="IP Address" max_length="32" name="ip_address_reservation" reference="x_401282_nsone_int_ip_address" type="reference"/>
+        <element label="MAC" max_length="255" name="mac" type="string"/>
+        <element label="Scope Group" max_length="32" name="scope_group" reference="x_401282_nsone_int_scope_group" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="IP Address" max_length="40" name="x_401282_nsone_int_ip_address" type="collection">
+        <element label="children" max_length="40" name="children" type="string"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Free Addresses" max_length="40" name="free_addresses" type="string"/>
+        <element label="ID" max_length="40" name="id" type="string"/>
+        <element label="Indent" max_length="40" name="indent" type="string"/>
+        <element label="Inherited Tags" max_length="8000" name="inherited_tags" type="string"/>
+        <element label="kvps" max_length="8000" name="kvps" type="string"/>
+        <element label="Network" max_length="32" name="network" reference="x_401282_nsone_int_network" type="reference"/>
+        <element label="Parent" max_length="32" name="parent" reference="x_401282_nsone_int_ip_address" type="reference"/>
+        <element label="Prefix" max_length="40" name="prefix" type="string"/>
+        <element label="Subnets" max_length="32" name="subnets" reference="x_401282_nsone_int_ip_address" reference_qual="parent=javascript:current.sys_id^EQ" reference_qual_condition="parent=javascript:current.sys_id^EQ" type="reference"/>
+        <element label="Tags" max_length="8000" name="tags" type="string"/>
+        <element label="Total Addresses" max_length="40" name="total_addresses" type="string"/>
+        <element choice="1" default="Planned" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Assignment" value="Assignment"/>
+                <element inactive_on_update="false" label="Host" value="Host"/>
+                <element inactive_on_update="false" label="Planned" value="Planned"/>
+            </choice>
+        </element>
+        <element label="Used Addresses" max_length="40" name="used_addresses" type="string"/>
+    </element>
+</database>

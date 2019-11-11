@@ -4,7 +4,7 @@
         <condition/>
         <conditional>false</conditional>
         <name>Get All Active Zones</name>
-        <run_as display_value="Sachin Morey">413c8b9a1b7373001cf5b9541a4bcb22</run_as>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -17,21 +17,22 @@ this.logger.info("Scheduled Script Execution", "Get All Active Zones", "Running 
 
 var zoneLib = new x_401282_nsone_int.ZonesAndRecordsLibrary();
 
-zoneLib.getAllActiveZones();
+//zoneLib.getAllActiveZones();
+zoneLib.createAllZonesRequestQueueEntry();
 zoneLib.cleanupRecordImportSets();
 zoneLib.cleanupZoneImportSets();]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-30 18:43:25</sys_created_on>
         <sys_id>f1d620d01b940c1023b9631e6e4bcbcf</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Get All Active Zones</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sysauto_script_f1d620d01b940c1023b9631e6e4bcbcf</sys_update_name>
-        <sys_updated_by>manali</sys_updated_by>
-        <sys_updated_on>2019-10-06 15:22:00</sys_updated_on>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:26:20</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

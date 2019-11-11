@@ -4,43 +4,85 @@
             <element>u_dns_servers</element>
             <position>0</position>
             <sys_created_by>smorey</sys_created_by>
-            <sys_created_on>2019-09-30 14:56:00</sys_created_on>
-            <sys_id>6603b30c1bd00c1023b9631e6e4bcbcd</sys_id>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>687a5b6bdb2440d021b91ffa6896190b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
             <sys_updated_by>smorey</sys_updated_by>
-            <sys_updated_on>2019-09-30 14:56:00</sys_updated_on>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
             <sys_user/>
             <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>smorey</sys_created_by>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>ec7a5b6bdb2440d021b91ffa6896190b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
+            <sys_updated_by>smorey</sys_updated_by>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>network_pools</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>smorey</sys_created_by>
-            <sys_created_on>2019-09-30 14:56:00</sys_created_on>
-            <sys_id>e603b30c1bd00c1023b9631e6e4bcbcd</sys_id>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>647a5b6bdb2440d021b91ffa6896190c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
             <sys_updated_by>smorey</sys_updated_by>
-            <sys_updated_on>2019-09-30 14:56:00</sys_updated_on>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_networks</element>
-            <position>2</position>
+            <element>.split</element>
+            <position>3</position>
             <sys_created_by>smorey</sys_created_by>
-            <sys_created_on>2019-09-30 14:56:00</sys_created_on>
-            <sys_id>6a03b30c1bd00c1023b9631e6e4bcbcd</sys_id>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>e87a5b6bdb2440d021b91ffa6896190c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
             <sys_updated_by>smorey</sys_updated_by>
-            <sys_updated_on>2019-09-30 14:56:00</sys_updated_on>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_networks</element>
+            <position>4</position>
+            <sys_created_by>smorey</sys_created_by>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>607a5b6bdb2440d021b91ffa6896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
+            <sys_updated_by>smorey</sys_updated_by>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
             <sys_user/>
             <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>smorey</sys_created_by>
+            <sys_created_on>2019-10-23 20:22:59</sys_created_on>
+            <sys_id>e47a5b6bdb2440d021b91ffa6896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Name Servers" display_value="Name Servers" name="x_401282_nsone_int_cmdb_ci_dns_zone" sys_domain="global" view="Default view">382caa29db00001051bde4da4b961962</sys_ui_section>
+            <sys_updated_by>smorey</sys_updated_by>
+            <sys_updated_on>2019-10-23 20:22:59</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Name Servers</caption>

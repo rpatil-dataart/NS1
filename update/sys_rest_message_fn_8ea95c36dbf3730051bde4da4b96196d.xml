@@ -10,21 +10,21 @@
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>List DHCP scopes [ Get scope DHCP information ]</qualified_name>
+        <qualified_name>NS1-DHCP [ Get scope DHCP information ]</qualified_name>
         <rest_endpoint>https://${api.mycompany.net}/v1/dhcp/scope/${scopeID}</rest_endpoint>
-        <rest_message display_value="List DHCP scopes">ba775432dbf3730051bde4da4b9619e4</rest_message>
+        <rest_message display_value="NS1-DHCP">ba775432dbf3730051bde4da4b9619e4</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>sachin.morey</sys_created_by>
         <sys_created_on>2019-09-13 15:38:50</sys_created_on>
         <sys_id>8ea95c36dbf3730051bde4da4b96196d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Get scope DHCP information</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_rest_message_fn_8ea95c36dbf3730051bde4da4b96196d</sys_update_name>
-        <sys_updated_by>viktor.dergach</sys_updated_by>
-        <sys_updated_on>2019-09-26 14:39:26</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-20 08:34:38</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>

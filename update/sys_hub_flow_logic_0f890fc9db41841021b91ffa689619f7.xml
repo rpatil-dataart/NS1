@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">07890fc9db41841021b91ffa689619f6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Assign an IP address">c6c563581bcdc01023b9631e6e4bcb77</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3.2.1</order>
+        <outputs_assigned>output,message,output1,reservation_id</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>d66c97fb-a6b1-47b2-b6fa-2d1da02290f6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>0f890fc9db41841021b91ffa689619f7</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_0f890fc9db41841021b91ffa689619f7</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 17:40:11</sys_updated_on>
+        <ui_id>0fd5bbc1-31c6-4403-b398-b2645fc1fbac</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0f890fc9db41841021b91ffa689619f7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0f890fc9db41841021b91ffa689619f7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>43890fc9db41841021b91ffa689619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <value>IP Address created and host is reserved</value>
+        <variable display_value="">40e2c7c5db41841021b91ffa68961903</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0f890fc9db41841021b91ffa689619f7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>message</field>
+        <id>0f890fc9db41841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>cf890fc9db41841021b91ffa689619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_c6c563581bcdc01023b9631e6e4bcb77</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>output</field>
+        <id>0f890fc9db41841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>87890fc9db41841021b91ffa689619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_c6c563581bcdc01023b9631e6e4bcb77</table>
+        <value>{{d07df984-8bcc-4453-a088-4f69f895bdab.status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>output1</field>
+        <id>0f890fc9db41841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>0f890fc9db41841021b91ffa689619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_c6c563581bcdc01023b9631e6e4bcb77</table>
+        <value>{{99eebe4a-5b9a-440b-aef5-18acb71a1c4c.network}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reservation_id</field>
+        <id>0f890fc9db41841021b91ffa689619f7</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-09 21:15:45</sys_created_on>
+        <sys_id>4b890fc9db41841021b91ffa689619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_c6c563581bcdc01023b9631e6e4bcb77</table>
+        <value>{{d07df984-8bcc-4453-a088-4f69f895bdab.mac}}</value>
+    </sys_element_mapping>
+</record_update>

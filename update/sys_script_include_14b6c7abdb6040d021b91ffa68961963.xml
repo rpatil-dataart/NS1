@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_401282_nsone_int.NSOneAPIDHCP</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>NSOneAPIDHCP</name>
+        <script><![CDATA[var NSOneAPIDHCP = Class.create();
+NSOneAPIDHCP.prototype = Object.extendsObject(x_401282_nsone_int.NSOneApiCore,{
+
+    initialize: function() {
+			x_401282_nsone_int.NSOneApiCore.prototype.initialize.call(this);
+		this.logger = new x_401282_nsone_int.SystemLogHelper();
+		var func = "initialize";
+		this.logger.info(this.type, func, "Entering Function");
+    },
+	/* Get All scope
+	* Sample API Call
+	* GET https://demo.nsone.net/v1/dhcp/scope
+	*/
+	getScopes: function(){
+		var func = "getAllDHCPScopes";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var DHCPscopes;
+
+		var method = "GET DHCP Scopes"; //Need to add in constants class or some table
+		var endpoint = "NS1-DHCP";
+		var headers= this.getDefaultRequestHeaders();
+		var params=this._getDHCPParams(gs.getProperty('x_401282_nsone_int.My Company'));
+		var response = this.sendRequest(method,endpoint, headers, params, null);
+
+		try{
+			if (this.responseWasSuccessful(response)) {
+				DHCPscopes = this.getResponseJSON(response);
+			} else {
+				this.result.nsOneError.errorDetails = "Error";
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+		}
+		return DHCPscopes;
+	},	
+
+	/* Get a scope details
+	*  Sample API Call
+	*  GET https://demo.nsone.net/v1/dhcp/scope/scopeid
+	*/
+	getScope: function(ScopeID){
+		var func = "getScope";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var scopeDetails;
+		var method = "Get DHCP Scope details"; //Need to add in constants class or some table
+		var endpoint = "NS1-DHCP";
+		var headers= this.getDefaultRequestHeaders();
+		var params = this._getDHCPParams(gs.getProperty('x_401282_nsone_int.My Company'),ScopeID);
+		var response = this.sendRequest(method,endpoint, headers, params, null);
+
+		try{
+			if (this.responseWasSuccessful(response)) {				
+				this.logger.debug(this.type, func, "DHCP scope Details " + response.getBody()); 
+				scopeDetails = this.getResponseJSON(response);
+
+			} else {
+				this.result.nsOneError.errorDetails = "Error";
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting zone details" + JSON.stringify(e));   
+		}
+		return scopeDetails;
+	},
+
+	_getDHCPParams: function(companyName,scopeID) {
+		var params = [];
+		params.push({ "name": "scopeID", "value": scopeID });  
+		params.push({ "name": "api.mycompany.net", "value": companyName });
+		return params;
+	},
+
+	insertAllActiveScope: function(DHCPscopes){
+		var func = "insertAllActiveZones";
+		this.logger.info(this.type, func, "Entering Function");
+
+		try { 
+			var xmlHelper = new global.XMLHelper();
+
+			var xmlStr = DHCPscopes.map(function(scope){
+				return "<record>" + xmlHelper.toXMLStr(scope,true) + "</record>";
+			});
+
+			var functionName = "insertMultiple"; //Need to add in constants class or some table
+			var messageName = "x_401282_nsone_int.ScopeImportSet";
+			//var headers= this.getDefaultRequestHeaders();
+			var params = [{ "name": "records", "value": xmlStr }];
+			this.logger.debug(this.type, func, "params " + xmlStr); 
+			var response = this.sendSOAPRequest(functionName, messageName, null, params, null);
+
+			try{
+				if (this.responseWasSuccessful(response)) {
+					var responseBody = response.getBody(); 
+										
+					this.logger.debug(this.type,func, gs.getMessage("Response Body{0}", [responseBody]));				
+
+				} else {
+					this.result.nsOneError.errorDetails = "Error";
+				}
+			}
+			catch(e){
+				this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+			}
+
+
+		}
+		catch(ex) { 
+			this.logger.error(this.type,func, "Exception thrown while inserting Zones" + JSON.stringify(ex));
+			//var message = ex.message;
+		}
+	},
+/* Get a scope details
+	*  Sample API Call
+	*  GET https://demo.nsone.net/v1/dhcp/scopegroup
+	*/
+getScopeGroups:function(){
+	var func = "getScopeGroups";
+		this.logger.info(this.type, func, "Entering Function");
+
+		var scopeGroups;
+		var method = "List scope Group"; //Need to add in constants class or some table
+		var endpoint = "NS1-DHCP";
+		var headers= this.getDefaultRequestHeaders();
+		var params = this._getDHCPParams(gs.getProperty('x_401282_nsone_int.My Company'));
+		var response = this.sendRequest(method,endpoint, headers, params, null);
+
+		try{
+			if (this.responseWasSuccessful(response)) {				
+				this.logger.debug(this.type, func, "DHCP scopeGroups Details " + response.getBody()); 
+				scopeGroups = this.getResponseJSON(response);
+
+			} else {
+				this.result.nsOneError.errorDetails = "Error";
+			}
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting zone details" + JSON.stringify(e));   
+		}
+		return scopeGroups;
+},
+	insertAllRecords: function(records){
+		var func = "insertAllRecords";
+		this.logger.info(this.type, func, "Entering Function");
+
+		try { 
+			
+			var xmlHelper = new global.XMLHelper();
+
+			var xmlStr = records.map(function(record){
+				return "<record>" + xmlHelper.toXMLStr(record,true) + "</record>";
+			});
+
+			var functionName = "insertMultiple"; //Need to add in constants class or some table
+			var messageName = "x_401282_nsone_int.ScopeImportSet";
+			//var headers= this.getDefaultRequestHeaders();
+			var params = [{ "name": "records", "value": xmlStr }];
+			this.logger.debug(this.type, func, "params " + xmlStr); 
+			var response = this.sendSOAPRequest(functionName, messageName, null, params, null);
+
+			try{
+				if (this.responseWasSuccessful(response)) {
+					var responseBody = response.getBody(); 
+										
+					this.logger.debug(this.type,func, gs.getMessage("Response Body{0}", [responseBody]));				
+
+				} else {
+					this.result.nsOneError.errorDetails = "Error";
+				}
+			}
+			catch(e){
+				this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+			}
+		}
+		catch(ex) { 
+			this.logger.error(this.type,func, "Exception thrown while inserting Zones" + JSON.stringify(ex));
+			//var message = ex.message;
+		}
+	},
+
+	/* 
+	**********************
+	***** Unit Tests *****
+	**********************
+
+	//Get All DHCPSCopes
+	var result = new NSOneAPIDHCP().getScopes();
+    gs.info(result);
+
+	//Get a scope Details
+	var result = new NSOneAPIDHCP().getScope('68');
+	gs.info(result);
+
+    //get scope groups details
+	var result = new NSOneAPIDHCP().getScopeGroups();
+	gs.info(result)
+	*/
+
+    type: 'NSOneAPIDHCP'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-10-23 19:00:38</sys_created_on>
+        <sys_id>14b6c7abdb6040d021b91ffa68961963</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>NSOneAPIDHCP</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_script_include_14b6c7abdb6040d021b91ffa68961963</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-24 18:56:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Create a network</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>a5e4d303dbf8001021b91ffa689619cc</copied_from>
+        <copied_from_name>Create a network</copied_from_name>
+        <description>Create a network</description>
+        <internal_name>create_an_ip_address</internal_name>
+        <label_cache>[{"name":"{{action.routing_table}}","label":"action➛Network ID","type":"action","ref":""},{"name":"{{action.name1}}","label":"action➛Prefix","type":"action","ref":""},{"name":"{{action.kvps}}","label":"action➛KVPS","type":"action","ref":""},{"name":"{{action.tags4}}","label":"action➛Tags","type":"action","ref":""},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.name}}","label":"action➛Name","type":"action","ref":""},{"name":"{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].sn_auth_token}}","label":"step➛Create an IP address➛Credential Value","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].}}","label":"step➛Create Payload➛","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].p}}","label":"step➛Create Payload➛p","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].pa}}","label":"step➛Create Payload➛pa","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].pay}}","label":"step➛Create Payload➛pay","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].payl}}","label":"step➛Create Payload➛payl","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].paylo}}","label":"step➛Create Payload➛paylo","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].payloa}}","label":"step➛Create Payload➛payloa","type":"step","ref":""},{"name":"{{step[656dcea8-8979-4302-a2dd-36c04aaf328c].payload}}","label":"step➛Create Payload➛payload","type":"step","ref":""},{"name":"{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].error_message}}","label":"step➛Create an IP address➛Error Message","type":"step","ref":""},{"name":"{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].response_body}}","label":"step➛Create an IP address➛Response Body","type":"step","ref":""},{"name":"{{step[258c576b-832e-4fdf-854e-9fbb8f95a020].status_code}}","label":"step➛Create an IP address➛Status Code","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].}}","label":"step➛Post Processing➛","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].k}}","label":"step➛Post Processing➛k","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].kv}}","label":"step➛Post Processing➛kv","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].kvp}}","label":"step➛Post Processing➛kvp","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].kvps}}","label":"step➛Post Processing➛kvps","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].tags}}","label":"step➛Post Processing➛tags","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].prefix}}","label":"step➛Post Processing➛prefix","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].type}}","label":"step➛Post Processing➛type","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].name}}","label":"step➛Post Processing➛name","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].description}}","label":"step➛Post Processing➛description","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].network_id}}","label":"step➛Post Processing➛network_id","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].inherited_tags}}","label":"step➛Post Processing➛inherited_tags","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].total_addresses}}","label":"step➛Post Processing➛total_addresses","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].children}}","label":"step➛Post Processing➛children","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].free_addresses}}","label":"step➛Post Processing➛free_addresses","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].indent}}","label":"step➛Post Processing➛indent","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].used_addresses}}","label":"step➛Post Processing➛used_addresses","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>77ab4b4ddb41841021b91ffa68961952</latest_snapshot>
+        <master_snapshot>1ccfaf47db3c001021b91ffa689619ae</master_snapshot>
+        <name>Create an IP address</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 18:35:53</sys_created_on>
+        <sys_id>be6b2f83db3c001021b91ffa689619e6</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Create an IP address</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_be6b2f83db3c001021b91ffa689619e6</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 21:25:10</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=be6b2f83db3c001021b91ffa689619e6"/>
+    <sys_element_mapping action="delete_multiple" query="id=be6b2f83db3c001021b91ffa689619e6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>children</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 15:21:58</sys_created_on>
+        <sys_id>1165af181bcdc01023b9631e6e4bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].children}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>0c3c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 18:35:55</sys_created_on>
+        <sys_id>976b6f83db3c001021b91ffa6896196a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:30:53</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>free_addresses</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 15:21:58</sys_created_on>
+        <sys_id>1965af181bcdc01023b9631e6e4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].free_addresses}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>indent</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 15:21:58</sys_created_on>
+        <sys_id>9d65af181bcdc01023b9631e6e4bcb0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].indent}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>kvps</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>cc3c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].kvps}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>483c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>network</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 18:35:55</sys_created_on>
+        <sys_id>5b6b6f83db3c001021b91ffa6896196a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>network_id</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>003c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].network_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>prefix</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>c03c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].prefix}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>843c7d841b41c01023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:15:43</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].inherited_tags}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 18:35:55</sys_created_on>
+        <sys_id>1f6b6f83db3c001021b91ffa6896196a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:30:53</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tags</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>443c7d841b41c01023b9631e6e4bcbb3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:21:47</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].tags}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>total_addresses</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 15:21:58</sys_created_on>
+        <sys_id>5565af181bcdc01023b9631e6e4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].total_addresses}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>type</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-06 13:03:49</sys_created_on>
+        <sys_id>803c7d841b41c01023b9631e6e4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-06 13:03:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].type}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>used_addresses</field>
+        <id>be6b2f83db3c001021b91ffa689619e6</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 15:21:58</sys_created_on>
+        <sys_id>d965af181bcdc01023b9631e6e4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{step[b27d7e88-7b89-4d12-9903-b1dd2c303490].used_addresses}}</value>
+    </sys_element_mapping>
+</record_update>

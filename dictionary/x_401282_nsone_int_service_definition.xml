@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Service Definition" max_length="40" name="x_401282_nsone_int_service_definition" type="collection">
+        <element label="Config Tree ID" max_length="40" name="config_tree_id" type="string"/>
+        <element label="ID" max_length="40" name="id" read_only="true" type="string"/>
+        <element label="Name Servers" max_length="4000" name="name_servers" reference="x_401282_nsone_int_dns_server" type="glide_list"/>
+        <element label="Scope Groups" max_length="32" name="scope_groups" reference="x_401282_nsone_int_scope_group" type="reference"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="DHCP" sequence="0" value="DHCP"/>
+                <element inactive_on_update="false" label="DNS" sequence="1" value="DNS"/>
+            </choice>
+        </element>
+    </element>
+</database>

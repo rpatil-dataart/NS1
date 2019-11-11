@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">29b430201bc1041023b9631e6e4bcb90</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Create Host record">7a16b0601bc1041023b9631e6e4bcb04</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2.7.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>9bf50148-f63b-40fd-a629-a3d49e48b1b0</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 21:14:36</sys_created_on>
+        <sys_id>3216b0601bc1041023b9631e6e4bcb5d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_3216b0601bc1041023b9631e6e4bcb5d</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 20:26:15</sys_updated_on>
+        <ui_id>8a05fbd9-75d6-4d95-9ff2-0121f5367118</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=3216b0601bc1041023b9631e6e4bcb5d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>3216b0601bc1041023b9631e6e4bcb5d</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 21:14:36</sys_created_on>
+        <sys_id>f216b0601bc1041023b9631e6e4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 21:14:36</sys_updated_on>
+        <value>{{79f412f3-4bdc-4715-9d85-0e3eb7d8b4e9.status}}=Success</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+</record_update>

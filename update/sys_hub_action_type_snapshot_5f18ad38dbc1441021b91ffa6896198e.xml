@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>create_reverse_zone_and_record_name_from_domain</internal_name>
+        <label_cache>[{"name":"{{action.domain_name}}","label":"action➛Domain Name","type":"action","ref":""},{"name":"{{action.answer}}","label":"action➛Answer","type":"action","ref":""},{"name":"{{step[84bd314f-b8dd-4553-a089-b671521e97b5].reverseZoneName}}","label":"step➛Calculate Reverse➛reverseZoneName","type":"step","ref":""},{"name":"{{step[84bd314f-b8dd-4553-a089-b671521e97b5].revereseDomainName}}","label":"step➛Calculate Reverse➛revereseDomainName","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Create Reverse Zone and Record Name from domain</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Create Reverse Zone and Record Name from domain">5ca7e538dbc1441021b91ffa68961955</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-08 19:31:34</sys_created_on>
+        <sys_id>5f18ad38dbc1441021b91ffa6896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Reverse Zone and Record Name from domain</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_5f18ad38dbc1441021b91ffa6896198e</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-08 19:31:34</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=5f18ad38dbc1441021b91ffa6896198e"/>
+    <sys_element_mapping action="delete_multiple" query="id=5f18ad38dbc1441021b91ffa6896198e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reverse_record_name</field>
+        <id>5f18ad38dbc1441021b91ffa6896198e</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-08 19:31:35</sys_created_on>
+        <sys_id>6718ad38dbc1441021b91ffa689619e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-08 19:31:35</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5f18ad38dbc1441021b91ffa6896198e</table>
+        <value>{{step[84bd314f-b8dd-4553-a089-b671521e97b5].revereseDomainName}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reverse_zone_name</field>
+        <id>5f18ad38dbc1441021b91ffa6896198e</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-08 19:31:35</sys_created_on>
+        <sys_id>a318ad38dbc1441021b91ffa689619e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-08 19:31:35</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5f18ad38dbc1441021b91ffa6896198e</table>
+        <value>{{step[84bd314f-b8dd-4553-a089-b671521e97b5].reverseZoneName}}</value>
+    </sys_element_mapping>
+</record_update>

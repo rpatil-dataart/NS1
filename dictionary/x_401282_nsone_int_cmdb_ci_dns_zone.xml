@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="DNS Zone" max_length="40" name="x_401282_nsone_int_cmdb_ci_dns_zone" sizeclass="2570" type="collection">
+    <element extends="cmdb_ci" label="DNS Zone" max_length="40" name="x_401282_nsone_int_cmdb_ci_dns_zone" sizeclass="2625" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Network Pools" max_length="100" name="network_pools" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Primary Master" max_length="100" name="primary_master" type="string"/>
         <element label="Serial" max_length="40" name="serial" type="longint"/>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="DI Scope" max_length="40" name="x_401282_nsone_int_di_scope" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_address" label="Address" max_length="40" name="u_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_dhcp_options" label="DHCP Options" max_length="40" name="u_dhcp_options" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_id" label="ID" max_length="40" name="u_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_scope_group" label="Scope Group" max_length="40" name="u_scope_group" type="string"/>
+    </element>
+</database>

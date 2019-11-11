@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="API Request Queue" max_length="40" name="x_401282_nsone_int_api_request_queue" sizeclass="92414" type="collection">
+        <element display="true" label="Action" max_length="100" name="action" type="string"/>
+        <element label="Error Code" max_length="40" name="error_code" type="string"/>
+        <element label="Input Data" max_length="4000" name="input_data" type="string"/>
+        <element label="Parent" max_length="32" name="parent" reference="x_401282_nsone_int_api_request_queue" type="reference"/>
+        <element label="Processed" max_length="40" name="processed" type="glide_date_time"/>
+        <element label="Response Body" max_length="4000" name="response_body" type="string"/>
+        <element default="0" label="Retry Count" max_length="40" name="retry_count" type="integer"/>
+        <element choice="3" default="100" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="100"/>
+                <element inactive_on_update="false" label="Processing" sequence="1" value="200"/>
+                <element inactive_on_update="false" label="Complete" sequence="2" value="300"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="400"/>
+                <element inactive_on_update="false" label="Error" sequence="4" value="500"/>
+            </choice>
+        </element>
+        <element label="Status Code" max_length="40" name="status_code" type="string"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="parent"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

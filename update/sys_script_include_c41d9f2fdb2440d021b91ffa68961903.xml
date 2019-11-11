@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_401282_nsone_int.DHCPLibrary</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>DHCPLibrary</name>
+        <script><![CDATA[var DHCPLibrary = Class.create();
+DHCPLibrary.prototype = {
+	Scope_IMPORT_SET_TBL_NAME : 'x_401282_nsone_int_di_zone',
+	ZONE_TABLE_NAME: 'x_401282_nsone_int_cmdb_ci_dns_zone',
+	AVAILABLE_LIMIT: 900,
+	OPERATIONAL_STATUS:{RETIRED:6},
+    initialize: function() {
+	this.logger = new x_401282_nsone_int.SystemLogHelper();
+		var func = "initialize";
+		this.logger.info(this.type, func, "Entering Function");
+
+		this.importSetUtil = new x_401282_nsone_int.ImportSetApiUtils();
+		this.scopeApis = new x_401282_nsone_int.NSOneAPIDHCP();
+		this.apiQueue = new x_401282_nsone_int.APIRequestQueueHelper();
+    },
+createAllScopesRequestQueueEntry : function(){
+
+		this.apiQueue.createApiRequestQueueEntry('GetAllScopes', null);
+	},
+	getAllScopes: function(){
+
+		var func = "getAllScopes";
+		this.logger.info(this.type, func, "Entering Function");
+
+		//var statusCode = -1;
+
+		try{
+			var scopes = this.scopeApis.getAllZones();
+
+			if(scopes){
+				var result = this.scopeApis.NSOneAPIDHCP(scopes);
+				//statusCode = this.zoneApis.result.statusCode;
+			}
+
+		}
+		catch(e){
+			this.logger.error(this.type,func, "Exception thrown in getting zones" + JSON.stringify(e));   
+		}
+		finally{			
+			return this.scopeApis.result;
+		}
+	},
+
+    type: 'DHCPLibrary'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-10-23 20:40:41</sys_created_on>
+        <sys_id>c41d9f2fdb2440d021b91ffa68961903</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DHCPLibrary</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_script_include_c41d9f2fdb2440d021b91ffa68961903</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:43:02</sys_updated_on>
+    </sys_script_include>
+</record_update>

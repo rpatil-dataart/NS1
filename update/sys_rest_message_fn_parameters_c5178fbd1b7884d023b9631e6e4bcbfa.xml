@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>operatorID</name>
+        <rest_message_function display_value="Get an operators details">cc174fbd1b7884d023b9631e6e4bcbdb</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-10-30 18:44:42</sys_created_on>
+        <sys_id>c5178fbd1b7884d023b9631e6e4bcbfa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>operatorID</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_c5178fbd1b7884d023b9631e6e4bcbfa</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-02 18:34:50</sys_updated_on>
+        <type>string</type>
+        <value>5d7677c8b1d43d008f6f69ec</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

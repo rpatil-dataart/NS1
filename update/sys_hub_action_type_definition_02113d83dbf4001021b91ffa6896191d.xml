@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Delete a reservation</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Delete a reservation</description>
+        <internal_name>delete_a_reservation</internal_name>
+        <label_cache>[{"name":"{{action.reservation_id}}","label":"action➛reservation_id","type":"action","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].sn_auth_token}}","label":"step➛Delete a reservation➛Credential Value","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].S}}","label":"step➛Post Processing➛S","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].St}}","label":"step➛Post Processing➛St","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Sta}}","label":"step➛Post Processing➛Sta","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Stat}}","label":"step➛Post Processing➛Stat","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Statu}}","label":"step➛Post Processing➛Statu","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Status}}","label":"step➛Post Processing➛Status","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].}}","label":"step➛Post Processing➛","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].R}}","label":"step➛Post Processing➛R","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Re}}","label":"step➛Post Processing➛Re","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Res}}","label":"step➛Post Processing➛Res","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Resp}}","label":"step➛Post Processing➛Resp","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Respo}}","label":"step➛Post Processing➛Respo","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Respon}}","label":"step➛Post Processing➛Respon","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Respons}}","label":"step➛Post Processing➛Respons","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Response}}","label":"step➛Post Processing➛Response","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].status_code}}","label":"step➛Delete a reservation➛Status Code","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].response_body}}","label":"step➛Delete a reservation➛Response Body","type":"step","ref":""},{"name":"{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].error_message}}","label":"step➛Delete a reservation➛Error Message","type":"step","ref":""},{"name":"{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>79683715db8d841021b91ffa689619df</latest_snapshot>
+        <master_snapshot>01214643db38001021b91ffa68961969</master_snapshot>
+        <name>Delete a reservation</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 09:41:27</sys_created_on>
+        <sys_id>02113d83dbf4001021b91ffa6896191d</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Delete a reservation</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_02113d83dbf4001021b91ffa6896191d</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-10 19:18:59</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=02113d83dbf4001021b91ffa6896191d"/>
+    <sys_element_mapping action="delete_multiple" query="id=02113d83dbf4001021b91ffa6896191d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>errormessage</field>
+        <id>02113d83dbf4001021b91ffa6896191d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 10:49:27</sys_created_on>
+        <sys_id>1ea0ce03db38001021b91ffa689619a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 21:44:50</sys_updated_on>
+        <table>var__m_sys_hub_action_output_02113d83dbf4001021b91ffa6896191d</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response</field>
+        <id>02113d83dbf4001021b91ffa6896191d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 10:49:01</sys_created_on>
+        <sys_id>c0908e03db38001021b91ffa68961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 10:49:01</sys_updated_on>
+        <table>var__m_sys_hub_action_output_02113d83dbf4001021b91ffa6896191d</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Response}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>02113d83dbf4001021b91ffa6896191d</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-03 10:49:01</sys_created_on>
+        <sys_id>84908e03db38001021b91ffa68961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-03 10:49:01</sys_updated_on>
+        <table>var__m_sys_hub_action_output_02113d83dbf4001021b91ffa6896191d</table>
+        <value>{{step[c1599fc7-c919-44cc-85dc-34f9d709b3e1].Status}}</value>
+    </sys_element_mapping>
+</record_update>

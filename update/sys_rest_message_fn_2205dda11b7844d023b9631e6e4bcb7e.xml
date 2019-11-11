@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+  "hostmaster": "hostmaster@nsone.net",&#13;
+  "ttl": ${ttl},&#13;
+  "nx_ttl": ${nx_ttl},&#13;
+  "retry": ${retry},&#13;
+  "zone": "${zone}",&#13;
+  "refresh": ${refresh},&#13;
+  "expiry": ${expiry},&#13;
+  "dns_servers": ${dns_servers},&#13;
+  "networks": ${networks},&#13;
+  "network_pools": ${network_pools}&#13;
+}</content>
+        <function_name>Modify a zone</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>NS1-Zones and Records [ Modify a zone ]</qualified_name>
+        <rest_endpoint>https://api.nsone.net/v1/zones/${zone}</rest_endpoint>
+        <rest_message display_value="NS1-Zones and Records">5983f240dbff330051bde4da4b961956</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-10-29 15:47:58</sys_created_on>
+        <sys_id>2205dda11b7844d023b9631e6e4bcb7e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Modify a zone</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_rest_message_fn_2205dda11b7844d023b9631e6e4bcb7e</sys_update_name>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-10-29 15:59:13</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

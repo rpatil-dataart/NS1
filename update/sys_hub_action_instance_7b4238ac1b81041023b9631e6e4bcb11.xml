@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create a new DNS zone">be41523fdbb8801021b91ffa68961934</action_type>
+        <action_type_parent/>
+        <comment>Create a Reverse Zone</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Host record">6eba98e41b41041023b9631e6e4bcb00</flow>
+        <order>2.6</order>
+        <parent_ui_id>c6a4dadf-c78e-4ce5-ae9f-c23ac530d9a0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 20:58:00</sys_created_on>
+        <sys_id>7b4238ac1b81041023b9631e6e4bcb11</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_7b4238ac1b81041023b9631e6e4bcb11</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 20:26:21</sys_updated_on>
+        <ui_id>b54b8dd5-4c9b-41d7-bb5e-edfb1cde9a30</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7b4238ac1b81041023b9631e6e4bcb11"/>
+    <sys_element_mapping action="delete_multiple" query="id=7b4238ac1b81041023b9631e6e4bcb11"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>zone</field>
+        <id>7b4238ac1b81041023b9631e6e4bcb11</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 20:58:00</sys_created_on>
+        <sys_id>b34238ac1b81041023b9631e6e4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-07 20:58:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_79219efbdbb8801021b91ffa6896197a</table>
+        <value>{{9a81aaec-1604-4767-9164-ff30915a42cb.reverse_zone_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>zone</field>
+        <id>7b4238ac1b81041023b9631e6e4bcb11</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-07 21:14:34</sys_created_on>
+        <sys_id>1e1670601bc1041023b9631e6e4bcb79</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-09 19:59:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be41523fdbb8801021b91ffa68961934</table>
+        <value>{{bcd48a3d-de9b-4cae-85e9-3e6e4f3409d8.reverse_zone_name}}</value>
+    </sys_element_mapping>
+</record_update>

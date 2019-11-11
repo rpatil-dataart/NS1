@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Scope Group" max_length="40" name="x_401282_nsone_int_scope_group" type="collection">
+        <element label="DHCP Options" max_length="4000" name="dhcp_options" reference="x_401282_nsone_int_dhcp_option" type="glide_list"/>
+        <element label="DHCP Options" max_length="4000" name="dhcp_options_v6" reference="x_401282_nsone_int_dhcp_option" type="glide_list"/>
+        <element label="DHCP Service" max_length="32" name="dhcp_service" reference="x_401282_nsone_int_service_definition" reference_qual="type=DHCP^EQ" reference_qual_condition="type=DHCP^EQ" type="reference"/>
+        <element label="Echo Client ID" max_length="40" name="echo_client_id" type="boolean"/>
+        <element label="Enabled " max_length="40" name="enabled" type="boolean"/>
+        <element label="Enabled " max_length="40" name="enabled_v6" type="boolean"/>
+        <element label="ID" max_length="255" name="id" read_only="true" type="string"/>
+        <element hint="Valid lifetime in seconds" label="Lease Duration" max_length="40" name="lease_duration" type="integer"/>
+        <element label="Preferred Lifetime" max_length="40" name="preferred_lifetime" type="integer"/>
+        <element hint="Rebind timer in seconds" label="Rebind Timer" max_length="40" name="rebind_timer" type="integer"/>
+        <element label="Rebind Timer" max_length="40" name="rebind_timer_v6" type="integer"/>
+        <element hint="Renew timer in seconds" label="Renew Timer" max_length="40" name="renew_timer" type="integer"/>
+        <element label="Renew Timer" max_length="40" name="renew_timer_v6" type="integer"/>
+        <element label="Valid Lifetime" max_length="40" name="valid_lifetime" type="integer"/>
+    </element>
+</database>
