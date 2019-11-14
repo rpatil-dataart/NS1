@@ -6,81 +6,126 @@
         <client_callable>false</client_callable>
         <description/>
         <name>CommonUtil</name>
-        <script><![CDATA[var CommonUtil = Class.create();
-CommonUtil.prototype = {
-	initialize: function() {
-		this.logger = new x_401282_nsone_int.SystemLogHelper();
-	},
-	
-	/*
-     * takes in a sys_id and returns a corresponding GlideRecord object
-     * If the sys_id is actually the GlideRecord object, we return the object
-     *
-     * @returns: Glide Record or Null
-     */
-	getGr: function(
-	sys_id, //(string or GlideRecord) sys_id of the scheduled import record
-	 table //(string) name of table
-	) {
-		var func = "getGr";
-		this.logger.debug(this.type, func, "Entering Function");
-		this.logger.debug(this.type, func, "Raw sys_id parameter value: " + sys_id);
-		this.logger.debug(this.type, func, "table: " + table);
-
-		var gr;
-		try {
-			if (typeof sys_id == "object" && sys_id.isValidRecord()) {
-				this.logger.debug(this.type, func, "Appears to be a GR already.");
-				return sys_id;
-			}
-			if (!sys_id) {
-				//this.logger.warn(this.type, func, "No sys_id value...exit");
-				this.logger.warn(this.type, func, "No sys_id value...exit");
-				return;
-			}
-			if (!table) {
-				//this.logger.warn(this.type, func, "No table specified...exiting");
-				this.logger.warn(this.type, func, "No table specified...exiting");
-				return;
-			}
-			gr = new GlideRecord(table);
-			if (!gr.isValid()) {
-				//this.logger.warn(this.type, func, "Invalid table ("+table+") specified...exiting");
-				this.logger.warn(this.type, func, "Invalid table (" + table + ") specified...exiting");
-				return;
-			}
-			gr.get(sys_id);
-			if (!gr.isValidRecord()) {
-				//this.logger.debug(this.type, func, "Sys_id ("+sys_id+") matches no valid record");
-				this.logger.warn(this.type, func, "Sys_id (" + sys_id + ") matches no valid record");
-				return;
-			}
-
-		} catch (e) {
-			this.logger.error(this.type, func, e);
-		}
-		this.logger.debug(this.type, func, "GR sys_id: " + gr.getValue("sys_id"));
-		return gr;
-
-	},
-
-	
-	type: 'CommonUtil'
-};
-
-
-]]></script>
+        <script>var CommonUtil = Class.create();&#13;
+CommonUtil.prototype = {&#13;
+	initialize: function() {&#13;
+		this.logger = new x_401282_nsone_int.SystemLogHelper();&#13;
+	},&#13;
+	&#13;
+	/*&#13;
+     * takes in a sys_id and returns a corresponding GlideRecord object&#13;
+     * If the sys_id is actually the GlideRecord object, we return the object&#13;
+     *&#13;
+     * @returns: Glide Record or Null&#13;
+     */&#13;
+	getGr: function(&#13;
+	sys_id, //(string or GlideRecord) sys_id of the scheduled import record&#13;
+	 table //(string) name of table&#13;
+	) {&#13;
+		var func = "getGr";&#13;
+		this.logger.debug(this.type, func, "Entering Function");&#13;
+		this.logger.debug(this.type, func, "Raw sys_id parameter value: " + sys_id);&#13;
+		this.logger.debug(this.type, func, "table: " + table);&#13;
+&#13;
+		var gr;&#13;
+		try {&#13;
+			if (typeof sys_id == "object" &amp;&amp; sys_id.isValidRecord()) {&#13;
+				this.logger.debug(this.type, func, "Appears to be a GR already.");&#13;
+				return sys_id;&#13;
+			}&#13;
+			if (!sys_id) {&#13;
+				//this.logger.warn(this.type, func, "No sys_id value...exit");&#13;
+				this.logger.warn(this.type, func, "No sys_id value...exit");&#13;
+				return;&#13;
+			}&#13;
+			if (!table) {&#13;
+				//this.logger.warn(this.type, func, "No table specified...exiting");&#13;
+				this.logger.warn(this.type, func, "No table specified...exiting");&#13;
+				return;&#13;
+			}&#13;
+			gr = new GlideRecord(table);&#13;
+			if (!gr.isValid()) {&#13;
+				//this.logger.warn(this.type, func, "Invalid table ("+table+") specified...exiting");&#13;
+				this.logger.warn(this.type, func, "Invalid table (" + table + ") specified...exiting");&#13;
+				return;&#13;
+			}&#13;
+			gr.get(sys_id);&#13;
+			if (!gr.isValidRecord()) {&#13;
+				//this.logger.debug(this.type, func, "Sys_id ("+sys_id+") matches no valid record");&#13;
+				this.logger.warn(this.type, func, "Sys_id (" + sys_id + ") matches no valid record");&#13;
+				return;&#13;
+			}&#13;
+&#13;
+		} catch (e) {&#13;
+			this.logger.error(this.type, func, e);&#13;
+		}&#13;
+		this.logger.debug(this.type, func, "GR sys_id: " + gr.getValue("sys_id"));&#13;
+		return gr;&#13;
+&#13;
+	},&#13;
+	&#13;
+	 toXMLStr : function(o, leaveBlanks) {&#13;
+        var toXml = function(v, name, ind) {&#13;
+		   if (typeof(v) == "function")&#13;
+			  return "";&#13;
+		   &#13;
+            var xml = "";&#13;
+            if (v instanceof Array) {&#13;
+                for ( var i = 0, n = v.length; i &lt; n; i++)&#13;
+                    xml += ind + toXml(v[i], name, ind + "\t") + "\n";&#13;
+            } else if (typeof (v) == "object") {&#13;
+                var hasChild = false;&#13;
+                xml += ind + "&lt;" + name;&#13;
+                for ( var m in v) {&#13;
+                    if (m.charAt(0) == "@")&#13;
+                        xml += " " + m.substr(1) + "=\"" + v[m].toString() + "\"";&#13;
+                    else&#13;
+                        hasChild = true;&#13;
+                }&#13;
+                xml += hasChild ? "&gt;" : "/&gt;";&#13;
+                if (hasChild) {&#13;
+                    for ( var m in v) {&#13;
+                        if (m == "#text")&#13;
+                            xml += v[m];&#13;
+                        else if (m == "#cdata")&#13;
+                            xml += "&lt;![CDATA[" + v[m] + "]]&gt;";&#13;
+                        else if (m.charAt(0) != "@")&#13;
+                            xml += toXml(v[m], m, ind + "\t");&#13;
+                    }&#13;
+                    xml += (xml.charAt(xml.length - 1) == "\n" ? ind : "") + "&lt;/" + name + "&gt;";&#13;
+                }&#13;
+            } else {&#13;
+                xml += ind + "&lt;" + name + "&gt;" + v.toString() + "&lt;/" + name + "&gt;";&#13;
+            }&#13;
+            return xml;&#13;
+        };&#13;
+&#13;
+        xml = "";&#13;
+        for ( var m in o)&#13;
+            xml += toXml(o[m], m, "");&#13;
+		&#13;
+		if (leaveBlanks)&#13;
+			return xml;&#13;
+		&#13;
+        return xml.replace(/\t|\n/g, "");&#13;
+    },&#13;
+	&#13;
+	type: 'CommonUtil'&#13;
+};&#13;
+&#13;
+&#13;
+</script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-10-15 13:35:13</sys_created_on>
         <sys_id>6330b009dbacc09021b91ffa68961945</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>CommonUtil</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_6330b009dbacc09021b91ffa68961945</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-10-23 19:34:19</sys_updated_on>
+        <sys_updated_on>2019-11-11 19:18:22</sys_updated_on>
     </sys_script_include>
 </record_update>

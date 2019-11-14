@@ -8,20 +8,20 @@
         <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
         <display_text/>
         <flow display_value="Create Host record">7a16b0601bc1041023b9631e6e4bcb04</flow>
-        <order>5</order>
-        <parent_ui_id/>
+        <order>4.2</order>
+        <parent_ui_id>4d9cad27-2248-40f8-9b35-2fb4ae54a5d1</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-07 21:14:37</sys_created_on>
         <sys_id>9f16b0601bc1041023b9631e6e4bcbcd</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_action_instance_9f16b0601bc1041023b9631e6e4bcbcd</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-09 20:26:16</sys_updated_on>
+        <sys_updated_on>2019-11-13 16:28:21</sys_updated_on>
         <ui_id>12a0c544-951d-45ab-8720-1bf37670f68e</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9f16b0601bc1041023b9631e6e4bcbcd"/>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create an IP address">be6b2f83db3c001021b91ffa689619e6</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Testing assign IP">b597e75edbc5481021b91ffa68961970</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>a1daa312db09481021b91ffa68961987</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_a1daa312db09481021b91ffa68961987</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:00:21</sys_updated_on>
+        <ui_id>91355dfa-20aa-425d-a02a-406c690991e8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a1daa312db09481021b91ffa68961987"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a1daa312db09481021b91ffa68961987</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>25daa312db09481021b91ffa6896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <value/>
+        <variable display_value="">653c27c3db3c001021b91ffa68961990</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a1daa312db09481021b91ffa68961987</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>e5daa312db09481021b91ffa6896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <value>host</value>
+        <variable display_value="">6d3c27c3db3c001021b91ffa689619a7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a1daa312db09481021b91ffa68961987"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>a5daa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>kvps</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>2ddaa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.kvps}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>21daa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name1</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>a1daa312db09481021b91ffa6896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.prefix}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>routing_table</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>e1daa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.network_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tags4</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>69daa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value>{{subflow.tags}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>type</field>
+        <id>a1daa312db09481021b91ffa68961987</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 20:53:35</sys_created_on>
+        <sys_id>eddaa312db09481021b91ffa6896198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 20:53:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_be6b2f83db3c001021b91ffa689619e6</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

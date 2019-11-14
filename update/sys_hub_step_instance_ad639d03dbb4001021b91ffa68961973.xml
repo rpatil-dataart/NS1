@@ -15,14 +15,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-03 07:31:42</sys_created_on>
         <sys_id>ad639d03dbb4001021b91ffa68961973</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Create Payload</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_step_instance_ad639d03dbb4001021b91ffa68961973</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-06 13:13:21</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:23:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ad639d03dbb4001021b91ffa68961973"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -47,9 +47,9 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-03 07:31:42</sys_created_on>
         <sys_id>a9639d03dbb4001021b91ffa6896197f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-06 13:13:21</sys_updated_on>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:23:32</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   //Transform input to JSON
@@ -64,7 +64,7 @@
     payload.mac = inputs.mac;
 
   payload.options = JSON.parse(inputs.options);
-
+  payload.options = inputs.options;
   outputs.payload = JSON.stringify(payload);
 
 })(inputs, outputs);

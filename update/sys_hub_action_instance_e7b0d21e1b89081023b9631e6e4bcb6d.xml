@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Create an IP address">be6b2f83db3c001021b91ffa689619e6</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Testing IP-reservation">ef9e8e5a1b89081023b9631e6e4bcbe6</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>e7b0d21e1b89081023b9631e6e4bcb6d</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_e7b0d21e1b89081023b9631e6e4bcb6d</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:32:27</sys_updated_on>
+        <ui_id>3fb61389-d199-45b6-9bdb-ba6aceba39df</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e7b0d21e1b89081023b9631e6e4bcb6d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>27b0d21e1b89081023b9631e6e4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:19:57</sys_updated_on>
+        <value>host</value>
+        <variable display_value="">6d3c27c3db3c001021b91ffa689619a7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>2bb0d21e1b89081023b9631e6e4bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:19:57</sys_updated_on>
+        <value>7</value>
+        <variable display_value="">653c27c3db3c001021b91ffa68961990</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>63b0d21e1b89081023b9631e6e4bcb75</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:40:42</sys_updated_on>
+        <value>{"a": "2"}</value>
+        <variable display_value="">1be2330bdb3c001021b91ffa68961947</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>67b0d21e1b89081023b9631e6e4bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:19:57</sys_updated_on>
+        <value>ab zone</value>
+        <variable display_value="">a13c27c3db3c001021b91ffa689619b9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>afb0d21e1b89081023b9631e6e4bcb74</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:40:42</sys_updated_on>
+        <value>["custom-tag-1", "custom-tag-2"]</value>
+        <variable display_value="">613c27c3db3c001021b91ffa6896199c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>e7b0d21e1b89081023b9631e6e4bcb75</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:32:27</sys_updated_on>
+        <value>11.0.1.120/32</value>
+        <variable display_value="">3e6b2f83db3c001021b91ffa689619e9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e7b0d21e1b89081023b9631e6e4bcb6d</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:19:57</sys_created_on>
+        <sys_id>ebb0d21e1b89081023b9631e6e4bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:19:57</sys_updated_on>
+        <value>ab zone</value>
+        <variable display_value="">ed3c27c3db3c001021b91ffa689619a1</variable>
+    </sys_variable_value>
+</record_update>

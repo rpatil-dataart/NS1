@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>DHCP</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description>Creates a reservation. &#13;
+&#13;
+Note: Currently, the reservation must be associated with an address. The DHCP server, if enabled, will provide the associated IP address and any DHCP options to the client with the associated MAC address. The address and scope group must each meet certain invariants or else the request will result in a 422. &#13;
+&#13;
+The address must:&#13;
+&#13;
+Be of type host.&#13;
+Not be associated with another scope group&#13;
+Not have another conflicting reservation&#13;
+The scope group must:&#13;
+&#13;
+Only contain reservations and scopes from a single network.&#13;
+Options should be supported for the address' protocol.</description>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"domain","type":"STRING","mandatory":true},{"name":"scope_group_id","type":"INTEGER","mandatory":false},{"name":"address_id","type":"INTEGER","mandatory":true},{"name":"mac","type":"STRING","mandatory":false},{"name":"options","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"ba775432dbf3730051bde4da4b9619e4","web_service_message_function":"f0601ab91bf484d023b9631e6e4bcba1","web_service_endpoint":"","parameters":"[{\"name\":\"api.mycompany.net\",\"value\":\"${activityInput.domain}\",\"additional_attribute\":\"\"},{\"name\":\"scope_group_id\",\"value\":\"${activityInput.scope_group_id}\",\"additional_attribute\":\"\"},{\"name\":\"mac\",\"value\":\"${activityInput.mac}\",\"additional_attribute\":\"\"},{\"name\":\"address_id\",\"value\":\"${activityInput.address_id}\",\"additional_attribute\":\"\"},{\"name\":\"options\",\"value\":\"${activityInput.options}\",\"additional_attribute\":\"do_not_escape_text\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[]}</local_variables>
+        <name>Create Reservation</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"address_id","type":"INTEGER"},{"name":"options","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"DATA_OBJECT","properties":[{"name":"name","type":"STRING"},{"name":"value","type":"DATA_ARRAY","properties":[{"name":"Array element type: ","type":"STRING"}]}]}]},{"name":"scope_group_id","type":"INTEGER"},{"name":"id","type":"INTEGER"},{"name":"mac","type":"STRING"}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description>Create Reservation</short_description>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>markov</sys_created_by>
+        <sys_created_on>2019-11-11 22:12:31</sys_created_on>
+        <sys_id>5eb92d7d1b05c41023b9631e6e4bcb66</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create Reservation</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>wf_element_activity_5eb92d7d1b05c41023b9631e6e4bcb66</sys_update_name>
+        <sys_updated_by>markov</sys_updated_by>
+        <sys_updated_on>2019-11-11 22:12:45</sys_updated_on>
+        <version_container_id>a00ae3a71b7c401023b9631e6e4bcb81</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=5eb92d7d1b05c41023b9631e6e4bcb66"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>markov</sys_created_by>
+        <sys_created_on>2019-11-11 22:12:31</sys_created_on>
+        <sys_id>9ab92d7d1b05c41023b9631e6e4bcb67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>markov</sys_updated_by>
+        <sys_updated_on>2019-11-11 22:12:45</sys_updated_on>
+        <valid_from>2019-11-11 22:12:45</valid_from>
+        <valid_to/>
+        <version>3</version>
+        <version_container_id>a00ae3a71b7c401023b9631e6e4bcb81</version_container_id>
+        <wf_element_definition display_value="Create Reservation">5eb92d7d1b05c41023b9631e6e4bcb66</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Reservation">5eb92d7d1b05c41023b9631e6e4bcb66</activity_definition>
+        <condition>activityOutput.error == null</condition>
+        <derived_definition>314a41f71bb0801023b9631e6e4bcba9</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>markov</sys_created_by>
+        <sys_created_on>2019-11-11 22:12:31</sys_created_on>
+        <sys_id>56b92d7d1b05c41023b9631e6e4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>markov</sys_updated_by>
+        <sys_updated_on>2019-11-11 22:12:31</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Reservation">5eb92d7d1b05c41023b9631e6e4bcb66</activity_definition>
+        <condition/>
+        <derived_definition>8d8a05f71bb0801023b9631e6e4bcb48</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>markov</sys_created_by>
+        <sys_created_on>2019-11-11 22:12:31</sys_created_on>
+        <sys_id>9eb92d7d1b05c41023b9631e6e4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>markov</sys_updated_by>
+        <sys_updated_on>2019-11-11 22:12:31</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=a00ae3a71b7c401023b9631e6e4bcb81^sys_id!=9ab92d7d1b05c41023b9631e6e4bcb67^version&lt;3">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=a00ae3a71b7c401023b9631e6e4bcb81">
+        <new_activity_definition>5eb92d7d1b05c41023b9631e6e4bcb66</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

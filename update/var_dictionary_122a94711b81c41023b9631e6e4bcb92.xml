@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -60,14 +60,14 @@
         <sys_created_by>abarzdis</sys_created_by>
         <sys_created_on>2019-11-11 16:25:17</sys_created_on>
         <sys_id>122a94711b81c41023b9631e6e4bcb92</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Create a reverse zone and record</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>var_dictionary_122a94711b81c41023b9631e6e4bcb92</sys_update_name>
-        <sys_updated_by>abarzdis</sys_updated_by>
-        <sys_updated_on>2019-11-11 16:26:22</sys_updated_on>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-12 19:40:41</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

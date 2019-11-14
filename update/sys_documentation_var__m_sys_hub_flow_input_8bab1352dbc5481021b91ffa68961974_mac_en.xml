@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="mac" label="MAC" language="en" table="var__m_sys_hub_flow_input_8bab1352dbc5481021b91ffa68961974">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>mac</element>
+            <help/>
+            <hint/>
+            <label>MAC</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_8bab1352dbc5481021b91ffa68961974</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>wsuser</sys_created_by>
+            <sys_created_on>2019-11-13 19:47:21</sys_created_on>
+            <sys_id>57ab5352dbc5481021b91ffa6896193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>MAC</sys_name>
+            <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8bab1352dbc5481021b91ffa68961974_mac_en</sys_update_name>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-13 19:47:21</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

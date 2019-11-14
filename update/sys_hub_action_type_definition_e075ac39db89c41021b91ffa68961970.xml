@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Creates a reservation. </annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>09bdfe76dbb0c8d021b91ffa689619b8</copied_from>
+        <copied_from_name>Create a reservation</copied_from_name>
+        <description>Creates a reservation. </description>
+        <internal_name>copy_of_create_a_reservation</internal_name>
+        <label_cache>[{"name":"{{action.address_id}}","label":"action➛address_id","type":"action","ref":""},{"name":"{{action.scope_group_id}}","label":"action➛scope_group_id","type":"action","ref":""},{"name":"{{action.mac}}","label":"action➛mac","type":"action","ref":""},{"name":"{{action.options}}","label":"action➛options","type":"action","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].}}","label":"step➛Post Processing➛","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].S}}","label":"step➛Post Processing➛S","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Sc}}","label":"step➛Post Processing➛Sc","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Sco}}","label":"step➛Post Processing➛Sco","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Scop}}","label":"step➛Post Processing➛Scop","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Scope}}","label":"step➛Post Processing➛Scope","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeG}}","label":"step➛Post Processing➛ScopeG","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGr}}","label":"step➛Post Processing➛ScopeGr","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGro}}","label":"step➛Post Processing➛ScopeGro","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGrou}}","label":"step➛Post Processing➛ScopeGrou","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGroup}}","label":"step➛Post Processing➛ScopeGroup","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGroupI}}","label":"step➛Post Processing➛ScopeGroupI","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGroupID}}","label":"step➛Post Processing➛ScopeGroupID","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Status}}","label":"step➛Post Processing➛Status","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].AddressID}}","label":"step➛Post Processing➛AddressID","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Options}}","label":"step➛Post Processing➛Options","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ReservationResponse}}","label":"step➛Post Processing➛ReservationResponse","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].I}}","label":"step➛Post Processing➛I","type":"step","ref":""},{"name":"{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ID}}","label":"step➛Post Processing➛ID","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].}}","label":"step➛Payload➛","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].p}}","label":"step➛Payload➛p","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].pa}}","label":"step➛Payload➛pa","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].pay}}","label":"step➛Payload➛pay","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].payl}}","label":"step➛Payload➛payl","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].paylo}}","label":"step➛Payload➛paylo","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].payloa}}","label":"step➛Payload➛payloa","type":"step","ref":""},{"name":"{{step[97473d18-8fec-4cd5-a36e-385d25c26656].payload}}","label":"step➛Payload➛payload","type":"step","ref":""},{"name":"{{step[c8804370-7613-4054-b0d7-1fb065a2f942].sn_auth_token}}","label":"step➛REST step➛Credential Value","type":"step","ref":""},{"name":"{{step[c8804370-7613-4054-b0d7-1fb065a2f942].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[c8804370-7613-4054-b0d7-1fb065a2f942].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[c8804370-7613-4054-b0d7-1fb065a2f942].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>e863de5e1b89081023b9631e6e4bcbba</latest_snapshot>
+        <master_snapshot>703764b9db89c41021b91ffa68961975</master_snapshot>
+        <name>Copy of Create a reservation</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:13</sys_created_on>
+        <sys_id>e075ac39db89c41021b91ffa68961970</sys_id>
+        <sys_mod_count>178</sys_mod_count>
+        <sys_name>Copy of Create a reservation</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_e075ac39db89c41021b91ffa68961970</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:31:32</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_variable_value action="delete_multiple" query="document_key=e075ac39db89c41021b91ffa68961970"/>
+    <sys_element_mapping action="delete_multiple" query="id=e075ac39db89c41021b91ffa68961970"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>address_id</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>9175ec39db89c41021b91ffa689619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].AddressID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>errormessage</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>dd75ec39db89c41021b91ffa689619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mac</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>9d75ec39db89c41021b91ffa689619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>options</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>5575ec39db89c41021b91ffa689619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Options}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reservationresponse8</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>d975ec39db89c41021b91ffa689619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ReservationResponse}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_group_id</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>1975ec39db89c41021b91ffa689619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].ScopeGroupID}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>e075ac39db89c41021b91ffa68961970</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-11 17:14:17</sys_created_on>
+        <sys_id>5175ec39db89c41021b91ffa689619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:14:17</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</table>
+        <value>{{step[9217776e-9b6a-44f6-9466-e74a7c09d21f].Status}}</value>
+    </sys_element_mapping>
+</record_update>

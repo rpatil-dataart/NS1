@@ -18,14 +18,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-09 21:15:45</sys_created_on>
         <sys_id>0f890fc9db41841021b91ffa689619f7</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_flow_logic_0f890fc9db41841021b91ffa689619f7</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-10 17:40:11</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:28:03</sys_updated_on>
         <ui_id>0fd5bbc1-31c6-4403-b398-b2645fc1fbac</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -44,6 +44,20 @@
         <sys_updated_on>2019-11-09 21:15:45</sys_updated_on>
         <value>IP Address created and host is reserved</value>
         <variable display_value="">40e2c7c5db41841021b91ffa68961903</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0f890fc9db41841021b91ffa689619f7</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 21:19:11</sys_created_on>
+        <sys_id>d4b03356db09481021b91ffa689619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 21:19:11</sys_updated_on>
+        <value/>
+        <variable display_value="">d4b03356db09481021b91ffa689619af</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=0f890fc9db41841021b91ffa689619f7"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">

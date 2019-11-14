@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create a reservation">09bdfe76dbb0c8d021b91ffa689619b8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="TestingDeleteImap">e324acf5db89c41021b91ffa689619fa</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>908616121bc9081023b9631e6e4bcb5b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_instance_908616121bc9081023b9631e6e4bcb5b</sys_update_name>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:48:55</sys_updated_on>
+        <ui_id>5d5af5a6-1e31-40ca-9321-7a369b20f53f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=908616121bc9081023b9631e6e4bcb5b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>908616121bc9081023b9631e6e4bcb5b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>108616121bc9081023b9631e6e4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <value/>
+        <variable display_value="">d976dd43dbb4001021b91ffa689619d8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>908616121bc9081023b9631e6e4bcb5b</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:48:55</sys_created_on>
+        <sys_id>3f5752521bc9081023b9631e6e4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:48:55</sys_updated_on>
+        <value>[{"name": "dhcpv4/host-name","value": "abzone.com"},{"name": "dhcpv4/domain-name","value": "abzone.com"},{"name": "dhcpv4/bootfile-name","value": "/boot1.img"}]</value>
+        <variable display_value="">f6e69a121bc9081023b9631e6e4bcb82</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>908616121bc9081023b9631e6e4bcb5b</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>588616121bc9081023b9631e6e4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <value>11:33:44:55:66:70</value>
+        <variable display_value="">e176d1c3dbb4001021b91ffa68961948</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>908616121bc9081023b9631e6e4bcb5b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>948616121bc9081023b9631e6e4bcb61</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:48:55</sys_updated_on>
+        <value>229</value>
+        <variable display_value="">5576d1c3dbb4001021b91ffa68961942</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=908616121bc9081023b9631e6e4bcb5b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>address_id</field>
+        <id>908616121bc9081023b9631e6e4bcb5b</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>548616121bc9081023b9631e6e4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_09bdfe76dbb0c8d021b91ffa689619b8</table>
+        <value>{{58fb7627-b8df-4610-bd96-915c444c7333.network}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mac</field>
+        <id>908616121bc9081023b9631e6e4bcb5b</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>9c8616121bc9081023b9631e6e4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_09bdfe76dbb0c8d021b91ffa689619b8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>options</field>
+        <id>908616121bc9081023b9631e6e4bcb5b</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>188616121bc9081023b9631e6e4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_09bdfe76dbb0c8d021b91ffa689619b8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_group_id</field>
+        <id>908616121bc9081023b9631e6e4bcb5b</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-13 14:45:08</sys_created_on>
+        <sys_id>d88616121bc9081023b9631e6e4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-13 14:45:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_09bdfe76dbb0c8d021b91ffa689619b8</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>
