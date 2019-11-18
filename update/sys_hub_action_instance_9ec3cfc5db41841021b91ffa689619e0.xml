@@ -14,14 +14,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-09 20:50:34</sys_created_on>
         <sys_id>9ec3cfc5db41841021b91ffa689619e0</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>82</sys_mod_count>
         <sys_name/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_action_instance_9ec3cfc5db41841021b91ffa689619e0</sys_update_name>
         <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:28:03</sys_updated_on>
+        <sys_updated_on>2019-11-14 19:16:39</sys_updated_on>
         <ui_id>d07df984-8bcc-4453-a088-4f69f895bdab</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9ec3cfc5db41841021b91ffa689619e0"/>
@@ -61,10 +61,10 @@
         <sys_created_by>wsuser</sys_created_by>
         <sys_created_on>2019-11-13 21:22:52</sys_created_on>
         <sys_id>9681bf56db09481021b91ffa689619cc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:22:52</sys_updated_on>
-        <value>[{"name": "dhcpv4/host-name","value": "abzone.com"},{"name": "dhcpv4/domain-name","value": "abzone.com"},{"name": "dhcpv4/bootfile-name","value": "/boot1.img"}]</value>
+        <sys_updated_on>2019-11-14 19:13:19</sys_updated_on>
+        <value/>
         <variable display_value="">dcf6da121bc9081023b9631e6e4bcb95</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -150,11 +150,11 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-10 17:40:05</sys_created_on>
         <sys_id>edc16355db4d841021b91ffa6896196d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:22:52</sys_updated_on>
+        <sys_updated_on>2019-11-14 19:16:39</sys_updated_on>
         <table>var__m_sys_hub_action_input_01ec15c7dbb4001021b91ffa6896197a</table>
-        <value/>
+        <value>{{subflow.options}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>options</field>
