@@ -21,7 +21,7 @@
 	ga.addParam("sysparm_zoneName", g_form.getValue("zone"));
 	ga.getXMLAnswer(function(status){
 		g_form.clearMessages();
-		if(status == 200){
+		if(status != -1){
 			g_form.addInfoMessage("Records are updated");
 		}else
 			g_form.addErrorMessage("Failed to load records");
@@ -34,7 +34,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>788e1f6fdb2440d021b91ffa689619af</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Load Records Data</sys_name>
         <sys_overrides/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
@@ -42,7 +42,7 @@
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_client_788e1f6fdb2440d021b91ffa689619af</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-10-23 21:41:43</sys_updated_on>
+        <sys_updated_on>2019-12-04 19:02:46</sys_updated_on>
         <table>x_401282_nsone_int_cmdb_ci_dns_zone</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

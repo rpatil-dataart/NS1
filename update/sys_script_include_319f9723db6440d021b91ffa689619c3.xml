@@ -15,17 +15,18 @@ ZoneAndRecordsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 		var zoneName = this.getParameter("sysparm_zoneName");		
 		if(zoneName){
 			var result = new x_401282_nsone_int.ZonesAndRecordsLibrary().insertRecords(zoneName);
-			statusCode = result.statusCode;
+			statusCode = result;
 		}
 
 		return statusCode;
 	},
+
 	loadRecordDetails :function (){
 		var statusCode = -1;
 
 		var gr = new GlideRecord('x_401282_nsone_int_cmdb_ci_dns_zone');
 		gr.get(this.getParameter("sysparm_zone"));
-		
+
 		var fqdn = this.getParameter("sysparm_fqdn");		
 		var zone = gr.zone.toString();		
 		var type = this.getParameter("sysparm_type");		
@@ -47,13 +48,13 @@ ZoneAndRecordsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-10-23 20:46:03</sys_created_on>
         <sys_id>319f9723db6440d021b91ffa689619c3</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>ZoneAndRecordsAjax</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_319f9723db6440d021b91ffa689619c3</sys_update_name>
-        <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-05 18:05:20</sys_updated_on>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-12-04 19:02:27</sys_updated_on>
     </sys_script_include>
 </record_update>

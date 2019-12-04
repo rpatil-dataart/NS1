@@ -56,7 +56,7 @@ ZonesAndRecordsLibrary.prototype = {
 
 	/* *** Queue Entries End *** */
 
-	/*Method to get zones and records*/
+	/* Method to get zones and records */
 
 	getAllActiveZones: function(){
 
@@ -154,6 +154,8 @@ ZonesAndRecordsLibrary.prototype = {
 		var func = "insertRecords";		
 		this.logger.info(this.type, func, "Entering Function");
 
+		var statusCode = -1;
+
 		try{
 			//Get Zone Details
 			var zoneDetails = this.zoneApis.getZoneDetails(domainName);	
@@ -163,17 +165,26 @@ ZonesAndRecordsLibrary.prototype = {
 				//set zone name to each record;
 				for (var record in records){					
 					records[record].zone = domainName;
+					var recImportResult = this.importSetUtil.processImportSet(this.RECORD_IMPORT_SET_TBL_NAME, 	records[record]);
+
+					if(this.importSetUtil.result.statusCode != 201){
+						statusCode = -1;
+					}
+					else{
+						statusCode = this.importSetUtil.result.statusCode;
+					}
 				}
 
 				//Call import set api				
-				var result = this.zoneApis.insertAllRecords(records);
+				//var result = this.zoneApis.insertAllRecords(records);
 			}
 		}
 		catch(e){
+			statusCode = -1;
 			this.logger.error(this.type,func, "Exception thrown in getting records for zone " + domainName + " Exception " + JSON.stringify(e));   
 		}
 		finally{			
-			return this.zoneApis.result;
+			return statusCode;
 		}
 
 	},
@@ -399,13 +410,13 @@ ZonesAndRecordsLibrary.prototype = {
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-09-22 19:04:12</sys_created_on>
         <sys_id>150f53a11bc4841023b9631e6e4bcb22</sys_id>
-        <sys_mod_count>140</sys_mod_count>
+        <sys_mod_count>142</sys_mod_count>
         <sys_name>ZonesAndRecordsLibrary</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_script_include_150f53a11bc4841023b9631e6e4bcb22</sys_update_name>
         <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-12-04 17:44:54</sys_updated_on>
+        <sys_updated_on>2019-12-04 19:02:02</sys_updated_on>
     </sys_script_include>
 </record_update>
