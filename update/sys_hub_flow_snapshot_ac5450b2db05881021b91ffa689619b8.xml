@@ -14,7 +14,7 @@
         <master>true</master>
         <name>Delete Host Record</name>
         <outputs/>
-        <parent_flow display_value="Delete Host Record">5f96376adb81881021b91ffa68961918</parent_flow>
+        <parent_flow/>
         <remote_trigger_id/>
         <run_as>user</run_as>
         <sc_callable>false</sc_callable>

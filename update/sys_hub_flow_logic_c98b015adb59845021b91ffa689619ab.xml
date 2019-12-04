@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c58b015adb59845021b91ffa689619aa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Delete a Host Record">9d0985dedb19845021b91ffa68961915</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1.3.1</order>
+        <outputs_assigned>status,error_message</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>0ccfe48a-bfcd-4c93-b233-cfa3a81ad1bc</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-25 19:33:12</sys_created_on>
+        <sys_id>c98b015adb59845021b91ffa689619ab</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_c98b015adb59845021b91ffa689619ab</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-25 19:33:17</sys_updated_on>
+        <ui_id>81a69d32-2060-45c3-ae57-8b2181615d7a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c98b015adb59845021b91ffa689619ab"/>
+    <sys_element_mapping action="delete_multiple" query="id=c98b015adb59845021b91ffa689619ab"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>c98b015adb59845021b91ffa689619ab</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-25 19:33:12</sys_created_on>
+        <sys_id>058b015adb59845021b91ffa689619af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-25 19:33:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_9d0985dedb19845021b91ffa68961915</table>
+        <value>{{4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>c98b015adb59845021b91ffa689619ab</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-25 19:33:12</sys_created_on>
+        <sys_id>c58b015adb59845021b91ffa689619af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-25 19:33:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_9d0985dedb19845021b91ffa68961915</table>
+        <value>{{4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.status}}</value>
+    </sys_element_mapping>
+</record_update>

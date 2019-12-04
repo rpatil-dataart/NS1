@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Delete a Host Record</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Delete a Host Record</description>
+        <internal_name>delete_a_host_record</internal_name>
+        <label_cache>[{"name":"subflow.delete_reverse_record","label":"Input➛Delete Reverse Record","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":""},{"name":"ff550ca1-8399-4b86-a4f9-7ea7432f0700.status","label":"2➛Status","reference_display":"Status","type":"string","base_type":"string"},{"name":"ff550ca1-8399-4b86-a4f9-7ea7432f0700.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"subflow.domain_name","label":"Input➛Domain Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"subflow.type","label":"Input➛Type","reference":"","reference_display":"","type":"choice","base_type":"choice","column_name":""},{"name":"subflow.zone_name","label":"Input➛Zone Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.status","label":"1.1➛Status","reference_display":"Status","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.error_message","label":"1.1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.record","label":"1.1➛Answers","reference_display":"Answers","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.zone","label":"1.1➛Zone","reference_display":"Zone","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.type","label":"1.1➛Type","reference_display":"Type","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.domain","label":"1.1➛Domain","reference_display":"Domain","type":"string","base_type":"string"},{"name":"4d1b529b-cf9d-48b1-a3f3-021aebf3fef8.answer","label":"1.1➛Answer","reference_display":"Answer","type":"string","base_type":"string"},{"name":"d9bf612d-414d-46a6-b186-c90f1df7ab93.reverse_zone_name","label":"1.2.1➛Reverse Zone Name","type":"string","base_type":"string"},{"name":"d9bf612d-414d-46a6-b186-c90f1df7ab93.reverse_record_name","label":"1.2.1➛Reverse Domain Name","type":"string","base_type":"string"},{"name":"bb5092bf-89da-4110-9ae0-eb78a117d362.status","label":"1.2.2➛Status","type":"string","base_type":"string"},{"name":"bb5092bf-89da-4110-9ae0-eb78a117d362.error_message","label":"1.2.2➛Error Message","type":"string","base_type":"string"}]</label_cache>
+        <latest_snapshot>198b015adb59845021b91ffa689619fd</latest_snapshot>
+        <master_snapshot>198b015adb59845021b91ffa689619fd</master_snapshot>
+        <name>Delete a Host Record</name>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-25 19:22:18</sys_created_on>
+        <sys_id>9d0985dedb19845021b91ffa68961915</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Delete a Host Record</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_flow_9d0985dedb19845021b91ffa68961915</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-25 19:33:16</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=9d0985dedb19845021b91ffa68961915"/>
+</record_update>

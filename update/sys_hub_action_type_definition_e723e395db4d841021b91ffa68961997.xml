@@ -11,7 +11,7 @@
         <description>Get Reservation Details</description>
         <internal_name>get_reservation_details</internal_name>
         <label_cache>[{"name":"{{action.reservation_id}}","label":"action➛Reservation Id","type":"action","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].sn_auth_token}}","label":"step➛Get a Reservation Details➛Credential Value","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].error_message}}","label":"step➛Get a Reservation Details➛Error Message","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].response_body}}","label":"step➛Get a Reservation Details➛Response Body","type":"step","ref":""},{"name":"{{step[44538c2d-be23-4d13-8c2c-e3e945682709].status_code}}","label":"step➛Get a Reservation Details➛Status Code","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].S}}","label":"step➛Post Processing➛S","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].St}}","label":"step➛Post Processing➛St","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Sta}}","label":"step➛Post Processing➛Sta","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Stat}}","label":"step➛Post Processing➛Stat","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Statu}}","label":"step➛Post Processing➛Statu","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Status}}","label":"step➛Post Processing➛Status","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].E}}","label":"step➛Post Processing➛E","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Er}}","label":"step➛Post Processing➛Er","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Err}}","label":"step➛Post Processing➛Err","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Erro}}","label":"step➛Post Processing➛Erro","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].Error}}","label":"step➛Post Processing➛Error","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorM}}","label":"step➛Post Processing➛ErrorM","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMe}}","label":"step➛Post Processing➛ErrorMe","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMes}}","label":"step➛Post Processing➛ErrorMes","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMess}}","label":"step➛Post Processing➛ErrorMess","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessa}}","label":"step➛Post Processing➛ErrorMessa","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessag}}","label":"step➛Post Processing➛ErrorMessag","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ErrorMessage}}","label":"step➛Post Processing➛ErrorMessage","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].AddressID}}","label":"step➛Post Processing➛AddressID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].I}}","label":"step➛Post Processing➛I","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ID}}","label":"step➛Post Processing➛ID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].ScopeGroupID}}","label":"step➛Post Processing➛ScopeGroupID","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].DomainName}}","label":"step➛Post Processing➛DomainName","type":"step","ref":""},{"name":"{{step[e4323eba-24d0-418e-9519-763bb76b1910].HostName}}","label":"step➛Post Processing➛HostName","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>a4b56319db4d841021b91ffa68961962</latest_snapshot>
+        <latest_snapshot>bd1591a81b69889023b9631e6e4bcb9d</latest_snapshot>
         <master_snapshot>bcb56319db4d841021b91ffa689619e4</master_snapshot>
         <name>Get a Reservation Details</name>
         <outputs/>
@@ -21,14 +21,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-10 17:46:13</sys_created_on>
         <sys_id>e723e395db4d841021b91ffa68961997</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Get a Reservation Details</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_e723e395db4d841021b91ffa68961997</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-10 17:57:15</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-12-02 20:01:25</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>

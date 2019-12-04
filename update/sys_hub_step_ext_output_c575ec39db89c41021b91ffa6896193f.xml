@@ -38,7 +38,7 @@
         <label>AddressID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Post Processing">c175ec39db89c41021b91ffa68961925</model>
+        <model/>
         <model_id>c175ec39db89c41021b91ffa68961925</model_id>
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_c175ec39db89c41021b91ffa68961925</name>

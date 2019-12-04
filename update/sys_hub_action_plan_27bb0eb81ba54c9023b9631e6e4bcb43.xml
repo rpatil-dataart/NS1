@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_plan">
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="test">404b0e781ba54c9023b9631e6e4bcbf0</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"27bb0eb81ba54c9023b9631e6e4bcb43","name":"plan"}}</plan>
+        <snapshot>c7bbcab81ba54c9023b9631e6e4bcb40</snapshot>
+        <sys_class_name>sys_hub_action_plan</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-12-03 18:38:38</sys_created_on>
+        <sys_id>27bb0eb81ba54c9023b9631e6e4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>404b0e781ba54c9023b9631e6e4bcbf0</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_plan_27bb0eb81ba54c9023b9631e6e4bcb43</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-12-03 18:38:38</sys_updated_on>
+    </sys_hub_action_plan>
+</record_update>

@@ -14,14 +14,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-10 17:40:09</sys_created_on>
         <sys_id>a2c1a355db4d841021b91ffa689619e2</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name/>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_action_instance_a2c1a355db4d841021b91ffa689619e2</sys_update_name>
         <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:28:00</sys_updated_on>
+        <sys_updated_on>2019-11-25 14:45:54</sys_updated_on>
         <ui_id>d07df984-8bcc-4453-a088-4f69f895bdab</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a2c1a355db4d841021b91ffa689619e2"/>
@@ -52,20 +52,6 @@
         <sys_updated_on>2019-11-10 17:40:09</sys_updated_on>
         <value/>
         <variable display_value="">09ec15c7dbb4001021b91ffa6896197c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>a2c1a355db4d841021b91ffa689619e2</document_key>
-        <order>3</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>wsuser</sys_created_by>
-        <sys_created_on>2019-11-13 21:27:58</sys_created_on>
-        <sys_id>89b237d6db09481021b91ffa6896196a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:27:58</sys_updated_on>
-        <value>[{"name": "dhcpv4/host-name","value": "abzone.com"},{"name": "dhcpv4/domain-name","value": "abzone.com"},{"name": "dhcpv4/bootfile-name","value": "/boot1.img"}]</value>
-        <variable display_value="">dcf6da121bc9081023b9631e6e4bcb95</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=a2c1a355db4d841021b91ffa689619e2"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
@@ -98,11 +84,11 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-10 17:40:09</sys_created_on>
         <sys_id>76c1a355db4d841021b91ffa689619e7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>wsuser</sys_updated_by>
-        <sys_updated_on>2019-11-13 21:27:58</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-24 15:31:37</sys_updated_on>
         <table>var__m_sys_hub_action_input_01ec15c7dbb4001021b91ffa6896197a</table>
-        <value/>
+        <value>{{subflow.options}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>scope_group_id</field>

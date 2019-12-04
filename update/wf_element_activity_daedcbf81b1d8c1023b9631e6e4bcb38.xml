@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>DNS</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description>Removes an existing record and all associated answers and configuration details. We will no longer respond for this record once it is deleted, and it cannot be recovered, so use caution. Note: This operation deletes all answers associated with the domain and record type.</description>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"domain","type":"STRING","mandatory":true},{"name":"type","type":"STRING","mandatory":true},{"name":"zone","type":"STRING","mandatory":true},{"name":"company_domain","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"5983f240dbff330051bde4da4b961956","web_service_message_function":"731261651bb844d023b9631e6e4bcbfc","web_service_endpoint":"","parameters":"[{\"name\":\"zone\",\"value\":\"${activityInput.zone}\",\"additional_attribute\":\"\"},{\"name\":\"domain\",\"value\":\"${activityInput.domain}\",\"additional_attribute\":\"\"},{\"name\":\"type\",\"value\":\"${activityInput.type}\",\"additional_attribute\":\"\"},{\"name\":\"api.mycompany.net\",\"value\":\"${activityInput.company_domain}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables/>
+        <name>Delete Host Record</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"error","type":"STRING"}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description>Delete Host Record</short_description>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-11-21 13:12:01</sys_created_on>
+        <sys_id>daedcbf81b1d8c1023b9631e6e4bcb38</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Delete Host Record</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>wf_element_activity_daedcbf81b1d8c1023b9631e6e4bcb38</sys_update_name>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-11-21 13:21:48</sys_updated_on>
+        <version_container_id>f6921ebf1bb4801023b9631e6e4bcb2a</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=daedcbf81b1d8c1023b9631e6e4bcb38"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-11-21 13:12:01</sys_created_on>
+        <sys_id>16edcbf81b1d8c1023b9631e6e4bcb39</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-11-21 13:21:48</sys_updated_on>
+        <valid_from>2019-11-21 13:21:48</valid_from>
+        <valid_to/>
+        <version>2</version>
+        <version_container_id>f6921ebf1bb4801023b9631e6e4bcb2a</version_container_id>
+        <wf_element_definition display_value="Delete Host Record">daedcbf81b1d8c1023b9631e6e4bcb38</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Delete Host Record">daedcbf81b1d8c1023b9631e6e4bcb38</activity_definition>
+        <condition/>
+        <derived_definition>19435ebf1bb4801023b9631e6e4bcbd6</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-11-21 13:12:01</sys_created_on>
+        <sys_id>52ed873c1b1d8c1023b9631e6e4bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-11-21 13:12:01</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Delete Host Record">daedcbf81b1d8c1023b9631e6e4bcb38</activity_definition>
+        <condition>activityOutput.error == null</condition>
+        <derived_definition>97035aff1bb4801023b9631e6e4bcbfd</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>abarzdis</sys_created_by>
+        <sys_created_on>2019-11-21 13:12:01</sys_created_on>
+        <sys_id>96ed873c1b1d8c1023b9631e6e4bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>abarzdis</sys_updated_by>
+        <sys_updated_on>2019-11-21 13:12:01</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=f6921ebf1bb4801023b9631e6e4bcb2a^sys_id!=16edcbf81b1d8c1023b9631e6e4bcb39^version&lt;2">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=f6921ebf1bb4801023b9631e6e4bcb2a">
+        <new_activity_definition>daedcbf81b1d8c1023b9631e6e4bcb38</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

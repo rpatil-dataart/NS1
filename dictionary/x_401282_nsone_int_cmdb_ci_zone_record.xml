@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="Zone Record" max_length="40" name="x_401282_nsone_int_cmdb_ci_zone_record" sizeclass="195791" type="collection">
+    <element extends="cmdb_ci" label="Zone Record" max_length="40" name="x_401282_nsone_int_cmdb_ci_zone_record" sizeclass="195804" type="collection">
         <element label="Answers" max_length="4000" name="answers" type="string"/>
         <element label="Feeds" max_length="255" name="feeds" type="string"/>
         <element label="Filters" max_length="255" name="filters" type="string"/>

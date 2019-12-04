@@ -38,7 +38,7 @@
         <label>Zone Name</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Delete Host Record">5f96376adb81881021b91ffa68961918</model>
+        <model/>
         <model_id>5f96376adb81881021b91ffa68961918</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_5f96376adb81881021b91ffa68961918</name>

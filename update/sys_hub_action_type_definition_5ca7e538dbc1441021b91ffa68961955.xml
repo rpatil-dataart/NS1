@@ -11,7 +11,7 @@
         <description/>
         <internal_name>create_reverse_zone_and_record_name_from_domain</internal_name>
         <label_cache>[{"name":"{{action.domain_name}}","label":"action➛Domain Name","type":"action","ref":""},{"name":"{{action.answer}}","label":"action➛Answer","type":"action","ref":""},{"name":"{{step[84bd314f-b8dd-4553-a089-b671521e97b5].reverseZoneName}}","label":"step➛Calculate Reverse➛reverseZoneName","type":"step","ref":""},{"name":"{{step[84bd314f-b8dd-4553-a089-b671521e97b5].revereseDomainName}}","label":"step➛Calculate Reverse➛revereseDomainName","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>cf18ad38dbc1441021b91ffa6896194a</latest_snapshot>
+        <latest_snapshot>d52b48921bd9045023b9631e6e4bcb9f</latest_snapshot>
         <master_snapshot>5f18ad38dbc1441021b91ffa6896198e</master_snapshot>
         <name>Create Reverse Zone and Record Name from domain</name>
         <outputs/>
@@ -21,14 +21,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-08 19:29:27</sys_created_on>
         <sys_id>5ca7e538dbc1441021b91ffa68961955</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Create Reverse Zone and Record Name from domain</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5ca7e538dbc1441021b91ffa68961955</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-08 19:31:35</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-25 14:51:59</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>

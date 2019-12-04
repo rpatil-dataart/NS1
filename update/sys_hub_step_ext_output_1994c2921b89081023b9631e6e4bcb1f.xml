@@ -38,7 +38,7 @@
         <label>Credential Value</label>
         <mandatory>true</mandatory>
         <max_length>255</max_length>
-        <model display_value="REST step">c194c2921b89081023b9631e6e4bcb05</model>
+        <model/>
         <model_id>c194c2921b89081023b9631e6e4bcb05</model_id>
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_c194c2921b89081023b9631e6e4bcb05</name>

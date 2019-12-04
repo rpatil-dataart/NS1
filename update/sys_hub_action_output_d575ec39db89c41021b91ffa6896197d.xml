@@ -40,7 +40,7 @@
         <label>Address ID</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Copy of Create a reservation">e075ac39db89c41021b91ffa68961970</model>
+        <model/>
         <model_id>e075ac39db89c41021b91ffa68961970</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_e075ac39db89c41021b91ffa68961970</name>

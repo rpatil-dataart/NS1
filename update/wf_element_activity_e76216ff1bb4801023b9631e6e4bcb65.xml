@@ -25,27 +25,27 @@
         <sys_created_by>abarzdis</sys_created_by>
         <sys_created_on>2019-11-05 20:03:18</sys_created_on>
         <sys_id>e76216ff1bb4801023b9631e6e4bcb65</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Delete Host Record</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>wf_element_activity_e76216ff1bb4801023b9631e6e4bcb65</sys_update_name>
         <sys_updated_by>abarzdis</sys_updated_by>
-        <sys_updated_on>2019-11-05 21:20:22</sys_updated_on>
+        <sys_updated_on>2019-11-21 13:21:48</sys_updated_on>
         <version_container_id>f6921ebf1bb4801023b9631e6e4bcb2a</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=e76216ff1bb4801023b9631e6e4bcb65"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
-        <published>true</published>
+        <published>false</published>
         <sys_created_by>abarzdis</sys_created_by>
         <sys_created_on>2019-11-05 20:03:18</sys_created_on>
         <sys_id>f2921ebf1bb4801023b9631e6e4bcb2b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>abarzdis</sys_updated_by>
-        <sys_updated_on>2019-11-05 21:20:22</sys_updated_on>
+        <sys_updated_on>2019-11-21 13:21:48</sys_updated_on>
         <valid_from>2019-11-05 21:20:22</valid_from>
         <valid_to/>
         <version>1</version>

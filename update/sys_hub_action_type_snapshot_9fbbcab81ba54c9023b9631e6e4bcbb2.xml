@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation>Creates a reservation. </annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Creates a reservation. </description>
+        <internal_name>copy_of_create_a_reservation</internal_name>
+        <label_cache>[{"name":"{{action.address_id}}","label":"action➛address_id","type":"action","ref":""},{"name":"{{action.scope_group_id}}","label":"action➛scope_group_id","type":"action","ref":""},{"name":"{{action.mac}}","label":"action➛mac","type":"action","ref":""},{"name":"{{action.options}}","label":"action➛options","type":"action","ref":""},{"name":"{{step[1ab8823f-8cb8-49ca-944f-28698cfff8d3].payload}}","label":"step➛Create Payload➛payload","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Copy of Create a reservation</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="test">404b0e781ba54c9023b9631e6e4bcbf0</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-12-03 18:38:36</sys_created_on>
+        <sys_id>9fbbcab81ba54c9023b9631e6e4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Create a reservation</sys_name>
+        <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_9fbbcab81ba54c9023b9631e6e4bcbb2</sys_update_name>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-12-03 18:38:36</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=9fbbcab81ba54c9023b9631e6e4bcbb2"/>
+    <sys_element_mapping action="delete_multiple" query="id=9fbbcab81ba54c9023b9631e6e4bcbb2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>options</field>
+        <id>9fbbcab81ba54c9023b9631e6e4bcbb2</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-12-03 18:38:37</sys_created_on>
+        <sys_id>67bb0eb81ba54c9023b9631e6e4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-12-03 18:38:37</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9fbbcab81ba54c9023b9631e6e4bcbb2</table>
+        <value>{{step[1ab8823f-8cb8-49ca-944f-28698cfff8d3].payload}}</value>
+    </sys_element_mapping>
+</record_update>

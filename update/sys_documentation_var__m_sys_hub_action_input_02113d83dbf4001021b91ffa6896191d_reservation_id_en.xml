@@ -3,7 +3,7 @@
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>reservation_id</element>
             <help/>
-            <hint/>
+            <hint>The ID of the reservation</hint>
             <label>reservation_id</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_02113d83dbf4001021b91ffa6896191d</name>
@@ -12,14 +12,14 @@
             <sys_created_by>smorey</sys_created_by>
             <sys_created_on>2019-11-03 10:40:39</sys_created_on>
             <sys_id>59aeb9cfdbf4001021b91ffa68961960</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_name>reservation_id</sys_name>
             <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
             <sys_policy/>
             <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
             <sys_update_name>sys_documentation_var__m_sys_hub_action_input_02113d83dbf4001021b91ffa6896191d_reservation_id_en</sys_update_name>
-            <sys_updated_by>smorey</sys_updated_by>
-            <sys_updated_on>2019-11-03 10:40:39</sys_updated_on>
+            <sys_updated_by>wsuser</sys_updated_by>
+            <sys_updated_on>2019-11-30 18:46:21</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -15,14 +15,14 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-03 10:46:23</sys_created_on>
         <sys_id>29ff3903db38001021b91ffa68961995</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Post Processing</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_hub_step_instance_29ff3903db38001021b91ffa68961995</sys_update_name>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-07 18:29:04</sys_updated_on>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-28 18:59:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=29ff3903db38001021b91ffa68961995"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -47,17 +47,16 @@
         <sys_created_by>smorey</sys_created_by>
         <sys_created_on>2019-11-03 10:46:24</sys_created_on>
         <sys_id>e1ff3903db38001021b91ffa689619a9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>smorey</sys_updated_by>
-        <sys_updated_on>2019-11-07 18:29:04</sys_updated_on>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-28 18:59:32</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-  
+if(inputs['responseBody']){
   var responseBody = new global.JSON().decode(inputs['responseBody']);
-
-  if(responseBody.ok == true){
+}
+  if (inputs.status_code == 204) {
     outputs.Status = "Success";
-    output.Response = JSON.parse(inputs.responseBody);
-
+    outputs.Response = JSON.parse(inputs.responseBody);
   } else {
     outputs.Status= "Failure";
     outputs.ErrorMessage = new NSOneErrorHandler().dhcpErrorHandler(inputs, outputs).error_message;
@@ -88,6 +87,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>smorey</sys_updated_by>
         <sys_updated_on>2019-11-03 10:51:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_29ff3903db38001021b91ffa68961995</table>
+        <value>{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>29ff3903db38001021b91ffa68961995</id>
+        <sys_created_by>wsuser</sys_created_by>
+        <sys_created_on>2019-11-28 18:56:05</sys_created_on>
+        <sys_id>22cfd45b1b558c5023b9631e6e4bcbea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>wsuser</sys_updated_by>
+        <sys_updated_on>2019-11-28 18:56:05</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_29ff3903db38001021b91ffa68961995</table>
         <value>{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].error_message}}</value>
     </sys_element_mapping>
@@ -124,6 +135,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>smorey</sys_updated_by>
         <sys_updated_on>2019-11-03 10:51:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_29ff3903db38001021b91ffa68961995</table>
+        <value>{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].status_code}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_code</field>
+        <id>29ff3903db38001021b91ffa68961995</id>
+        <sys_created_by>smorey</sys_created_by>
+        <sys_created_on>2019-11-26 14:07:59</sys_created_on>
+        <sys_id>b2aa8d2edbdd085021b91ffa68961930</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>smorey</sys_updated_by>
+        <sys_updated_on>2019-11-26 14:07:59</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_29ff3903db38001021b91ffa68961995</table>
         <value>{{step[499d3817-dee6-4d6c-9f9a-2fa0f734a863].status_code}}</value>
     </sys_element_mapping>

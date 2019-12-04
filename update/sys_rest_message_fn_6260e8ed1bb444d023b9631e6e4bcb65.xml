@@ -11,20 +11,20 @@
         <oauth2_profile/>
         <protocol_name/>
         <qualified_name>NS1-Pulsar [ Get list of all jobs for an App ]</qualified_name>
-        <rest_endpoint>https://api.nsone.net/v1/pulsar/apps/${appID}/jobs</rest_endpoint>
+        <rest_endpoint>https://${api.mycompany.net}/v1/pulsar/apps/${appID}/jobs</rest_endpoint>
         <rest_message display_value="NS1-Pulsar">de3c506d1bb444d023b9631e6e4bcb7b</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>abarzdis</sys_created_by>
         <sys_created_on>2019-10-29 11:58:03</sys_created_on>
         <sys_id>6260e8ed1bb444d023b9631e6e4bcb65</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Get list of all jobs for an App</sys_name>
         <sys_package display_value="NSOne Integration" source="x_401282_nsone_int">79627e08dbbf330051bde4da4b961982</sys_package>
         <sys_policy/>
         <sys_scope display_value="NSOne Integration">79627e08dbbf330051bde4da4b961982</sys_scope>
         <sys_update_name>sys_rest_message_fn_6260e8ed1bb444d023b9631e6e4bcb65</sys_update_name>
         <sys_updated_by>abarzdis</sys_updated_by>
-        <sys_updated_on>2019-10-29 11:58:03</sys_updated_on>
+        <sys_updated_on>2019-11-21 11:20:52</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
